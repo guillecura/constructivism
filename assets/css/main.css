@@ -257,6 +257,23 @@ body {
       .contact-head > .page-description {
         font-size: 1rem; } }
 
+.menu-box {
+  border: 6px solid #f03246;
+  max-width: 300px;
+  padding: 15px;
+  width: calc(33.33% - 50px); }
+  .menu-box.right {
+    margin-right: 0;
+    text-align: right; }
+  .menu-box li {
+    color: #f03246;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.11em;
+    list-style: none; }
+    .menu-box li.nav-current {
+      font-weight: 700; }
+
 .icon-menu {
   animation: menu-h-in .333s ease-out forwards;
   appearance: none;
@@ -647,7 +664,7 @@ a[class='dribbble'] {
     margin: 10px auto 40px;
     width: 10%; }
   .about-content > .post:last-of-type, .post-template:not(.page-template) article:last-of-type, article.thought:last-of-type {
-    margin-bottom: 50px; }
+    margin-bottom: 100px; }
   .about-content > .post .post-header, .post-template:not(.page-template) article .post-header, article.thought .post-header {
     margin-bottom: 20px; }
   .about-content > .post .post-title, .post-template:not(.page-template) article .post-title, article.thought .post-title {
@@ -756,11 +773,17 @@ h6 {
         font-size: 0.7rem; } }
 
 .about-content {
+  padding-top: 30px;
+  position: relative;
   text-align: center; }
   .about-content > .post {
     margin-left: 0;
     text-align: left;
     width: 66.66%; }
+  .about-content .menu-box {
+    position: absolute;
+    right: 0;
+    top: 50px; }
 
 .author-profile {
   position: relative; }
