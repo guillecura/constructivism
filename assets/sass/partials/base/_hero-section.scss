@@ -52,8 +52,7 @@
 
 // Tag & Contact header
 // -----------------------------------------------------------------------------
-.tag-head,
-.contact-head {
+.tag-head {
   height: $tag-head;
   min-height: $header-height * 1.5;
   position: relative;
@@ -62,23 +61,6 @@
   &.no-cover {
     height: 0;
     min-height: 0;
-  }
-
-// Page logo -------------------------------------------------------------------
-  > .page-logo {
-    animation: item-in .666s ease-out forwards; // Slide In animation
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: $logo;
-    margin-bottom: $distance * 4;
-    width: $logo;
-
-    @include mq(mobile) {
-      height: $logo * .75;
-      margin-bottom: auto;
-      width: $logo * .75;
-    }
   }
 // -----------------------------------------------------------------------------
 

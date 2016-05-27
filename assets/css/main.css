@@ -181,6 +181,8 @@ body {
   height: 40px;
   position: relative;
   width: 100%; }
+  .site-footer a:hover {
+    color: white; }
   .site-footer .copyright {
     bottom: 0;
     color: #404040;
@@ -221,33 +223,15 @@ body {
   .main-header-content > .page-description {
     font-weight: 400; }
 
-.tag-head,
-.contact-head {
+.tag-head {
   height: 20vh;
   min-height: 120px;
   position: relative;
   width: 100%; }
-  .tag-head.no-cover,
-  .contact-head.no-cover {
+  .tag-head.no-cover {
     height: 0;
     min-height: 0; }
-  .tag-head > .page-logo,
-  .contact-head > .page-logo {
-    animation: item-in .666s ease-out forwards;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 150px;
-    margin-bottom: 40px;
-    width: 150px; }
-    @media (max-width: 640px) {
-      .tag-head > .page-logo,
-      .contact-head > .page-logo {
-        height: 112.5px;
-        margin-bottom: auto;
-        width: 112.5px; } }
-  .tag-head > .page-description,
-  .contact-head > .page-description {
+  .tag-head > .page-description {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -257,8 +241,7 @@ body {
     text-align: center;
     width: 100%; }
     @media (max-width: 640px) {
-      .tag-head > .page-description,
-      .contact-head > .page-description {
+      .tag-head > .page-description {
         font-size: 1rem; } }
 
 .menu-box {
@@ -864,16 +847,52 @@ h6 {
 
 .contact-content {
   animation: op-in .999s ease-out forwards;
-  min-height: calc(80vh - 135px);
-  padding: 15px 0; }
+  min-height: calc(100vh - 150px);
+  overflow: hidden;
+  padding: 15px 0;
+  position: relative; }
+  .contact-content::after {
+    background-color: #f03246;
+    content: '';
+    height: 400vh;
+    right: -250vh;
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 18vh;
+    width: 400vh;
+    z-index: -1; }
   @media (max-width: 640px) {
     .contact-content {
       padding-top: 0; } }
+  .contact-content > section {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    min-height: 300px;
+    width: 50%; }
+    .contact-content > section .page-logo {
+      animation: item-in .666s ease-out forwards;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 300px;
+      margin-top: 30px;
+      width: 300px; }
+      @media (max-width: 640px) {
+        .contact-content > section .page-logo {
+          height: 112.5px;
+          margin-bottom: auto;
+          width: 112.5px; } }
   .contact-content > article {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     max-width: 850px;
     padding: 30px 0;
+    right: 0;
     text-align: center;
-    width: 100%; }
+    width: 50%; }
     @media (max-width: 640px) {
       .contact-content > article {
         padding: 10px 0; } }
