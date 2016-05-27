@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700,400italic|Fira+Mono:400,700");
 @keyframes item-in {
   from {
@@ -53,7 +54,7 @@
   padding: 0; }
 
 ::selection {
-  background-color: rgba(255, 60, 60, 0.5); }
+  background-color: rgba(240, 50, 70, 0.5); }
 
 html {
   font-size: 20px; }
@@ -173,7 +174,7 @@ body {
   padding: 0 20px;
   transition: color 150ms ease-out, border-color 150ms ease-out; }
   .button:hover {
-    border-color: #ff3c3c; }
+    border-color: #f03246; }
 
 .site-footer {
   background-color: black;
@@ -296,7 +297,7 @@ body {
       transform: translateY(21px);
       transition-delay: 100ms; }
   .icon-menu:hover rect {
-    fill: #ff3c3c; }
+    fill: #f03246; }
     @media (max-width: 640px) {
       .icon-menu:hover rect {
         fill: #223347 !important; } }
@@ -330,7 +331,7 @@ body {
         .icon-menu.nav-close rect:nth-child(even) {
           animation: cross-r 0.666s ease-out forwards !important; } }
   .icon-menu.nav-close:hover rect {
-    fill: #ff3c3c;
+    fill: #f03246;
     width: 32px; }
     @media (max-width: 640px) {
       .icon-menu.nav-close:hover rect {
@@ -403,9 +404,9 @@ body > .nav {
   .post-content p + p {
     margin-top: 20px; }
   .post-content p a {
-    color: #ff3c3c; }
+    color: #f03246; }
     .post-content p a:hover {
-      color: #ff6f6f; }
+      color: #f36271; }
 
 .post-content ol,
 .post-content ul {
@@ -500,10 +501,10 @@ pre[class*='language-'] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #ff0909; }
+  color: #df1026; }
 
 .token.boolean {
-  color: #ff0909; }
+  color: #df1026; }
 
 .token.number,
 .token.selector,
@@ -680,7 +681,7 @@ a {
   transition: color 150ms ease-out; }
   span[tabindex='0']:hover,
   a:hover {
-    color: #ff0909; }
+    color: #df1026; }
 
 h1 {
   font-size: 3rem; }
@@ -762,16 +763,20 @@ h6 {
     width: 66.66%; }
 
 .author-profile {
-  padding: 30px 0; }
+  position: relative; }
   .author-profile .author-image {
     animation: blured-out .999s ease-out forwards;
     font-size: 0;
     height: 66.66vw;
+    left: 0;
     margin-left: 0;
     max-height: 850px;
     max-width: 850px;
     overflow: hidden;
-    width: 66.66vw; }
+    position: absolute;
+    top: 30px;
+    width: 66.66vw;
+    z-index: 2; }
     .author-profile .author-image > .img {
       background-position: center;
       background-repeat: no-repeat;
@@ -780,9 +785,52 @@ h6 {
       font-size: 0;
       height: 100%;
       width: 100%; }
-  .author-profile .author-bio {
-    padding: 30px;
-    text-align: center; }
+  .author-profile .author-block {
+    background-color: #f03246;
+    height: calc(66.66vw + 60px);
+    margin-right: 0;
+    max-width: 50%;
+    max-height: 910px;
+    padding-left: 16.66%;
+    position: relative;
+    width: 50vw;
+    z-index: 1; }
+    .author-profile .author-block::after {
+      background-color: #223347;
+      content: '';
+      display: block;
+      height: 66.66%;
+      left: calc(33.33% + 50px);
+      position: absolute;
+      top: 0;
+      width: 9px;
+      z-index: -1; }
+    .author-profile .author-block > section {
+      background-color: #f03246;
+      bottom: 0;
+      padding: 20px 20px 50px 50px;
+      position: absolute; }
+      .author-profile .author-block > section span {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.11em; }
+      .author-profile .author-block > section h3 {
+        color: white;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.11em; }
+      .author-profile .author-block > section p {
+        line-height: 1.48em;
+        margin: 10px auto; }
+      .author-profile .author-block > section a {
+        color: white;
+        font-size: 0.85rem;
+        line-height: 2.96em; }
+        .author-profile .author-block > section a:hover {
+          border-bottom: 1px dotted white; }
+        .author-profile .author-block > section a::after {
+          content: '»';
+          margin-left: 10px; }
 
 .contact-content {
   animation: op-in .999s ease-out forwards;
@@ -815,18 +863,6 @@ h6 {
   min-height: calc(100vh - 95px);
   position: relative;
   margin-top: calc(9rem + 30px); }
-  .home-content::after {
-    background-color: #ff3c3c;
-    bottom: 0;
-    content: '';
-    display: block;
-    height: 15vh;
-    left: -5.5vw;
-    position: absolute;
-    transform: rotate(-45deg);
-    transform-origin: bottom left;
-    width: 200%;
-    z-index: -2; }
   .home-content::before {
     background-image: url("../img/dots-texture.png");
     content: '';

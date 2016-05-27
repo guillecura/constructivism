@@ -15,13 +15,31 @@
       </figure>
     {{/if}}
 
-    {{#if bio}}
-      <p class="author-bio">{{bio}}</p>
-    {{/if}}
+    <div class="author-block">
+      <section>
+        {{#if @blog.title}}
+          <span>About</span>
+          <h3>{{@blog.title}}</h3>
+        {{/if}}
+        {{#if bio}}
+          <p class="author-bio">{{bio}}</p>
+        {{/if}}
+        {{#if @blog.navigation}}
+          <a href="{{@blog.url}}/tag/portfolio/">Go to portfolio</a>
+        {{/if}}
+      </section>
+    </div>
   </section>
 {{/author}}
 
 <main class="about-content" role="main">
+
+  {{#if @blog.navigation}}
+    <menu class="menu-box-widget">
+      {{navigation}}
+    </menu>
+  {{/if}}
+
   <article class="{{post_class}}">
 
     <header class="post-header">

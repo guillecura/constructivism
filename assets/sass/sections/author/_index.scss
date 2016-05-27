@@ -17,7 +17,7 @@
 }
 
 .author-profile {
-  padding: $distance * 3 0;
+  position: relative;
 
 
 // Author Image
@@ -26,11 +26,15 @@
     animation: blured-out .999s ease-out forwards; // Blur out animation
     font-size: 0;
     height: 66.66vw;
+    left: 0;
     margin-left: 0;
     max-height: $post-box;
     max-width: $post-box;
     overflow: hidden;
+    position: absolute;
+    top: $distance * 3;
     width: 66.66vw;
+    z-index: 2;
 
     > .img {
       background-position: center;
@@ -45,11 +49,70 @@
 // -----------------------------------------------------------------------------
 
 
-// Author Bio
+// Author Block
 // -----------------------------------------------------------------------------
-  .author-bio {
-    padding: $distance * 3;
-    text-align: center;
+  .author-block {
+    background-color: $primary;
+    height: calc(66.66vw + #{$distance * 6});
+    margin-right: 0;
+    max-width: 50%;
+    max-height: $post-box + $distance * 6;
+    padding-left: 16.66%;
+    position: relative;
+    width: 50vw;
+    z-index: 1;
+
+    &::after {
+      background-color: $black;
+      content: '';
+      display: block;
+      height: 66.66%;
+      left: calc(33.33% + #{$distance * 5});
+      position: absolute;
+      top: 0;
+      width: $line * 3;
+      z-index: -1;
+    }
+
+    > section {
+      background-color: $primary;
+      bottom: 0;
+      padding: $distance * 2 $distance * 2 $distance * 5 $distance * 5;
+      position: absolute;
+
+      span {
+        font-size: $fh3;
+        font-weight: $regular;
+        line-height: $line-height;
+      }
+
+      h3 {
+        color: $white;
+        font-size: $fh2;
+        font-weight: $regular;
+        line-height: $line-height;
+      }
+
+      p {
+        line-height: $line-height-big;
+        margin: $distance auto;
+      }
+
+      a {
+        color: $white;
+        font-size: $fsmall;
+        line-height: $line-height-big * 2;
+        
+        &:hover {
+          border-bottom: 1px dotted $white;
+        }
+
+        &::after {
+          content: '»';
+          margin-left: $distance;
+        }
+      }
+    }
   }
 // -----------------------------------------------------------------------------
 }

@@ -12,19 +12,19 @@
   margin-top: calc(#{$fh1 * 3} + #{$distance * 3});
 
   // Stripe
-  &::after {
-    background-color: $primary;
-    bottom: 0;
-    content: '';
-    display: block;
-    height: 15vh;
-    left: -5.5vw;
-    position: absolute;
-    transform: rotate(-45deg);
-    transform-origin: bottom left;
-    width: 200%;
-    z-index: -2;
-  }
+  // &::after {
+  //   background-color: $primary;
+  //   bottom: 0;
+  //   content: '';
+  //   display: block;
+  //   height: 15vh;
+  //   left: -5.5vw;
+  //   position: absolute;
+  //   transform: rotate(-45deg);
+  //   transform-origin: bottom left;
+  //   width: 200%;
+  //   z-index: -2;
+  // }
 
   // Dotted background
   &::before {
