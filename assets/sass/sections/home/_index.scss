@@ -19,4 +19,36 @@
 .home-posts {
   min-height: 50vh;
 }
+
+.menu-widget {
+  padding: $distance * 2 0;
+  position: relative;
+  width: 100%;
+
+  // Menu list
+  > ul {
+    list-style: none;
+    margin-right: 0;
+    padding: $distance * 3 $distance * 1.5 $distance * 3 $distance * 4.5;
+    width: 50%;
+
+    li {
+      font-size: $fh1;
+      font-weight: $bold;
+      line-height: $line-height;
+    }
+  }
+
+  // Dotted background
+  &:before {
+    background-image: url('../img/dots-texture.png');
+    content: '';
+    left: 0;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    width: 66%;
+    z-index: -1;
+  }
+}
 // -----------------------------------------------------------------------------
