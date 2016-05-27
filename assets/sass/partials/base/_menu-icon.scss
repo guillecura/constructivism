@@ -4,21 +4,13 @@
 // =============================================================================
 
 
-// Double Meat Hamburger Icon SVG
+// No Meat Hamburger Icon SVG
 // -----------------------------------------------------------------------------
 .icon-menu {
-// Variables -------------------------------------------------------------------
-  $color-1:        darken($primary, 10%);
-  $color-2:        $primary;
-  $color-3:        lighten($primary, 10%);
-
-  $list:           $color-1 $color-2 $color-3; // one for each line
-// -----------------------------------------------------------------------------
 
 // General Styles --------------------------------------------------------------
   animation: menu-h-in .333s ease-out forwards; // Slide In animation
   appearance: none;
-  background-color: $white;
   border: 0;
   box-shadow: none;
   cursor: pointer;
@@ -57,13 +49,16 @@
     transition: fill 50ms ease-out, width 150ms ease-out, transform 150ms ease-out;
     width: $icon;
 
-    @each $pos-y in $list {
-      $i: index($list, $pos-y);
+    // Top line
+    &:nth-child(odd) {
+      transform: translateY(#{$line * 3.5});
+      transition-delay: unquote('#{50}ms');
+    }
 
-      &:nth-child(#{$i}) {
-        transform: translateY(#{$line * $i * 2.5});
-        transition-delay: unquote('#{$i * 50}ms');
-      }
+    // Bottom line
+    &:nth-child(even) {
+      transform: translateY(#{$line * 7});
+      transition-delay: unquote('#{100}ms');
     }
   }
 // -----------------------------------------------------------------------------
@@ -71,33 +66,11 @@
 // Set the hover
 // -----------------------------------------------------------------------------
   &:hover rect {
-    @each $color in $list {
-      $i: index($list, $color);
-
-// Animation -------------------------------------------------------------------
-      @keyframes bounce-#{$i} {
-        0% {width: #{$icon};}
-
-        33% {width: #{$icon / $i};}
-
-        66% {width: #{$icon / ($i * .333)};}
-
-        100% {width: #{$icon / ($i * .666)};}
-      }
-
-// Hover state -----------------------------------------------------------------
-      &:nth-child(#{$i}) {
-        animation: bounce-#{$i} unquote('#{$i * 150}ms') ease-out forwards;
-        fill: #{$color};
-        width: #{$icon / ($i * .666)};
-      }
-    }
+    fill: $primary;
 
 // Prevent hover on mobile -----------------------------------------------------
     @include mq(mobile) {
-      animation: none!important;
       fill: $black!important;
-      width: $icon!important;
     }
   }
 // -----------------------------------------------------------------------------
@@ -134,7 +107,7 @@
 
 // Prevent hover on mobile -----------------------------------------------------
       @include mq(mobile) {
-        fill: $white!important;
+        fill: $black!important;
 
         &:nth-child(odd) {animation: cross-l .666s ease-out forwards!important;}
 
