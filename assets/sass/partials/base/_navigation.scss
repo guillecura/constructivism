@@ -1,0 +1,36 @@
+// =============================================================================
+// HEADER STYLES
+// =============================================================================
+
+
+// General properties
+// -----------------------------------------------------------------------------
+.main-nav {
+  animation: header-in .333s ease-out forwards; // Slide In animation
+  background-color: $white;
+  height: $header-height;
+  left: 50%;
+  max-width: $site-box;
+  padding: 0 $distance * 3;
+  position: fixed;
+  top: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: $z-top;
+
+  @include mq(mobile) {
+    padding: 0 $distance * 1.5;
+  }
+
+
+// Blog name and page title ----------------------------------------------------
+  .page-title {
+    display: inline-block;
+    font-size: $fh5;
+    font-weight: $medium;
+    line-height: $header-height;
+    width: auto;
+  }
+// -----------------------------------------------------------------------------
+}
+// -----------------------------------------------------------------------------

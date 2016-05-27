@@ -1,0 +1,41 @@
+// =============================================================================
+// POST SHARE STYLES
+// =============================================================================
+
+
+// Social Icon
+// -----------------------------------------------------------------------------
+%social-icon {
+  @include inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 0;
+  height: $icon;
+  transform-origin: center;
+  transition: transform .1s ease-out;
+  width: $icon;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:hover {
+    transform: scale(.9);
+  }
+
+
+// Icon images -----------------------------------------------------------------
+  $list: twitter facebook google-plus;
+
+  @each $link in $list {
+    &[class='icon-#{$link}'] {
+      background-image: url('../img/icon-#{$link}.svg');
+    }
+  }
+// -----------------------------------------------------------------------------
+}
+// -----------------------------------------------------------------------------

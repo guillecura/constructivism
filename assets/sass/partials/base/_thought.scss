@@ -1,0 +1,80 @@
+// =============================================================================
+// SINGLE THOUGHT STYLES
+// =============================================================================
+
+
+// Define styles
+// -----------------------------------------------------------------------------
+%thought {
+  max-width: $post-box;
+  padding: $distance * 3 0;
+  width: 100%;
+
+  + .thought::before {
+    border-top: $border solid $black;
+    content: '';
+    display: block;
+    margin: $distance auto $distance * 4;
+    width: 10%;
+  }
+
+  &:last-of-type {
+    margin-bottom: $distance * 5;
+  }
+
+  .post-header {
+    margin-bottom: $distance * 2;
+    text-align: center;
+  }
+
+
+// Date ------------------------------------------------------------------------
+  .post-title {
+    line-height: $line-height;
+  }
+// -----------------------------------------------------------------------------
+
+
+// Date ------------------------------------------------------------------------
+  .post-date {
+    font-size: $ftiny;
+    font-weight: $light;
+    line-height: $line-height;
+  }
+// -----------------------------------------------------------------------------
+
+
+// Expert ----------------------------------------------------------------------
+  .post-excerpt {
+    p {
+      font-size: $fsmall;
+    }
+
+    span {
+      float: left;
+      font-size: $ftiny;
+      margin: $distance 0;
+    }
+
+    [class*='tag-'] {
+      // scss-lint:disable NestingDepth
+      font-weight: $light;
+
+      &::after {
+        content: ', ';
+      }
+
+      &:last-of-type::after {
+        display: none;
+      }
+    }
+
+    .read-more {
+      float: right;
+      font-size: $ftiny;
+      margin: $distance 0;
+    }
+  }
+// -----------------------------------------------------------------------------
+}
+// -----------------------------------------------------------------------------

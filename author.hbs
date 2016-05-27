@@ -1,0 +1,21 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+
+{{! Everything inside the #author tags pulls data from the author }}
+{{#author}}
+  <main class="content" role="main">
+    <section class="author-profile">
+      {{#if image}}
+        <figure class="author-image">
+          <div class="img" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
+        </figure>
+      {{/if}}
+
+      {{#if bio}}
+        <p class="author-bio">{{bio}}</p>
+      {{/if}}
+    </section>
+  </main>
+{{/author}}

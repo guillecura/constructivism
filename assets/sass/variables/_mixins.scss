@@ -1,0 +1,46 @@
+// =============================================================================
+// MIXINS
+// =============================================================================
+
+
+// Position & Alignment
+// -----------------------------------------------------------------------------
+// Vertical Center (Needs a parent without position: static)
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+// -----------------------------------------------------------------------------
+
+
+// Inline / block hotfix
+// -----------------------------------------------------------------------------
+// Inline-Block
+@mixin inline-block {
+  display: inline-block;
+  margin-right: -5px;
+  vertical-align: top;
+}
+
+
+// Block
+@mixin block {
+  display: block;
+  margin-right: auto;
+}
+// -----------------------------------------------------------------------------
+
+
+// Media Queries
+// -----------------------------------------------------------------------------
+@mixin mq($point) {
+  @if $point == hd {
+    @media (min-width: 1660px) { @content; }
+  } @else if $point == desktop {
+    @media (max-width: 1280px) { @content; }
+  } @else if $point == mobile {
+    @media (max-width: 640px)  { @content; }
+  }
+}
+// -----------------------------------------------------------------------------

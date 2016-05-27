@@ -1,0 +1,22 @@
+// =============================================================================
+// HOME PAGE STYLES
+// =============================================================================
+
+
+// General
+// -----------------------------------------------------------------------------
+.home-content {
+  animation: op-in .999s ease-out forwards; // Opacity In animation
+  min-height: $section-height;
+  padding: $distance * 1.5 0;
+}
+
+.home-cases + .home-posts {
+  margin-top: $distance * 3;
+}
+
+.home-cases,
+.home-posts {
+  min-height: 50vh;
+}
+// -----------------------------------------------------------------------------

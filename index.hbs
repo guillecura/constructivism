@@ -1,0 +1,43 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+{{#if @blog.cover}}
+  <header class="hero-section" style="background-image: url({{@blog.cover}})"></header>
+{{else}}
+  <header class="hero-section no-cover">
+    <div class="main-header-content">
+      {{#if @blog.logo}}
+        <figure class="page-logo" style="background-image: url('{{@blog.logo}}');">
+          <img src="{{@blog.logo}}" alt="{{@blog.title}}" width="0" height="0"/>
+        </figure>
+      {{/if}}
+      {{#if @blog.description}}
+        <h3 class="page-description">{{@blog.description}}</h3>
+      {{/if}}
+    </div>
+  </header>
+{{/if}}
+
+{{! The main content area on the homepage }}
+<main id="content" class="home-content" role="main">
+
+  {{#get "posts" filter="featured:true" order="published_at" include="tags" as |featured|}}
+    {{! The tag below includes the post loop - partials/home-project.hbs }}
+    <section class="home-cases">
+      {{#foreach featured}}
+        {{#has tag="portfolio"}}{{> "home-project"}}{{/has}}
+      {{/foreach}}
+    </section>
+
+    {{! The tag below includes the post loop - partials/home-thought.hbs }}
+    <section class="home-posts">
+      {{#foreach featured}}
+        {{#has tag="thoughts"}}{{> "home-thought"}}{{/has}}
+      {{/foreach}}
+    </section>
+  {{else}}
+    <p>No featured posts yet!</p>
+  {{/get}}
+
+</main>

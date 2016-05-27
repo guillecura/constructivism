@@ -1,0 +1,22 @@
+// =============================================================================
+// SITE BUTTONS STYLES
+// =============================================================================
+
+
+// Basic
+// -----------------------------------------------------------------------------
+.button {
+  border: $border solid $black;
+  color: $black;
+  display: inline-block;
+  font-weight: $medium;
+  height: $button-height;
+  line-height: $button-height;
+  padding: 0 $distance * 2;
+  transition: color 150ms ease-out, border-color 150ms ease-out;
+
+  &:hover {
+    border-color: $primary;
+  }
+}
+// -----------------------------------------------------------------------------

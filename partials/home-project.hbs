@@ -1,0 +1,11 @@
+{{! This is the post loop - each post will be output using this markup }}
+<article class="{{post_class}} case-study">
+    <section>
+        <h3 class="post-title"><a href="{{url}}">{{{title}}}</a></h3>
+        <span>Go to {{tags from="2"}} &raquo;</span>
+    </section>
+
+  <a href="{{url}}"{{#if image}} style="background-image: url('{{image}}');"{{/if}}>
+    {{#if image}}<img src="{{image}}" width="0" height="0"/>{{/if}}
+  </a>
+</article>

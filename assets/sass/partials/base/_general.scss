@@ -1,0 +1,60 @@
+// =============================================================================
+// GENERAL STYLES
+// =============================================================================
+
+
+// Layout
+// -----------------------------------------------------------------------------
+// General ---------------------------------------------------------------------
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+::selection {
+  background-color: rgba($primary, .5);
+}
+// -----------------------------------------------------------------------------
+
+
+// HTML ------------------------------------------------------------------------
+html {
+  // background-color: $white;
+  font-size: $font-size; // default rem size = $font-size
+}
+// -----------------------------------------------------------------------------
+
+
+// Body properties -------------------------------------------------------------
+body {
+  background-color: $white;
+  // Font rendering
+  font-family: $primary-font;
+  font-feature-settings: 'kern';
+  font-kerning: normal;
+  font-smooth: always; // scss-lint:disable PropertySpelling
+  font-smoothing: antialiased;
+  font-variant-ligatures: common-ligatures;
+  font-weight: $regular;
+  text-rendering: optimizeLegibility;
+
+  &.nav-opened {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+}
+// -----------------------------------------------------------------------------
+
+
+// Site wrapper ----------------------------------------------------------------
+.site-wrapper {
+  margin-top: $header-height;
+  max-width: $site-box;
+  min-height: $site-height;
+  padding: $distance * 1.5;
+  padding-top: 0;
+  width: 100%;
+}
+// -----------------------------------------------------------------------------

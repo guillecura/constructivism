@@ -1,0 +1,27 @@
+{{! This is the post loop - each post will be output using this markup }}
+<section>
+  {{#foreach posts}}
+    {{#has tag="thoughts"}}
+      <article class="{{post_class}} thought">
+          <header class="post-header">
+            <h3 class="post-title"><a href="{{url}}">{{{title}}}</a></h3>
+            <section class="post-meta">
+              <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+            </section>
+          </header>
+
+          <section class="post-excerpt">
+              <p>{{excerpt words="44"}}</p>
+              {{#if tags}}
+                <span>Tags:
+                  {{#foreach tags from="2"}}
+                    <a href="{{url}}" title="{{name}}" class="tag-{{id}}">{{name}}</a>
+                  {{/foreach}}
+                </span>
+              {{/if}}
+              <a class="read-more" href="{{url}}">Read more &raquo;</a>
+          </section>
+      </article>
+    {{/has}}
+  {{/foreach}}
+</section>

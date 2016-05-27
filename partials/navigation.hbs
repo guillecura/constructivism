@@ -1,0 +1,10 @@
+{{#if @blog.navigation}}
+  <div class="nav">
+    <ul>
+      {{#foreach navigation}}
+        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+      {{/foreach}}
+    </ul>
+  </div>
+  {{!<span class="nav-cover"></span>}}
+{{/if}}

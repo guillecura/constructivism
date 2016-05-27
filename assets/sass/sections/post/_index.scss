@@ -1,0 +1,109 @@
+// =============================================================================
+// THOUGHT POST STYLES
+// =============================================================================
+
+
+// General
+// -----------------------------------------------------------------------------
+.post-template:not(.page-template) {
+  .main-nav {
+    display: none;
+  }
+
+  .main-header {
+    animation: blured-out .999s ease-out forwards; // Blur out animation
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    min-height: 450px;
+
+    &.no-cover {
+      height: $header-height + $distance * 2;
+      min-height: auto;
+    }
+  }
+
+  .site-wrapper {
+    margin: 0;
+    max-width: 100vw;
+    min-height: $post-height;
+    padding: 0;
+  }
+
+  .content {
+    animation: op-in .999s ease-out forwards; // Opacity In animation
+    max-width: $site-box;
+    padding: $distance * 1.5;
+    padding-bottom: $distance * 5;
+  }
+
+
+// Thought Post style
+// -----------------------------------------------------------------------------
+  article {
+    @extend %thought;
+
+    .post-header {
+      text-align: left;
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Post Footer
+// -----------------------------------------------------------------------------
+  .post-content + .post-footer {
+    margin-top: $distance * 3;
+  }
+
+  .author,
+  .share {
+    @include inline-block;
+    margin-top: $distance * 3;
+    width: 50%;
+  }
+
+// Author ----------------------------------------------------------------------
+  .author {
+    .author-image {
+      @extend %auth-image;
+      @include inline-block;
+    }
+
+    .author-name {
+      @extend %auth-name;
+      @include inline-block;
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Share -----------------------------------------------------------------------
+  .share {
+    text-align: right;
+
+    > span {
+      font-size: $ftiny;
+      font-weight: $light;
+      line-height: $auth-image;
+      margin-right: $distance;
+
+      @include mq(mobile) {
+        display: block;
+        line-height: $auth-image / 2;
+      }
+    }
+
+    > a[class*='icon-'] { // scss-lint:disable QualifyingElement
+      @extend %social-icon;
+      margin-top: #{($auth-image - $icon) / 2};
+
+      @include mq(mobile) {
+        margin-top: 0;
+      }
+    }
+  }
+// -----------------------------------------------------------------------------
+}
+// -----------------------------------------------------------------------------

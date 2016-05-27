@@ -1,0 +1,10 @@
+{{! This is the post loop - each post will be output using this markup }}
+<article class="{{post_class}} thought">
+  <header class="post-header">
+    <h3 class="post-title"><a href="{{url}}">{{{title}}}</a></h3>
+  </header>
+
+  <section class="post-excerpt">
+    <p>{{excerpt words="50"}}...</p>
+  </section>
+</article>

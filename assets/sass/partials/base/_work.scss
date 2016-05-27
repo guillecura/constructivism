@@ -1,0 +1,74 @@
+// =============================================================================
+// HOME PAGE CASE-STUDY BLOCK
+// =============================================================================
+
+
+// Case Study box
+// -----------------------------------------------------------------------------
+.work-sample {
+  @include inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: $case-size;
+  margin-left: $distance * 1.5;
+  max-height: #{(($site-box - ($distance * 3)) / 3) - $distance};
+  max-width: #{(($site-box - ($distance * 3)) / 3) - $distance};
+  padding: $distance * 2;
+  position: relative;
+  width: $case-size;
+
+  @include mq(mobile) {
+    height: $case-size-small;
+    margin-left: auto;
+    width: $case-size-small;
+  }
+
+  &:nth-child(3n-2) {
+    margin-left: 0;
+
+    @include mq(mobile) {
+      margin-left: auto;
+    }
+  }
+
+  &:nth-child(2n) {
+    @include mq(mobile) {
+      margin-left: $distance * 1.5;
+    }
+  }
+
+  > a > figure {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  > a > section {
+    background-color: $white;
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .post-title {
+    font-weight: $regular;
+    height: $footer-height;
+    line-height: $footer-height;
+    text-align: center;
+
+    @include mq(mobile) {
+      font-size: $ftiny;
+    }
+  }
+}
+// -----------------------------------------------------------------------------

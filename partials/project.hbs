@@ -1,0 +1,18 @@
+{{! This is the post work - each post will be output using this markup }}
+<section>
+  {{#foreach posts}}
+    {{#has tag="portfolio"}}
+      <article class="{{post_class}} work-sample">
+        <a href="{{url}}">
+          <figure{{#if image}} style="background-image: url('{{image}}');"{{/if}}>
+            {{#if image}}<img src="{{image}}" width="0" height="0"/>{{/if}}
+          </figure>
+
+          <section>
+              <h6 class="post-title">{{{title}}}</h6>
+          </section>
+        </a>
+      </article>
+    {{/has}}
+  {{/foreach}}
+</section>

@@ -1,0 +1,21 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+<nav class="main-nav">
+  <h1 class="page-title"><a href="{{@blog.url}}">{{#if @blog.title}}{{@blog.title}}{{else}}Blog name!{{/if}}</a></h1>
+  <span>· {{tag.name}}</span>
+</nav>
+
+{{! If we have a tag cover, display that - else blog cover - else nothing }}
+<header class="tag-head {{#if tag.image}}" style="background-image: url({{tag.image}}){{else}}no-cover{{/if}}">
+  {{#if tag.description}}
+    <h3 class="page-description">{{tag.description}}</h3>
+  {{/if}}
+</header>
+
+{{! The main content area on the homepage }}
+<main class="tag-content" role="main">
+
+  {{! The tag below includes the post work - partials/work.hbs }}
+  {{> "project"}}
+
+</main>

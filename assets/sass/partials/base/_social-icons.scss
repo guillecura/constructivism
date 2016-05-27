@@ -1,0 +1,48 @@
+// =============================================================================
+// SITE SOCIAL ICONS
+// =============================================================================
+
+
+// General
+// -----------------------------------------------------------------------------
+.social-links {
+  list-style: none;
+
+  > li {
+    display: inline-block;
+    font-size: 0;
+    height: $icon * 2;
+    width: $icon * 2;
+
+    @include mq(mobile) {
+      height: $icon * 1.5;
+      width: $icon * 1.5;
+    }
+
+    + li {
+      margin-left: $distance;
+    }
+  }
+
+  a {
+    display: block;
+    font-size: 0;
+    height: 100%;
+    transform-origin: center;
+    transition: transform .1s ease-out;
+    width: 100%;
+
+    &:hover {
+      transform: scale(.9);
+    }
+  }
+}
+
+$list: facebook github googleplus instagram linkedin share twitter dribbble;
+
+@each $link in $list {
+  a[class='#{$link}'] {
+    background-image: url('../img/icon-#{$link}.svg');
+  }
+}
+// -----------------------------------------------------------------------------

@@ -1,0 +1,32 @@
+// =============================================================================
+// RELATED POSTS STYLES
+// =============================================================================
+
+// General
+// -----------------------------------------------------------------------------
+.related-posts {
+  @include inline-block;
+  margin-top: $distance * 3;
+  width: 50%;
+
+  > span {
+    display: block;
+    font-size: $ftiny;
+    font-weight: $light;
+    line-height: $auth-image / 2;
+  }
+
+  > a {
+    font-size: $ftiny;
+    line-height: $auth-image / 2;
+
+    &::after {
+      content: ', ';
+    }
+
+    &:last-of-type::after {
+      content: '';
+    }
+  }
+}
+// -----------------------------------------------------------------------------
