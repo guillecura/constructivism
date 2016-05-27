@@ -7,10 +7,15 @@
 // No Meat Hamburger Icon SVG
 // -----------------------------------------------------------------------------
 .menu-box {
+  animation: none!important;
   border: $line * 2 solid $primary;
-  max-width: 300px;
   padding: $distance * 1.5;
-  width: calc(33.33% - #{$distance * 5});
+  width: 300px;
+
+  &.left {
+    margin-left: 0;
+    text-align: left;
+  }
 
   &.right {
     margin-right: 0;

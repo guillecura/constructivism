@@ -12,8 +12,8 @@
   background-size: cover;
   height: $case-size;
   margin-left: $distance * 1.5;
-  max-height: #{(($site-box - ($distance * 3)) / 3) - $distance};
-  max-width: #{(($site-box - ($distance * 3)) / 3) - $distance};
+  max-height: #{(($site-box - ($distance * 4)) / 4) - $distance};
+  max-width: #{(($site-box - ($distance * 4)) / 4) - $distance};
   padding: $distance * 2;
   position: relative;
   width: $case-size;

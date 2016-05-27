@@ -59,6 +59,11 @@
   position: relative;
   width: 100%;
 
+  &.no-cover {
+    height: 0;
+    min-height: 0;
+  }
+
 // Page logo -------------------------------------------------------------------
   > .page-logo {
     animation: item-in .666s ease-out forwards; // Slide In animation
@@ -79,7 +84,6 @@
 
 
 // Page Description ------------------------------------------------------------
-
   > .page-description {
     @include vertical-center;
     animation: item-in .666s ease-out forwards; // Slide In animation

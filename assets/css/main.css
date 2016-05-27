@@ -227,6 +227,10 @@ body {
   min-height: 120px;
   position: relative;
   width: 100%; }
+  .tag-head.no-cover,
+  .contact-head.no-cover {
+    height: 0;
+    min-height: 0; }
   .tag-head > .page-logo,
   .contact-head > .page-logo {
     animation: item-in .666s ease-out forwards;
@@ -258,10 +262,13 @@ body {
         font-size: 1rem; } }
 
 .menu-box {
+  animation: none !important;
   border: 6px solid #f03246;
-  max-width: 300px;
   padding: 15px;
-  width: calc(33.33% - 50px); }
+  width: 300px; }
+  .menu-box.left {
+    margin-left: 0;
+    text-align: left; }
   .menu-box.right {
     margin-right: 0;
     text-align: right; }
@@ -393,7 +400,7 @@ body > .nav {
     font-weight: 700;
     line-height: 5rem; }
 
-.nav-opened .nav {
+.nav-opened > .nav {
   animation: menu-in .333s ease-out forwards;
   pointer-events: all; }
 
@@ -727,8 +734,8 @@ h6 {
   background-size: cover;
   height: calc(50vw - 10px);
   margin-left: 15px;
-  max-height: 406.66667px;
-  max-width: 406.66667px;
+  max-height: 300px;
+  max-width: 300px;
   padding: 20px;
   position: relative;
   width: calc(50vw - 10px); }
@@ -996,6 +1003,20 @@ h6 {
       .post-template:not(.page-template) .share > a[class*='icon-'] {
         margin-top: 0; } }
 
+.tag-aside {
+  display: inline-block;
+  margin-right: -5px;
+  vertical-align: top;
+  width: 25%; }
+  .tag-aside .page-description {
+    margin-bottom: 15px;
+    padding: 15px;
+    padding-left: 0; }
+
 .tag-content {
+  display: inline-block;
+  margin-right: -5px;
+  vertical-align: top;
   animation: op-in .999s ease-out forwards;
-  min-height: 0; }
+  min-height: 0;
+  width: 75%; }

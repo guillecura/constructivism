@@ -20,13 +20,13 @@
 
           $(this).addClass("nav-close");
           $("body").toggleClass("nav-opened nav-closed");
-          $(".nav").removeClass("closed");
+          $("body > .nav").removeClass("closed");
 
         } else {
 
           $(this).removeClass("nav-close");
           $("body").toggleClass("nav-opened nav-closed");
-          $(".nav").addClass("closed");
+          $("body > .nav").addClass("closed");
 
         }
       });

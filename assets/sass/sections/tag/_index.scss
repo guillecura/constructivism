@@ -5,9 +5,22 @@
 
 // General
 // -----------------------------------------------------------------------------
+.tag-aside {
+  @include inline-block;
+  width: 25%;
+
+  .page-description {
+    margin-bottom: $distance *1.5;
+    padding: $distance * 1.5;
+    padding-left: 0;
+  }
+}
+
 .tag-content {
+  @include inline-block;
   animation: op-in .999s ease-out forwards; // Opacity In animation
   min-height: 0;
+  width: 75%;
 }
 // -----------------------------------------------------------------------------
 
