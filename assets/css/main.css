@@ -53,13 +53,14 @@
   padding: 0; }
 
 ::selection {
-  background-color: rgba(49, 180, 232, 0.5); }
+  background-color: rgba(255, 60, 60, 0.5); }
 
 html {
   font-size: 20px; }
 
 body {
   background-color: white;
+  color: #223347;
   font-family: "Fira Sans", sans-serif;
   font-feature-settings: 'kern';
   font-kerning: normal;
@@ -177,8 +178,8 @@ body {
     font-size: 0.7rem; }
 
 .button {
-  border: 3px solid black;
-  color: black;
+  border: 3px solid #223347;
+  color: #223347;
   display: inline-block;
   font-weight: 500;
   height: 60px;
@@ -186,16 +187,16 @@ body {
   padding: 0 20px;
   transition: color 150ms ease-out, border-color 150ms ease-out; }
   .button:hover {
-    border-color: #31b4e8; }
+    border-color: #ff3c3c; }
 
 .site-footer {
-  background-color: black;
+  background-color: #223347;
   height: 40px;
   position: relative;
   width: 100%; }
   .site-footer .copyright {
     bottom: 0;
-    color: #404040;
+    color: #4b719d;
     font-size: 0.7rem;
     line-height: 40px;
     position: absolute;
@@ -296,7 +297,7 @@ body {
     width: 100%; }
   .icon-menu rect {
     display: block;
-    fill: black;
+    fill: #223347;
     height: 3px;
     transform-origin: center;
     transition: fill 50ms ease-out, width 150ms ease-out, transform 150ms ease-out;
@@ -308,10 +309,10 @@ body {
       transform: translateY(21px);
       transition-delay: 100ms; }
   .icon-menu:hover rect {
-    fill: #31b4e8; }
+    fill: #ff3c3c; }
     @media (max-width: 640px) {
       .icon-menu:hover rect {
-        fill: black !important; } }
+        fill: #223347 !important; } }
   .icon-menu.nav-close {
     background-color: transparent; }
 
@@ -336,13 +337,13 @@ body {
       animation: cross-r .666s ease-out forwards; }
     @media (max-width: 640px) {
       .icon-menu.nav-close rect {
-        fill: black !important; }
+        fill: #223347 !important; }
         .icon-menu.nav-close rect:nth-child(odd) {
           animation: cross-l 0.666s ease-out forwards !important; }
         .icon-menu.nav-close rect:nth-child(even) {
           animation: cross-r 0.666s ease-out forwards !important; } }
   .icon-menu.nav-close:hover rect {
-    fill: #31b4e8;
+    fill: #ff3c3c;
     width: 32px; }
     @media (max-width: 640px) {
       .icon-menu.nav-close:hover rect {
@@ -351,7 +352,7 @@ body {
 .nav {
   background-color: white;
   bottom: 0;
-  color: black;
+  color: #223347;
   height: 100vh;
   left: 0;
   opacity: 0;
@@ -378,7 +379,7 @@ body {
       .nav > ul {
         padding: 0 30px; } }
   .nav .nav-title {
-    color: #404040;
+    color: #4b719d;
     font-size: 1.5rem;
     line-height: 1.48em;
     margin-bottom: 30px; }
@@ -393,7 +394,7 @@ body {
 
 .main-nav {
   animation: header-in .333s ease-out forwards;
-  border-bottom: 6px solid black;
+  border-bottom: 6px solid #223347;
   height: 80px;
   left: 50%;
   max-width: 1280px;
@@ -419,9 +420,9 @@ body {
   .post-content p + p {
     margin-top: 20px; }
   .post-content p a {
-    color: #31b4e8; }
+    color: #ff3c3c; }
     .post-content p a:hover {
-      color: #5fc5ed; }
+      color: #ff6f6f; }
 
 .post-content ol,
 .post-content ul {
@@ -516,10 +517,10 @@ pre[class*='language-'] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #179bcf; }
+  color: #ff0909; }
 
 .token.boolean {
-  color: #179bcf; }
+  color: #ff0909; }
 
 .token.number,
 .token.selector,
@@ -656,7 +657,7 @@ a[class='dribbble'] {
   padding: 30px 0;
   width: 100%; }
   .about-content > .post + .thought::before, .post-template:not(.page-template) article + .thought::before, article.thought + .thought::before {
-    border-top: 3px solid black;
+    border-top: 3px solid #223347;
     content: '';
     display: block;
     margin: 10px auto 40px;
@@ -696,7 +697,7 @@ a {
   transition: color 150ms ease-out; }
   span[tabindex='0']:hover,
   a:hover {
-    color: #179bcf; }
+    color: #ff0909; }
 
 h1 {
   font-size: 3rem; }
@@ -797,7 +798,7 @@ h6 {
       .contact-content > article {
         padding: 10px 0; } }
     .contact-content > article .button {
-      color: black;
+      color: #223347;
       margin: 20px auto; }
     .contact-content > article span {
       font-size: 0.85rem; }
@@ -813,7 +814,7 @@ h6 {
   position: relative;
   margin-top: calc(12rem + 30px); }
   .home-content::after {
-    background-color: #31b4e8;
+    background-color: #ff3c3c;
     bottom: 0;
     content: '';
     display: block;

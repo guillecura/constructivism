@@ -6,7 +6,7 @@
 // Main Palette
 // -----------------------------------------------------------------------------
 // Primary Color ---------------------------------------------------------------
-$primary:                 rgb(49, 180, 232);
+$primary:                 rgb(255, 60, 60);
 $primary-dark:            darken($primary, 10%);
 $primary-light:           lighten($primary, 10%);
 
@@ -36,7 +36,7 @@ $stone:                   rgb(76, 86, 94);
 $stone-light:             lighten($stone, 10%);
 $stone-dark:              darken($stone, 10%);
 
-$black:                   rgb(0, 0, 0);
+$black:                   rgb(34, 51, 71);
 $black-light:             lighten($black, 10%);
 // -----------------------------------------------------------------------------
 
