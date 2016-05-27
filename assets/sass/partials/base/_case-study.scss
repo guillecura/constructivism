@@ -11,8 +11,8 @@
   height: $case-size;
   margin-left: $distance * 1.5;
   margin-top: $distance * 1.5;
-  max-height: #{(($site-box - ($distance * 3)) / 2) - $distance};
-  max-width: #{(($site-box - ($distance * 3)) / 2) - $distance};
+  max-height: #{($site-box / 2) - $distance};
+  max-width: #{($site-box / 2) - $distance};
   position: relative;
   width: $case-size;
 
@@ -25,7 +25,12 @@
     width: $m-case-size;
   };
 
-  &:nth-child(3n-2) {
+  &:first-child {
+    @include block;
+    margin-left: 0;
+  }
+
+  &:nth-child(2) {
     margin-left: 0;
 
     @include mq(mobile) {
@@ -40,8 +45,17 @@
     background-size: cover;
     display: block;
     height: 100%;
+    transition: all 75ms;
     width: 100%;
     z-index: 0;
+
+    &:hover {
+      border: $distance solid $white;
+
+      @include mq(mobile) {
+        border: 0;
+      }
+    }
   }
 
   > section {

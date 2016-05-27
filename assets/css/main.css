@@ -70,8 +70,7 @@ body {
   text-rendering: optimizeLegibility; }
   body.nav-opened {
     height: 100vh;
-    overflow: hidden;
-    position: relative; }
+    overflow: hidden; }
 
 .site-wrapper {
   margin-top: 80px;
@@ -126,13 +125,13 @@ body {
   margin-right: -5px;
   vertical-align: top;
   animation: blured-out .999s ease-out forwards;
-  height: calc((100vw - 20px) / 2 - 10px);
+  height: calc(50vw - 10px);
   margin-left: 15px;
   margin-top: 15px;
-  max-height: 615px;
-  max-width: 615px;
+  max-height: 630px;
+  max-width: 630px;
   position: relative;
-  width: calc((100vw - 20px) / 2 - 10px); }
+  width: calc(50vw - 10px); }
   @media (max-width: 640px) {
     .case-study {
       display: block;
@@ -142,10 +141,14 @@ body {
       margin-left: auto;
       margin-top: auto;
       width: calc(100vw - 30px); } }
-  .case-study:nth-child(3n-2) {
+  .case-study:first-child {
+    display: block;
+    margin-right: auto;
+    margin-left: 0; }
+  .case-study:nth-child(2) {
     margin-left: 0; }
     @media (max-width: 640px) {
-      .case-study:nth-child(3n-2) {
+      .case-study:nth-child(2) {
         margin-left: auto;
         margin-top: 15px; } }
   .case-study > a {
@@ -154,8 +157,14 @@ body {
     background-size: cover;
     display: block;
     height: 100%;
+    transition: all 75ms;
     width: 100%;
     z-index: 0; }
+    .case-study > a:hover {
+      border: 10px solid white; }
+      @media (max-width: 640px) {
+        .case-study > a:hover {
+          border: 0; } }
   .case-study > section {
     background-color: white;
     bottom: 10px;
@@ -643,7 +652,7 @@ a[class='dribbble'] {
   background-image: url("../img/icon-dribbble.svg"); }
 
 .about-content > .post, .post-template:not(.page-template) article, article.thought {
-  max-width: 640px;
+  max-width: 850px;
   padding: 30px 0;
   width: 100%; }
   .about-content > .post + .thought::before, .post-template:not(.page-template) article + .thought::before, article.thought + .thought::before {
@@ -655,8 +664,7 @@ a[class='dribbble'] {
   .about-content > .post:last-of-type, .post-template:not(.page-template) article:last-of-type, article.thought:last-of-type {
     margin-bottom: 50px; }
   .about-content > .post .post-header, .post-template:not(.page-template) article .post-header, article.thought .post-header {
-    margin-bottom: 20px;
-    text-align: center; }
+    margin-bottom: 20px; }
   .about-content > .post .post-title, .post-template:not(.page-template) article .post-title, article.thought .post-title {
     line-height: 1.11em; }
   .about-content > .post .post-date, .post-template:not(.page-template) article .post-date, article.thought .post-date {
@@ -715,13 +723,13 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc((100vw - 20px) / 2 - 10px);
+  height: calc(50vw - 10px);
   margin-left: 15px;
   max-height: 406.66667px;
   max-width: 406.66667px;
   padding: 20px;
   position: relative;
-  width: calc((100vw - 20px) / 2 - 10px); }
+  width: calc(50vw - 10px); }
   @media (max-width: 640px) {
     .work-sample {
       height: calc((100vw - 30px) / 2 - 10px);
@@ -781,7 +789,7 @@ h6 {
     .contact-content {
       padding-top: 0; } }
   .contact-content > article {
-    max-width: 640px;
+    max-width: 850px;
     padding: 30px 0;
     text-align: center;
     width: 100%; }
@@ -803,37 +811,58 @@ h6 {
   animation: op-in .999s ease-out forwards;
   min-height: calc(100vh - 95px);
   position: relative;
-  top: calc(12rem + 30px); }
+  margin-top: calc(12rem + 30px); }
+  .home-content::after {
+    background-color: #31b4e8;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 20vh;
+    left: -5.5vw;
+    position: absolute;
+    transform: rotate(-45deg);
+    transform-origin: bottom left;
+    width: 200%;
+    z-index: -2; }
+  .home-content::before {
+    background-image: url("../img/dots-texture.png");
+    content: '';
+    height: calc(15rem + 150px);
+    left: 0;
+    position: absolute;
+    top: calc((12rem + 30px) * -1);
+    width: 66%;
+    z-index: -1; }
 
 .home-cases + .home-posts {
-  margin-top: 30px; }
+  margin-top: 50px; }
 
 .home-cases,
 .home-posts {
   min-height: 50vh; }
 
+.home-posts > .thought {
+  margin-right: 0;
+  width: 66.66%; }
+  @media (max-width: 1280px) {
+    .home-posts > .thought {
+      margin-right: 15px; } }
+
 .menu-widget {
   padding: 20px 0;
   position: absolute;
-  width: 100%; }
+  right: 0;
+  width: 50%;
+  z-index: 10000; }
   .menu-widget > ul {
     list-style: none;
     margin-right: 0;
     padding: 30px 15px 30px 45px;
-    width: 50%; }
+    width: 100%; }
     .menu-widget > ul li {
       font-size: 3rem;
       font-weight: 700;
       line-height: 1.11em; }
-  .menu-widget:before {
-    background-image: url("../img/dots-texture.png");
-    content: '';
-    left: 0;
-    min-height: 100%;
-    position: absolute;
-    top: 0;
-    width: 66%;
-    z-index: -1; }
 
 .post-template:not(.page-template) .main-nav {
   display: none; }

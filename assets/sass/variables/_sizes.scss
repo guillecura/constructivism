@@ -11,7 +11,7 @@ $icon:                       32px;
 $line:                       3px;
 $logo:                       150px;
 $z-top:                      10000;
-$post-box:                   640px;
+$post-box:                   850px;
 $site-box:                   1280px;
 // -----------------------------------------------------------------------------
 
@@ -51,7 +51,7 @@ $auth-profile:               150px;
 
 // Home page projects
 // -----------------------------------------------------------------------------
-$case-size:                  calc((100vw - #{$distance * 2}) / 2 - #{$distance});
+$case-size:                  calc(50vw - #{$distance});
 $case-size-small:            calc((100vw - #{$distance * 3}) / 2 - #{$distance});
 $m-case-size:                calc(100vw - #{$distance * 3});
 // -----------------------------------------------------------------------------
