@@ -7,7 +7,6 @@
 // No Meat Hamburger Icon SVG
 // -----------------------------------------------------------------------------
 .icon-menu {
-
 // General Styles --------------------------------------------------------------
   animation: menu-h-in .333s ease-out forwards; // Slide In animation
   appearance: none;
@@ -19,19 +18,18 @@
   outline: 0;
   padding: 0 $distance / 4;
   position: fixed;
-  right: calc(50% - #{($site-box / 2) - ($distance * 3)});
-  top: ($header-height - $icon) / 2;
+  right: calc(50% - #{($site-box / 2)});
+  top: (($header-height - $icon) / 2) + $distance;
   transform: translateZ(1px);
   width: #{$icon + $distance / 2};
   z-index: $z-top + 2; // over the nav menu
 
   @include mq(desktop) {
-    right: $distance * 3;
+    right: $distance * 1.5;
   }
 
   @include mq(mobile) {
     animation: menu-h-in .333s ease-out forwards!important; // Slide In animation
-    right: $distance * 1.5;
   }
 
   > svg {

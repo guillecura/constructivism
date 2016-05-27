@@ -39,7 +39,7 @@
   from {
     top: -80px; }
   to {
-    top: 24px; } }
+    top: 34px; } }
 
 @keyframes blured-out {
   from {
@@ -271,18 +271,17 @@ body {
   outline: 0;
   padding: 0 2.5px;
   position: fixed;
-  right: calc(50% - 610px);
-  top: 24px;
+  right: calc(50% - 640px);
+  top: 34px;
   transform: translateZ(1px);
   width: 37px;
   z-index: 10002; }
   @media (max-width: 1280px) {
     .icon-menu {
-      right: 30px; } }
+      right: 15px; } }
   @media (max-width: 640px) {
     .icon-menu {
-      animation: menu-h-in 0.333s ease-out forwards !important;
-      right: 15px; } }
+      animation: menu-h-in 0.333s ease-out forwards !important; } }
   .icon-menu > svg {
     display: block;
     height: 100%;
@@ -361,12 +360,15 @@ body {
     left: 50%;
     list-style: none;
     max-width: 1280px;
-    padding: 0 30px;
+    padding: 0 15px;
     position: absolute;
     text-align: right;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%; }
+    @media (max-width: 1280px) {
+      .nav > ul {
+        padding: 0 30px; } }
   .nav .nav-title {
     color: #404040;
     font-size: 1.5rem;
@@ -383,24 +385,25 @@ body {
 
 .main-nav {
   animation: header-in .333s ease-out forwards;
-  background-color: white;
+  border-bottom: 6px solid black;
   height: 80px;
   left: 50%;
   max-width: 1280px;
-  padding: 0 30px;
+  padding: 0;
   position: fixed;
   top: 0;
   transform: translateX(-50%);
   width: 100%;
   z-index: 10000; }
-  @media (max-width: 640px) {
+  @media (max-width: 1280px) {
     .main-nav {
       padding: 0 15px; } }
   .main-nav .page-title {
     display: inline-block;
     font-size: 1rem;
     font-weight: 500;
-    line-height: 80px;
+    line-height: 60px;
+    margin-top: 20px;
     width: auto; }
 
 .post-content p {

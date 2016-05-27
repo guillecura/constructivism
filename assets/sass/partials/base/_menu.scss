@@ -37,12 +37,16 @@
     left: 50%;
     list-style: none;
     max-width: $site-box;
-    padding: 0 $distance * 3;
+    padding: 0 $distance * 1.5;
     position: absolute;
     text-align: right;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+
+    @include mq(desktop) {
+      padding: 0 $distance * 3;
+    }
   }
 
 
