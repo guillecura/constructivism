@@ -8,7 +8,8 @@
 .home-content {
   animation: op-in .999s ease-out forwards; // Opacity In animation
   min-height: $section-height;
-  padding: $distance * 1.5 0;
+  position: relative;
+  top: calc(#{$fh1 * 4} + #{$distance * 3});
 }
 
 .home-cases + .home-posts {
@@ -20,9 +21,11 @@
   min-height: 50vh;
 }
 
+
+// Menu ------------------------------------------------------------------------
 .menu-widget {
   padding: $distance * 2 0;
-  position: relative;
+  position: absolute;
   width: 100%;
 
   // Menu list

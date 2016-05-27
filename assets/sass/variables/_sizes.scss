@@ -51,7 +51,7 @@ $auth-profile:               150px;
 
 // Home page projects
 // -----------------------------------------------------------------------------
-$case-size:                  calc((100vw - #{$distance * 3}) / 3 - #{$distance});
+$case-size:                  calc((100vw - #{$distance * 2}) / 2 - #{$distance});
 $case-size-small:            calc((100vw - #{$distance * 3}) / 2 - #{$distance});
 $m-case-size:                calc(100vw - #{$distance * 3});
 // -----------------------------------------------------------------------------

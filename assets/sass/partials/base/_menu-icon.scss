@@ -17,7 +17,7 @@
   height: $icon;
   outline: 0;
   padding: 0 $distance / 4;
-  position: fixed;
+  position: absolute;
   right: calc(50% - #{($site-box / 2)});
   top: (($header-height - $icon) / 2) + $distance;
   transform: translateZ(1px);

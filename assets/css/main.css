@@ -126,13 +126,13 @@ body {
   margin-right: -5px;
   vertical-align: top;
   animation: blured-out .999s ease-out forwards;
-  height: calc((100vw - 30px) / 3 - 10px);
+  height: calc((100vw - 20px) / 2 - 10px);
   margin-left: 15px;
   margin-top: 15px;
-  max-height: 406.66667px;
-  max-width: 406.66667px;
+  max-height: 615px;
+  max-width: 615px;
   position: relative;
-  width: calc((100vw - 30px) / 3 - 10px); }
+  width: calc((100vw - 20px) / 2 - 10px); }
   @media (max-width: 640px) {
     .case-study {
       display: block;
@@ -269,7 +269,7 @@ body {
   height: 32px;
   outline: 0;
   padding: 0 2.5px;
-  position: fixed;
+  position: absolute;
   right: calc(50% - 640px);
   top: 34px;
   transform: translateZ(1px);
@@ -389,7 +389,7 @@ body {
   left: 50%;
   max-width: 1280px;
   padding: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
   transform: translateX(-50%);
   width: 100%;
@@ -715,13 +715,13 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc((100vw - 30px) / 3 - 10px);
+  height: calc((100vw - 20px) / 2 - 10px);
   margin-left: 15px;
   max-height: 406.66667px;
   max-width: 406.66667px;
   padding: 20px;
   position: relative;
-  width: calc((100vw - 30px) / 3 - 10px); }
+  width: calc((100vw - 20px) / 2 - 10px); }
   @media (max-width: 640px) {
     .work-sample {
       height: calc((100vw - 30px) / 2 - 10px);
@@ -802,7 +802,8 @@ h6 {
 .home-content {
   animation: op-in .999s ease-out forwards;
   min-height: calc(100vh - 95px);
-  padding: 15px 0; }
+  position: relative;
+  top: calc(12rem + 30px); }
 
 .home-cases + .home-posts {
   margin-top: 30px; }
@@ -813,7 +814,7 @@ h6 {
 
 .menu-widget {
   padding: 20px 0;
-  position: relative;
+  position: absolute;
   width: 100%; }
   .menu-widget > ul {
     list-style: none;
