@@ -32,15 +32,15 @@
 
 @keyframes header-in {
   from {
-    top: -80px; }
+    transform: translateY(-80px); }
   to {
-    top: 0; } }
+    transform: translateY(0); } }
 
 @keyframes menu-h-in {
   from {
-    top: -80px; }
+    transform: translateY(-80px); }
   to {
-    top: 34px; } }
+    transform: translateY(0); } }
 
 @keyframes blured-out {
   from {
@@ -78,6 +78,7 @@ body {
   max-width: 1280px;
   min-height: calc(100vh - 120px);
   overflow-x: hidden;
+  overflow-y: auto;
   padding-top: 30px;
   position: relative;
   width: 100%; }

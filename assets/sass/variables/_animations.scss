@@ -69,22 +69,22 @@
 // -----------------------------------------------------------------------------
 @keyframes header-in {
   from {
-    top: -$header-height;
+    transform: translateY(-#{$header-height});
   }
 
   to {
-    top: 0;
+    transform: translateY(0);
   }
 }
 
 
 @keyframes menu-h-in {
   from {
-    top: -$header-height;
+    transform: translateY(-#{$header-height});
   }
 
   to {
-    top: (($header-height - $icon) / 2) + $distance;
+    transform: translateY(0);
   }
 }
 // -----------------------------------------------------------------------------
