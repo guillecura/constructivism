@@ -19,7 +19,11 @@
   </header>
 {{/if}}
 
-{{> navigation-widget}}
+{{#if @blog.navigation}}
+  <figure class="menu-widget">
+    {{navigation}}
+  </figure>
+{{/if}}
 
 {{! The main content area on the homepage }}
 <main id="content" class="home-content" role="main">

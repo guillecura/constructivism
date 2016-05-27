@@ -67,7 +67,7 @@
   z-index: $z-top;
 
   // Menu list
-  > ul {
+  > .nav > ul {
     list-style: none;
     margin-right: 0;
     padding: $distance * 3 $distance * 1.5 $distance * 3 $distance * 4.5;

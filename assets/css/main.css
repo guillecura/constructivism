@@ -349,7 +349,7 @@ body {
       .icon-menu.nav-close:hover rect {
         fill: white !important; } }
 
-.nav {
+body > .nav {
   background-color: white;
   bottom: 0;
   color: #223347;
@@ -362,9 +362,9 @@ body {
   top: 0;
   width: 100%;
   z-index: 10001; }
-  .nav.closed {
+  body > .nav.closed {
     animation: menu-out .333s ease-in forwards; }
-  .nav > ul {
+  body > .nav > ul {
     display: block;
     left: 50%;
     list-style: none;
@@ -376,14 +376,14 @@ body {
     transform: translate(-50%, -50%);
     width: 100%; }
     @media (max-width: 1280px) {
-      .nav > ul {
+      body > .nav > ul {
         padding: 0 30px; } }
-  .nav .nav-title {
+  body > .nav .nav-title {
     color: #4b719d;
     font-size: 1.5rem;
     line-height: 1.48em;
     margin-bottom: 30px; }
-  .nav li {
+  body > .nav li {
     font-size: 4rem;
     font-weight: 700;
     line-height: 5rem; }
@@ -855,12 +855,12 @@ h6 {
   right: 0;
   width: 50%;
   z-index: 10000; }
-  .menu-widget > ul {
+  .menu-widget > .nav > ul {
     list-style: none;
     margin-right: 0;
     padding: 30px 15px 30px 45px;
     width: 100%; }
-    .menu-widget > ul li {
+    .menu-widget > .nav > ul li {
       font-size: 3rem;
       font-weight: 700;
       line-height: 1.11em; }
