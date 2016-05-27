@@ -8,10 +8,9 @@
 // Nav block
 // -----------------------------------------------------------------------------
 .nav {
-  background-color: $black;
-  border: $distance solid $white;
+  background-color: $white;
   bottom: 0;
-  color: $white;
+  color: $black;
   height: $menu-height;
   left: 0;
   opacity: 0;
@@ -34,9 +33,15 @@
 // Main content
 // -----------------------------------------------------------------------------
   > ul {
-    @include vertical-center;
     display: block;
-    text-align: center;
+    left: 50%;
+    list-style: none;
+    max-width: $site-box;
+    padding: 0 $distance * 3;
+    position: absolute;
+    text-align: right;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
   }
 
@@ -50,8 +55,9 @@
   }
 
   li {
-    font-size: $fh1;
-    line-height: $line-height-big;
+    font-size: $fh0;
+    font-weight: $bold;
+    line-height: $fh0 * 1.25;
   }
 // -----------------------------------------------------------------------------
 }

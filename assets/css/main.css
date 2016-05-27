@@ -353,8 +353,6 @@ body {
       width: 32px !important; } }
   .icon-menu.nav-close {
     background-color: transparent; }
-    .icon-menu.nav-close rect {
-      fill: white; }
 
 @keyframes cross-l {
   0% {
@@ -371,17 +369,17 @@ body {
     transform: translateY(14.5px) rotate(45deg); }
   100% {
     transform: translateY(14.5px) rotate(45deg); } }
-      .icon-menu.nav-close rect:nth-child(odd) {
-        animation: cross-l .666s ease-out forwards; }
-      .icon-menu.nav-close rect:nth-child(even) {
-        animation: cross-r .666s ease-out forwards; }
-      @media (max-width: 640px) {
-        .icon-menu.nav-close rect {
-          fill: white !important; }
-          .icon-menu.nav-close rect:nth-child(odd) {
-            animation: cross-l 0.666s ease-out forwards !important; }
-          .icon-menu.nav-close rect:nth-child(even) {
-            animation: cross-r 0.666s ease-out forwards !important; } }
+    .icon-menu.nav-close rect:nth-child(odd) {
+      animation: cross-l .666s ease-out forwards; }
+    .icon-menu.nav-close rect:nth-child(even) {
+      animation: cross-r .666s ease-out forwards; }
+    @media (max-width: 640px) {
+      .icon-menu.nav-close rect {
+        fill: white !important; }
+        .icon-menu.nav-close rect:nth-child(odd) {
+          animation: cross-l 0.666s ease-out forwards !important; }
+        .icon-menu.nav-close rect:nth-child(even) {
+          animation: cross-r 0.666s ease-out forwards !important; } }
   .icon-menu.nav-close:hover rect {
     fill: #31b4e8;
     width: 32px; }
@@ -390,10 +388,9 @@ body {
         fill: white !important; } }
 
 .nav {
-  background-color: black;
-  border: 10px solid white;
+  background-color: white;
   bottom: 0;
-  color: white;
+  color: black;
   height: 100vh;
   left: 0;
   opacity: 0;
@@ -406,11 +403,15 @@ body {
   .nav.closed {
     animation: menu-out .333s ease-in forwards; }
   .nav > ul {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     display: block;
-    text-align: center;
+    left: 50%;
+    list-style: none;
+    max-width: 1280px;
+    padding: 0 30px;
+    position: absolute;
+    text-align: right;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 100%; }
   .nav .nav-title {
     color: #404040;
@@ -418,8 +419,9 @@ body {
     line-height: 1.48em;
     margin-bottom: 30px; }
   .nav li {
-    font-size: 3rem;
-    line-height: 1.48em; }
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 5rem; }
 
 .nav-opened .nav {
   animation: menu-in .333s ease-out forwards;
