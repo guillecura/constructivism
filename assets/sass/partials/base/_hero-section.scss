@@ -9,7 +9,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  height: $section-height;
+  height: $site-height;
+  max-height: $site-box / 1.2;
   min-height: $hero-min-height;
   position: relative;
 

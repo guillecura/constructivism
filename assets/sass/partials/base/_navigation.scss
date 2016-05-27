@@ -9,12 +9,8 @@
   animation: header-in .333s ease-out forwards; // Slide In animation
   border-bottom: $line * 2 solid $black;
   height: $header-height;
-  left: 50%;
   max-width: $site-box;
   padding: 0;
-  position: absolute;
-  top: 0;
-  transform: translateX(-50%);
   width: 100%;
   z-index: $z-top;
 

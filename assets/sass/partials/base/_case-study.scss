@@ -16,6 +16,14 @@
   position: relative;
   width: $case-size;
 
+  &:hover {
+    border: $border * 2 solid $white;
+
+    @include mq(mobile) {
+      border: 0;
+    }
+  }
+
   @include mq(mobile) {
     @include block;
     height: $m-case-size;
@@ -48,21 +56,13 @@
     transition: all 75ms;
     width: 100%;
     z-index: 0;
-
-    &:hover {
-      border: $distance solid $white;
-
-      @include mq(mobile) {
-        border: 0;
-      }
-    }
   }
 
   > section {
     background-color: $white;
-    bottom: $distance;
+    bottom: $distance * 1;
     display: block;
-    left: $distance;
+    left: $distance * 1;
     padding: 0 $distance * 1.5;
     position: absolute;
     z-index: 1;

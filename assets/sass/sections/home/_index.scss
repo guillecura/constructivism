@@ -9,7 +9,7 @@
   animation: op-in .999s ease-out forwards; // Opacity In animation
   min-height: $section-height;
   position: relative;
-  margin-top: calc(#{$fh1 * 4} + #{$distance * 3});
+  margin-top: calc(#{$fh1 * 3} + #{$distance * 3});
 
   // Stripe
   &::after {
@@ -17,7 +17,7 @@
     bottom: 0;
     content: '';
     display: block;
-    height: 20vh;
+    height: 15vh;
     left: -5.5vw;
     position: absolute;
     transform: rotate(-45deg);
@@ -33,8 +33,8 @@
     height: calc(#{$fh1 * 5} + #{$distance * 15});
     left: 0;
     position: absolute;
-    top: calc((#{$fh1 * 4} + #{$distance * 3}) * -1);
-    width: 66%;
+    top: calc((#{$fh1 * 3} + #{$distance * 3}) * -1);
+    width: 66.66%;
     z-index: -1;
   }
 }
@@ -48,7 +48,7 @@
   min-height: 50vh;
 }
 
-.home-posts > .thought{
+.home-posts > .thought {
   margin-right: 0;
   width: 66.66%;
 
@@ -70,13 +70,16 @@
   > .nav > ul {
     list-style: none;
     margin-right: 0;
-    padding: $distance * 3 $distance * 1.5 $distance * 3 $distance * 4.5;
+    padding: $distance * 3 $distance * 1.5 $distance * 3;
+    text-align: center;
     width: 100%;
 
     li {
-      font-size: $fh1;
+      font-size: $fh1 * 1.1;
       font-weight: $bold;
       line-height: $line-height;
+      text-align: left;
+      width: 66.66%;
     }
   }
 }

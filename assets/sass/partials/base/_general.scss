@@ -50,10 +50,11 @@ body {
 
 // Site wrapper ----------------------------------------------------------------
 .site-wrapper {
-  margin-top: $header-height;
   max-width: $site-box;
   min-height: $site-height;
-  padding-top: 0;
+  overflow-x: hidden;
+  padding-top: $distance * 3;
+  position: relative;
   width: 100%;
 }
 // -----------------------------------------------------------------------------

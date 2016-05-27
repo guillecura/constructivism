@@ -10,7 +10,9 @@
 
   > .post {
     @extend %thought;
+    margin-left: 0;
     text-align: left;
+    width: 66.66%;
   }
 }
 
@@ -21,7 +23,24 @@
 // Author Image
 // -----------------------------------------------------------------------------
   .author-image {
-    @extend %auth-picture;
+    animation: blured-out .999s ease-out forwards; // Blur out animation
+    font-size: 0;
+    height: 66.66vw;
+    margin-left: 0;
+    max-height: $post-box;
+    max-width: $post-box;
+    overflow: hidden;
+    width: 66.66vw;
+
+    > .img {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      font-size: 0;
+      height: 100%;
+      width: 100%;
+    }
   }
 // -----------------------------------------------------------------------------
 

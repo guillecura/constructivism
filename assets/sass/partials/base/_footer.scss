@@ -6,6 +6,8 @@
 // Base Styles
 // -----------------------------------------------------------------------------
 .site-footer {
+  $black: rgb(0,0,0);
+
   background-color: $black;
   height: $footer-height;
   position: relative;
