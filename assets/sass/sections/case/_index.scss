@@ -5,19 +5,70 @@
 
 // General
 // -----------------------------------------------------------------------------
-.post-template:not(.page-template) {
+.post-template.tag-portfolio:not(.page-template) {
+  .post-heading {
+    max-width: $site-box;
+    padding-top: $distance * 3;
+  }
+
+  .main-date {
+    @include inline-block;
+    font-size: 3.75rem;
+    font-weight: $bold;
+    height: 50vh;
+    line-height: 1em;
+    min-height: 500px;
+    position: relative;
+    width: 33.33%;
+
+    &::before {
+      border-bottom: $distance solid $primary;
+      border-right: $distance solid $primary;
+      content: '';
+      height: calc(100% - #{$distance * 4});
+      left: 0;
+      position: absolute;
+      top: $distance * 3;
+      width: calc(100% - #{$distance * 5});
+    }
+
+    &::after {
+      background-color: $black;
+      content: '';
+      bottom: calc(3.75rem + #{$distance * 3});
+      height: 1px;
+      position: absolute;
+      right: $distance * 6;
+      transform: rotate(-45deg);
+      width: 180px;
+    }
+
+    .mm,
+    .yy {
+      display: block;
+      position: absolute;
+    }
+
+    .mm {
+      bottom: calc(3.75rem + #{$distance * 4});
+      right: $distance * 16;
+    }
+
+    .yy {
+      bottom: $distance * 2;
+      right: $distance * 8;
+    }
+  }
+
   .main-header {
+    @include inline-block;
     animation: blured-out .999s ease-out forwards; // Blur out animation
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 50vh;
-    min-height: 450px;
-
-    &.no-cover {
-      height: $header-height + $distance * 2;
-      min-height: auto;
-    }
+    min-height: 500px;
+    width: 66.66%;
   }
 
   .site-wrapper {
@@ -30,7 +81,6 @@
   .content {
     animation: op-in .999s ease-out forwards; // Opacity In animation
     max-width: $site-box;
-    padding: $distance * 1.5;
     padding-bottom: $distance * 5;
   }
 
@@ -39,6 +89,7 @@
 // -----------------------------------------------------------------------------
   article {
     @extend %thought;
+    margin-left: 0;
 
     .post-header {
       text-align: left;

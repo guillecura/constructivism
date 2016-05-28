@@ -5,17 +5,11 @@
 
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
-
-<nav class="main-nav"></nav>
-
-<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
-</header>
-
-<main class="content" role="main">
-  {{#has tag="thoughts"}}
+{{#has tag="thoughts"}} {{!Thought post}}
+  <main class="content" role="main">
     <article class="{{post_class}} thought">
       <header class="post-header">
-        <h2 class="post-title">{{title}}</h2>
+        <h1 class="post-title">{{title}}</h1>
         <section class="post-meta">
           <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
         </section>
@@ -48,11 +42,23 @@
         </section>
       </footer>
     </article>
+  </main>
+{{else}} {{!Portfolio post}}
+  {{#if image}}
+    <section class="post-heading">
+      <time class="main-date" datetime="{{date format='YYYY-MM-DD'}}">
+        <span class="mm">{{date format="MM"}}</span>
+        <span class="yy">{{date format="YY"}}</span>
+      </time>
+      <header class="main-header post-head" style="background-image: url({{image}})">
+      </header>
+    </section>
+  {{/if}}
 
-  {{else}}
+  <main class="content" role="main">
     <article class="{{post_class}}">
       <header class="post-header">
-        <h3 class="post-title">{{title}}</h3>
+        <h1 class="post-title">{{title}}</h1>
         <section class="post-meta">
           <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
         </section>
@@ -87,7 +93,7 @@
       </footer>
 
     </article>
-  {{/has}}
-</main>
+  </main>
+{{/has}}
 
 {{/post}}
