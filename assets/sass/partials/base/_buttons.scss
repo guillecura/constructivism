@@ -16,7 +16,7 @@
   transition: color 150ms ease-out, border-color 150ms ease-out;
 
   &:hover {
-    border-color: $primary;
+    border: $border solid $primary;
   }
 }
 // -----------------------------------------------------------------------------

@@ -7,7 +7,13 @@
 // -----------------------------------------------------------------------------
 .tag-aside {
   @include inline-block;
+  max-width: $site-box / 4;
   width: 25%;
+
+  &.fixed {
+    position: fixed;
+    top: $distance * 3;
+  }
 
   .page-description {
     margin-bottom: $distance *1.5;
@@ -21,6 +27,10 @@
   animation: op-in .999s ease-out forwards; // Opacity In animation
   min-height: 0;
   width: 75%;
+
+  &.fixed {
+    margin-left: 25%;
+  }
 }
 // -----------------------------------------------------------------------------
 

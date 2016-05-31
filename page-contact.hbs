@@ -5,15 +5,15 @@
 
 {{! Everything inside the #post tags pulls data from the page }}
 {{#post}}
-<main class="contact-content" role="main">
+<header class="contact-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
   {{#if @blog.logo}}
-    <section>
-      <figure class="page-logo" style="background-image: url('{{@blog.logo}}');">
-        <img src="{{@blog.logo}}" alt="{{@blog.title}}" width="0" height="0"/>
-      </figure>
-    </section>
+    <figure class="page-logo" style="background-image: url('{{@blog.logo}}');">
+      <img src="{{@blog.logo}}" alt="{{@blog.title}}" width="0" height="0"/>
+    </figure>
   {{/if}}
+</header>
 
+<main class="contact-content" role="main">
   <article class="{{post_class}}">
 
     <header class="post-header">

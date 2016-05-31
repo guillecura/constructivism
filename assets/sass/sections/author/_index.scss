@@ -21,6 +21,16 @@
     position: absolute;
     right: 0;
     top: $distance * 5;
+
+    &.fixed {
+      position: fixed;
+      right: calc(50% - #{$site-box / 2});
+      top: $distance * 3;
+
+      @include mq(desktop) {
+        right: 0;
+      }
+    }
   }
 }
 // -----------------------------------------------------------------------------

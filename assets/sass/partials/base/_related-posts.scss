@@ -21,6 +21,11 @@
     display: block;
     font-size: $fsmall;
     line-height: $auth-image / 2;
+
+    &:hover{
+      border: 0;
+      color: $black-light;
+    }
   }
 }
 // -----------------------------------------------------------------------------

@@ -13,6 +13,7 @@ $logo:                       150px;
 $z-top:                      10000;
 $post-box:                   850px;
 $site-box:                   1280px;
+$tag-head:                   20vh;
 // -----------------------------------------------------------------------------
 
 
@@ -22,7 +23,7 @@ $button-height:              60px;
 $header-height:              80px;
 $footer-height:              40px;
 $section-height:             calc(100vh - #{$header-height + $distance * 1.5});
-$contact-height:             calc(100vh - #{$header-height + $footer-height + $distance * 3});
+$contact-height:             calc(100vh - #{$tag-head} - #{$header-height + $footer-height + $distance * 6});
 $site-height:                calc(100vh - #{$header-height + $footer-height});
 $post-height:                calc(100vh - #{$footer-height});
 // -----------------------------------------------------------------------------
@@ -54,10 +55,4 @@ $auth-profile:               150px;
 $case-size:                  calc(50vw - #{$distance});
 $case-size-small:            calc((100vw - #{$distance * 3}) / 2 - #{$distance});
 $m-case-size:                calc(100vw - #{$distance * 3});
-// -----------------------------------------------------------------------------
-
-
-// Tag page
-// -----------------------------------------------------------------------------
-$tag-head:                   20vh;
 // -----------------------------------------------------------------------------

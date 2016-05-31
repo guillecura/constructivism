@@ -28,9 +28,18 @@
     font-weight: $light;
     line-height: $line-height;
     list-style: none;
+    transition: color 150ms;
+
+    &:hover {
+      color: $primary-dark;
+    }
 
     &.nav-current {
       font-weight: $bold;
+    }
+
+    > a:hover {
+      border: 0;
     }
   }
 }

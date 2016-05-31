@@ -5,60 +5,39 @@
 
 // General
 // -----------------------------------------------------------------------------
+.contact-head {
+  height: $tag-head;
+  min-height: $logo;
+  position: relative;
+  width: 100%;
+
+  > .page-logo {
+    animation: item-in .666s ease-out forwards;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: $logo;
+    margin: $distance * 3 auto;
+    width: $logo;
+  }
+}
+
 .contact-content {
   animation: op-in .999s ease-out forwards; // Opacity In animation
   min-height: $contact-height;
-  overflow: hidden;
   padding: $distance * 1.5 0;
-  position: relative;
-
-  &::after {
-    background-color: $primary;
-    content: '';
-    height: 400vh;
-    right: -250vh;
-    position: absolute;
-    transform: rotate(-45deg);
-    top: 18vh;
-    width: 400vh;
-    z-index: -1;
-  }
 
   @include mq(mobile) {
     padding-top: 0;
   }
 
+
 // Content box -----------------------------------------------------------------
-  > section {
-    @include vertical-center;
-    left: 0;
-    min-height: $logo * 2;
-    width: 50%;
-
-    .page-logo {
-      animation: item-in .666s ease-out forwards; // Slide In animation
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: $logo * 2;
-      margin-top: $distance * 3;
-      width: $logo * 2;
-
-      @include mq(mobile) {
-        height: $logo * .75;
-        margin-bottom: auto;
-        width: $logo * .75;
-      }
-    }
-  }
-
   > article {
-    @include vertical-center;
     max-width: $post-box;
     padding: $distance * 3 0;
-    right: 0;
     text-align: center;
-    width: 50%;
+    width: 100%;
 
     @include mq(mobile) {
       padding: $distance 0;
@@ -77,7 +56,6 @@
 
 
 // Title
-// -----------------------------------------------------------------------------
   .post-title {
     @include mq(mobile) {
       font-size: $fh2;
@@ -88,5 +66,6 @@
   .social-links {
     margin-top: $distance;
   }
+// -----------------------------------------------------------------------------
 }
 // -----------------------------------------------------------------------------

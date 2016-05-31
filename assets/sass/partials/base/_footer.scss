@@ -6,15 +6,13 @@
 // Base Styles
 // -----------------------------------------------------------------------------
 .site-footer {
-  $black: rgb(0,0,0);
-
-  background-color: $black;
   height: $footer-height;
   position: relative;
   width: 100%;
 
   a:hover {
-    color: $white;
+    border: 0;
+    color: $black;
   }
 
 
@@ -22,7 +20,7 @@
 // -----------------------------------------------------------------------------
   .copyright {
     bottom: 0;
-    color: lighten($black, 25%);
+    color: lighten($black, 66.66%);
     font-size: $ftiny;
     line-height: $footer-height;
     position: absolute;

@@ -33,7 +33,7 @@
       position: absolute;
       width: 100%;
     }
-    
+
     .post-date {
       background-color: $black;
       color: $white;
@@ -127,6 +127,16 @@
       position: absolute;
       right: 0;
       top: $distance * 8;
+
+      &.fixed {
+        position: fixed;
+        right: calc(50% - #{$site-box / 2});
+        top: $distance * 3;
+
+        @include mq(desktop) {
+          right: 0;
+        }
+      }
     }
   }
 // -----------------------------------------------------------------------------
@@ -188,7 +198,8 @@
 
     .author-name {
       @extend %auth-name;
-      @include inline-block;
+      display: inline-block;
+      vertical-align: middle;
       text-align: left;
     }
   }

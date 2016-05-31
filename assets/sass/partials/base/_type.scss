@@ -15,9 +15,10 @@ a {
   color: inherit;
   cursor: pointer;
   text-decoration: none;
-  transition: color 150ms ease-out;
 
-  &:hover {color: $primary-dark;}
+  &:hover {
+    border-bottom: 2px dotted;
+  }
 }
 // -----------------------------------------------------------------------------
 

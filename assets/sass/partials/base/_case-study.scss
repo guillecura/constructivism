@@ -16,6 +16,11 @@
   position: relative;
   width: $case-size;
 
+  > a:hover,
+  .post-title a {
+    border: 0;
+  }
+
   &:hover {
     border: $border * 2 solid $white;
 

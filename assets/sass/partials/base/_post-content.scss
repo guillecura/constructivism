@@ -20,6 +20,7 @@
 
       // scss-lint:disable NestingDepth
       &:hover {
+        border: 0;
         color: $primary-light;
       }
     }

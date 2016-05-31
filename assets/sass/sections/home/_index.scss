@@ -11,21 +11,6 @@
   position: relative;
   margin-top: calc(#{$fh1 * 3} + #{$distance * 3});
 
-  // Stripe
-  // &::after {
-  //   background-color: $primary;
-  //   bottom: 0;
-  //   content: '';
-  //   display: block;
-  //   height: 15vh;
-  //   left: -5.5vw;
-  //   position: absolute;
-  //   transform: rotate(-45deg);
-  //   transform-origin: bottom left;
-  //   width: 200%;
-  //   z-index: -2;
-  // }
-
   // Dotted background
   &::before {
     background-image: url('../img/dots-texture.png');
@@ -80,6 +65,15 @@
       line-height: $line-height;
       text-align: left;
       width: 66.66%;
+    }
+
+    a {
+      transition: text-shadow 50ms;
+
+      &:hover {
+        border: 0;
+        text-shadow: $border * 1.5 $border * 1.5 $primary;
+      }
     }
   }
 }

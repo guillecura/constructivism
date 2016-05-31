@@ -63,12 +63,16 @@
 
 // Set the hover
 // -----------------------------------------------------------------------------
-  &:hover rect {
-    fill: $primary;
+  &:hover {
+    border: 0!important;
+
+    rect {
+      fill: $primary;
 
 // Prevent hover on mobile -----------------------------------------------------
-    @include mq(mobile) {
-      fill: $black!important;
+      @include mq(mobile) {
+        fill: $black!important;
+      }
     }
   }
 // -----------------------------------------------------------------------------
