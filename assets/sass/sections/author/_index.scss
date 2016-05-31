@@ -10,17 +10,29 @@
   position: relative;
   text-align: center;
 
+  @include mq(mobile) {
+    padding: 0 $distance * 1.5;
+  }
+
   > .post {
     @extend %thought;
     margin-left: 0;
     text-align: left;
     width: 66.66%;
+
+    @include mq(mobile) {
+      width: 100%;
+    }
   }
 
   .menu-box {
     position: absolute;
     right: 0;
     top: $distance * 5;
+
+    @include mq(mobile) {
+      display: none;
+    }
 
     &.fixed {
       position: fixed;
@@ -54,6 +66,12 @@
     width: 66.66vw;
     z-index: -1;
 
+    @include mq(mobile) {
+      margin-bottom: -$distance * 1.5;
+      margin-left: $distance * 1.5;
+      z-index: 1;
+    }
+
     > .img {
       background-position: center;
       background-repeat: no-repeat;
@@ -82,6 +100,16 @@
     width: 50vw;
     z-index: 1;
 
+    @include mq(mobile) {
+      height: auto;
+      max-height: none;
+      max-width: none;
+      padding: $distance * 3 $distance * 1.5;
+      position: relative;
+      width: 100%;
+      z-index: -1;
+    }
+
     > section {
       background-color: $white;
       bottom: $distance * 3;
@@ -89,6 +117,11 @@
       position: absolute;
       right: 0;
       width: calc(66.66% - #{$distance * 3});
+
+      @include mq(mobile) {
+        position: static;
+        width: 100%;
+      }
 
       span {
         font-size: $fh3;

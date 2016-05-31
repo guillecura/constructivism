@@ -793,14 +793,23 @@ h6 {
   padding-top: 30px;
   position: relative;
   text-align: center; }
+  @media (max-width: 640px) {
+    .about-content {
+      padding: 0 15px; } }
   .about-content > .post {
     margin-left: 0;
     text-align: left;
     width: 66.66%; }
+    @media (max-width: 640px) {
+      .about-content > .post {
+        width: 100%; } }
   .about-content .menu-box {
     position: absolute;
     right: 0;
     top: 50px; }
+    @media (max-width: 640px) {
+      .about-content .menu-box {
+        display: none; } }
     .about-content .menu-box.fixed {
       position: fixed;
       right: calc(50% - 640px);
@@ -822,6 +831,11 @@ h6 {
     overflow: hidden;
     width: 66.66vw;
     z-index: -1; }
+    @media (max-width: 640px) {
+      .author-profile .author-image {
+        margin-bottom: -15px;
+        margin-left: 15px;
+        z-index: 1; } }
     .author-profile .author-image > .img {
       background-position: center;
       background-repeat: no-repeat;
@@ -842,6 +856,15 @@ h6 {
     right: 0;
     width: 50vw;
     z-index: 1; }
+    @media (max-width: 640px) {
+      .author-profile .author-block {
+        height: auto;
+        max-height: none;
+        max-width: none;
+        padding: 30px 15px;
+        position: relative;
+        width: 100%;
+        z-index: -1; } }
     .author-profile .author-block > section {
       background-color: white;
       bottom: 30px;
@@ -849,6 +872,10 @@ h6 {
       position: absolute;
       right: 0;
       width: calc(66.66% - 30px); }
+      @media (max-width: 640px) {
+        .author-profile .author-block > section {
+          position: static;
+          width: 100%; } }
       .author-profile .author-block > section span {
         font-size: 1.5rem;
         font-weight: 400;
