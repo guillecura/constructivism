@@ -29,7 +29,7 @@
 
 
 // Icon images -----------------------------------------------------------------
-  $list: twitter facebook google-plus;
+  $list: twitter facebook googleplus;
 
   @each $link in $list {
     &[class='icon-#{$link}'] {

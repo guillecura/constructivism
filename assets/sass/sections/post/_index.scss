@@ -5,99 +5,117 @@
 
 // General
 // -----------------------------------------------------------------------------
-.post-template:not(.page-template) {
-  .main-header {
-    animation: blured-out .999s ease-out forwards; // Blur out animation
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50vh;
-    min-height: 450px;
+.post-template.tag-thoughts:not(.page-template) {
+// Post Heading
+// -----------------------------------------------------------------------------
+  .post-heading {
+    min-height: auto;
+  }
 
-    &.no-cover {
-      height: $header-height + $distance * 2;
-      min-height: auto;
+  .main-info {
+    height: calc(100vh - #{$header-height});
+    margin-left: 0;
+    min-height: 500px;
+    position: relative;
+    width: 66.66%;
+
+    &::before {
+      background-image: url('../img/dots-texture.png');
+      bottom: 0;
+      content: '';
+      height: 33.33%;
+      left: 0;
+      position: absolute;
+      width: 100%;
     }
   }
 
-  .site-wrapper {
-    margin: 0;
-    max-width: 100vw;
-    min-height: $post-height;
-    padding: 0;
-  }
+  .post-date {
+    background-color: $black;
+    color: $white;
+    font-size: $fsmall;
+    line-height: $line-height;
+    padding: 0 $distance;
 
-  .content {
-    animation: op-in .999s ease-out forwards; // Opacity In animation
-    max-width: $site-box;
-    padding: $distance * 1.5;
-    padding-bottom: $distance * 5;
-  }
-
-
-// Thought Post style
-// -----------------------------------------------------------------------------
-  article {
-    @extend %thought;
-
-    .post-header {
-      text-align: left;
+    &::after {
+      content: '»';
+      margin-left: $distance / 2;
     }
   }
-// -----------------------------------------------------------------------------
 
-
-// Post Footer
-// -----------------------------------------------------------------------------
-  .post-content + .post-footer {
-    margin-top: $distance * 3;
+  .post-title {
+    font-size: $fh0;
+    font-weight: $medium;
   }
 
-  .author,
-  .share {
-    @include inline-block;
-    margin-top: $distance * 3;
+  .post-excerpt {
+    background-color: $white;
+    bottom: $distance * 7;
+    left: $distance * 3;
+    padding: $distance * 2;
+    position: absolute;
     width: 50%;
+    z-index: 1;
+
+    &::after {
+      content: '...';
+      margin-left: $distance / 2;
+    }
   }
 
-// Author ----------------------------------------------------------------------
-  .author {
-    .author-image {
-      @extend %auth-image;
-      @include inline-block;
-    }
+  .post-cap {
+    bottom: -8rem;
+    color: $primary;
+    font-size: 0;
+    font-weight: $light;
+    line-height: 1em;
+    position: absolute;
 
-    .author-name {
-      @extend %auth-name;
-      @include inline-block;
+    &::first-letter {
+      font-size: 41rem;
     }
   }
 // -----------------------------------------------------------------------------
 
 
-// Share -----------------------------------------------------------------------
-  .share {
-    text-align: right;
+// Cover Image
+// -----------------------------------------------------------------------------
+  .main-header {
+    height: calc(100vh - #{$header-height + $distance * 6});
+    min-height: 500px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    z-index: -1;
 
-    > span {
-      font-size: $ftiny;
-      font-weight: $light;
-      line-height: $auth-image;
-      margin-right: $distance;
-
-      @include mq(mobile) {
-        display: block;
-        line-height: $auth-image / 2;
-      }
+    // Stripes background ------------------------------------------------------
+    &::before,
+    &::after {
+      display: none;
     }
 
-    > a[class*='icon-'] { // scss-lint:disable QualifyingElement
-      @extend %social-icon;
-      margin-top: #{($auth-image - $icon) / 2};
+    .post-cover {
+      animation: blured-out .999s ease-out forwards; // Blur out animation
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: calc(100vh - #{$header-height + $distance * 6});
+      min-height: 500px;
+      width: 100%;
+    }
+  }
+// -----------------------------------------------------------------------------
 
-      @include mq(mobile) {
-        margin-top: 0;
-      }
+
+// Page styles
+// -----------------------------------------------------------------------------
+  .content {
+    // padding-top: $distance * 3;
+
+    > aside {
+      top: $distance * 8;
     }
   }
 // -----------------------------------------------------------------------------

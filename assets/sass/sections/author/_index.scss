@@ -29,6 +29,7 @@
 // Author Profile
 // -----------------------------------------------------------------------------
 .author-profile {
+  padding-bottom: $distance * 3;
   position: relative;
 // Author Image
 // -----------------------------------------------------------------------------
@@ -36,15 +37,12 @@
     animation: blured-out .999s ease-out forwards; // Blur out animation
     font-size: 0;
     height: 66.66vw;
-    left: 0;
     margin-left: 0;
     max-height: $post-box;
     max-width: $post-box;
     overflow: hidden;
-    position: absolute;
-    top: $distance * 3;
     width: 66.66vw;
-    z-index: 2;
+    z-index: -1;
 
     > .img {
       background-position: center;
@@ -62,33 +60,25 @@
 // Author Block
 // -----------------------------------------------------------------------------
   .author-block {
-    background-color: $primary;
-    height: calc(66.66vw + #{$distance * 6});
+    background-image: url('../img/dots-texture.png');
+    bottom: 0;
+    height: 33.33vw;
     margin-right: 0;
     max-width: 50%;
-    max-height: $post-box + $distance * 6;
+    max-height: $post-box / 2;
     padding-left: 16.66%;
-    position: relative;
+    position: absolute;
+    right: 0;
     width: 50vw;
     z-index: 1;
 
-    &::after {
-      background-color: $black;
-      content: '';
-      display: block;
-      height: 66.66%;
-      left: calc(33.33% + #{$distance * 5});
-      position: absolute;
-      top: 0;
-      width: $line * 3;
-      z-index: -1;
-    }
-
     > section {
-      background-color: $primary;
-      bottom: 0;
-      padding: $distance * 2 $distance * 2 $distance * 5 $distance * 5;
+      background-color: $white;
+      bottom: $distance * 3;
+      padding: $distance * 2;
       position: absolute;
+      right: 0;
+      width: calc(66.66% - #{$distance * 3});
 
       span {
         font-size: $fh3;
@@ -97,7 +87,6 @@
       }
 
       h3 {
-        color: $white;
         font-size: $fh2;
         font-weight: $regular;
         line-height: $line-height;
@@ -109,7 +98,7 @@
       }
 
       a {
-        color: $white;
+        color: $primary;
         font-size: $fsmall;
         line-height: $line-height-big * 2;
 

@@ -5,28 +5,22 @@
 // General
 // -----------------------------------------------------------------------------
 .related-posts {
-  @include inline-block;
   margin-top: $distance * 3;
-  width: 50%;
+  text-align: right;
+  width: 100%;
 
   > span {
     display: block;
     font-size: $ftiny;
     font-weight: $light;
     line-height: $auth-image / 2;
+    margin-bottom: $distance / 2;
   }
 
   > a {
-    font-size: $ftiny;
+    display: block;
+    font-size: $fsmall;
     line-height: $auth-image / 2;
-
-    &::after {
-      content: ', ';
-    }
-
-    &:last-of-type::after {
-      content: '';
-    }
   }
 }
 // -----------------------------------------------------------------------------

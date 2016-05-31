@@ -5,72 +5,66 @@
 
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
-{{#has tag="thoughts"}} {{!Thought post}}
-  <main class="content" role="main">
-    <article class="{{post_class}} thought">
-      <header class="post-header">
-        <h1 class="post-title">{{title}}</h1>
-        <section class="post-meta">
+  {{#if image}}
+    <section class="post-heading">
+      {{#has tag="thoughts"}}
+        <section class="main-info">
           <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+          <h1 class="post-title">{{title}}</h1>
+          <p class="post-excerpt">{{excerpt characters="200"}}</p>
+          <p class="post-cap">{{title}}</p>
         </section>
+      {{else}}
+        <time class="main-date" datetime="{{date format='YYYY-MM-DD'}}">
+          <span class="mm">{{date format="MM"}}</span>
+          <span class="yy">{{date format="YY"}}</span>
+        </time>
+      {{/has}}
+
+      <header class="main-header post-head">
+        <figure class="post-cover" style="background-image: url({{image}})"></figure>
       </header>
 
-      <section class="post-content">
-        {{content}}
-      </section>
+      {{#has tag="thoughts"}}
+      {{else}}
+        <h1 class="post-title">{{title}}</h1>
+      {{/has}}
+    </section>
+  {{/if}}
+
+  <main class="content" role="main">
+    <aside>
+      {{#if @blog.navigation}}
+        <menu class="menu-box right">
+          {{navigation}}
+        </menu>
+      {{/if}}
 
       <footer class="post-footer">
-        {{#author}}
-          <section class="author">
-            {{#if image}}
-              <figure class="author-image">
-                <span class="img" style="background-image: url({{image}})">{{name}}'s Picture</span>
-              </figure>
-            {{/if}}
-            <h4 class="author-name"><span>Posted by</span>{{name}}</h4>
-          </section>
-        {{/author}}
-
+        {{#has tag="thoughts"}}
+          {{#author}}
+            <section class="author">
+              {{#if image}}
+                <figure class="author-image">
+                  <span class="img" style="background-image: url({{image}})">{{name}}'s Picture</span>
+                </figure>
+              {{/if}}
+              <h4 class="author-name"><span>Posted by</span>{{name}}</h4>
+            </section>
+          {{/author}}
+        {{/has}}
         <section class="share">
           <span>Share this</span>
           <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
               onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Twitter</a>
           <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
               onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">Facebook</a>
-          <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+          <a class="icon-googleplus" href="https://plus.google.com/share?url={{url absolute="true"}}"
              onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">Google+</a>
         </section>
-      </footer>
-    </article>
-  </main>
-{{else}} {{!Portfolio post}}
-  {{#if image}}
-    <section class="post-heading">
-      <time class="main-date" datetime="{{date format='YYYY-MM-DD'}}">
-        <span class="mm">{{date format="MM"}}</span>
-        <span class="yy">{{date format="YY"}}</span>
-      </time>
-      <header class="main-header post-head" style="background-image: url({{image}})">
-      </header>
-    </section>
-  {{/if}}
 
-  <main class="content" role="main">
-    <article class="{{post_class}}">
-      <header class="post-header">
-        <h1 class="post-title">{{title}}</h1>
-        <section class="post-meta">
-          <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-        </section>
-      </header>
-
-      <section class="post-content">
-        {{content}}
-      </section>
-
-      <footer class="post-footer">
         <section class="related-posts">
-          <span>See other projects!</span>
+          <span>More projects:</span>
 
           {{#prev_post}}
             <a href="{{url}}">{{title}}</a>
@@ -80,20 +74,23 @@
             <a href="{{url}}">{{title}}</a>
           {{/next_post}}
         </section>
-
-        <section class="share">
-          <span>Share this</span>
-          <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
-              onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Twitter</a>
-          <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-              onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">Facebook</a>
-          <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-             onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">Google+</a>
-        </section>
       </footer>
+    </aside>
 
+    <article class="{{post_class}}">
+      {{#if image}}
+      {{else}}
+        <header class="post-header no-cover">
+          <h1 class="post-title">{{title}}</h1>
+          <section class="post-meta">
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+          </section>
+        </header>
+      {{/if}}
+
+      <section class="post-content">
+        {{content}}
+      </section>
     </article>
   </main>
-{{/has}}
-
 {{/post}}

@@ -5,22 +5,40 @@
 
 // General
 // -----------------------------------------------------------------------------
-.post-template.tag-portfolio:not(.page-template) {
+.post-template:not(.page-template) {
   .post-heading {
     max-width: $site-box;
-    padding-top: $distance * 3;
+    overflow: hidden;
+    margin-top: $distance * 3;
+    min-height: 720px;
+    position: relative;
+
+    // Title
+    .post-title {
+      display: block;
+      font-size: 10vw;
+      line-height: 1;
+      padding-top: $distance * 5;
+      position: relative;
+      text-align: left;
+      width: 100%;
+      z-index: 2;
+    }
   }
 
+// Big date widget
+// -----------------------------------------------------------------------------
   .main-date {
     @include inline-block;
     font-size: 3.75rem;
     font-weight: $bold;
-    height: 50vh;
+    height: 40vh;
     line-height: 1em;
     min-height: 500px;
     position: relative;
     width: 33.33%;
 
+    // Color border
     &::before {
       border-bottom: $distance solid $primary;
       border-right: $distance solid $primary;
@@ -32,6 +50,7 @@
       width: calc(100% - #{$distance * 5});
     }
 
+    // slash, date divider
     &::after {
       background-color: $black;
       content: '';
@@ -59,18 +78,63 @@
       right: $distance * 8;
     }
   }
+// -----------------------------------------------------------------------------
 
+
+// Cover Image
+// -----------------------------------------------------------------------------
   .main-header {
     @include inline-block;
-    animation: blured-out .999s ease-out forwards; // Blur out animation
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 50vh;
+    height: 40vh;
     min-height: 500px;
+    padding: $distance * 3 $distance * 3 0 0;
+    position: relative;
     width: 66.66%;
-  }
 
+    // Stripes background ------------------------------------------------------
+
+    &::before {
+      background-image: url('../img/stripes-texture.png');
+      background-position: top -7px left;
+      content: '';
+      height: 100%;
+      position: absolute;
+      right: -50%;
+      top: -50%;
+      transform: rotate(-45deg);
+      width: 100%;
+      z-index: -1;
+    }
+
+    // Color block hover -------------------------------------------------------
+    &::after {
+      background-color: $primary;
+      content: '';
+      height: 100%;
+      mix-blend-mode: multiply;
+      position: absolute;
+      right: -40%;
+      top: -7%;
+      transform: rotate(-45deg);
+      width: 100%;
+      z-index: 1;
+    }
+
+    .post-cover {
+      animation: blured-out .999s ease-out forwards; // Blur out animation
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: calc(40vh - #{$distance});
+      min-height: 500 - $distance * 3;
+      width: 100%;
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Page styles
+// -----------------------------------------------------------------------------
   .site-wrapper {
     margin: 0;
     max-width: 100vw;
@@ -82,7 +146,16 @@
     animation: op-in .999s ease-out forwards; // Opacity In animation
     max-width: $site-box;
     padding-bottom: $distance * 5;
+    padding-top: $distance * 3;
+    position: relative;
+
+    > aside {
+      position: absolute;
+      right: 0;
+      top: $distance * 5;
+    }
   }
+// -----------------------------------------------------------------------------
 
 
 // Thought Post style
@@ -90,9 +163,29 @@
   article {
     @extend %thought;
     margin-left: 0;
+    text-align: left;
+    width: 66.66%;
 
     .post-header {
       text-align: left;
+
+      .post-date {
+        background-color: $black;
+        color: $white;
+        font-size: $fsmall;
+        line-height: $line-height;
+        padding: 0 $distance;
+
+        &::after {
+          content: '»';
+          margin-left: $distance / 2;
+        }
+      }
+
+      .post-title {
+        font-size: $fh0;
+        font-weight: $medium;
+      }
     }
   }
 // -----------------------------------------------------------------------------
@@ -106,13 +199,14 @@
 
   .author,
   .share {
-    @include inline-block;
     margin-top: $distance * 3;
-    width: 50%;
+    width: 100%;
   }
 
 // Author ----------------------------------------------------------------------
   .author {
+    text-align: right;
+
     .author-image {
       @extend %auth-image;
       @include inline-block;
@@ -121,6 +215,7 @@
     .author-name {
       @extend %auth-name;
       @include inline-block;
+      text-align: left;
     }
   }
 // -----------------------------------------------------------------------------
@@ -131,6 +226,7 @@
     text-align: right;
 
     > span {
+      display: block;
       font-size: $ftiny;
       font-weight: $light;
       line-height: $auth-image;
