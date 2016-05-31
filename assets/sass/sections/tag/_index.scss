@@ -10,6 +10,10 @@
   max-width: $site-box / 4;
   width: 25%;
 
+  @include mq(desktop) {
+    min-width: $distance * 3 + 300;
+  }
+
   @include mq(mobile) {
     display: none;
   }
@@ -23,6 +27,14 @@
     margin-bottom: $distance *1.5;
     padding: $distance * 1.5;
     padding-left: 0;
+
+    @include mq(desktop) {
+      padding-left: $distance * 1.5;
+    }
+  }
+
+  .menu-box {
+    max-width: none;
   }
 }
 
@@ -32,7 +44,13 @@
   min-height: 0;
   width: 75%;
 
+  @include mq(desktop) {
+    max-width: calc(100% - #{$distance * 3 + 300});
+    padding-right: $distance * 1.5;
+  }
+
   @include mq(mobile) {
+    max-width: none;
     padding: $distance * 1.5;
     padding-top: 0;
     width: 100%;

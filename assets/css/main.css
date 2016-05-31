@@ -1328,6 +1328,9 @@ h6 {
   vertical-align: top;
   max-width: 320px;
   width: 25%; }
+  @media (max-width: 1280px) {
+    .tag-aside {
+      min-width: 330px; } }
   @media (max-width: 640px) {
     .tag-aside {
       display: none; } }
@@ -1338,6 +1341,11 @@ h6 {
     margin-bottom: 15px;
     padding: 15px;
     padding-left: 0; }
+    @media (max-width: 1280px) {
+      .tag-aside .page-description {
+        padding-left: 15px; } }
+  .tag-aside .menu-box {
+    max-width: none; }
 
 .tag-content {
   display: inline-block;
@@ -1346,8 +1354,13 @@ h6 {
   animation: op-in .999s ease-out forwards;
   min-height: 0;
   width: 75%; }
+  @media (max-width: 1280px) {
+    .tag-content {
+      max-width: calc(100% - 330px);
+      padding-right: 15px; } }
   @media (max-width: 640px) {
     .tag-content {
+      max-width: none;
       padding: 15px;
       padding-top: 0;
       width: 100%; } }
