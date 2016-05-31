@@ -327,6 +327,8 @@ body {
           fill: #223347 !important; } }
   .icon-menu.nav-close {
     background-color: transparent; }
+    .icon-menu.nav-close rect {
+      fill: #223347; }
 
 @keyframes cross-l {
   0% {
@@ -343,17 +345,17 @@ body {
     transform: translateY(14.5px) rotate(45deg); }
   100% {
     transform: translateY(14.5px) rotate(45deg); } }
-    .icon-menu.nav-close rect:nth-child(odd) {
-      animation: cross-l .666s ease-out forwards; }
-    .icon-menu.nav-close rect:nth-child(even) {
-      animation: cross-r .666s ease-out forwards; }
-    @media (max-width: 640px) {
-      .icon-menu.nav-close rect {
-        fill: #223347 !important; }
-        .icon-menu.nav-close rect:nth-child(odd) {
-          animation: cross-l 0.666s ease-out forwards !important; }
-        .icon-menu.nav-close rect:nth-child(even) {
-          animation: cross-r 0.666s ease-out forwards !important; } }
+      .icon-menu.nav-close rect:nth-child(odd) {
+        animation: cross-l .666s ease-out forwards; }
+      .icon-menu.nav-close rect:nth-child(even) {
+        animation: cross-r .666s ease-out forwards; }
+      @media (max-width: 640px) {
+        .icon-menu.nav-close rect {
+          fill: #223347 !important; }
+          .icon-menu.nav-close rect:nth-child(odd) {
+            animation: cross-l 0.666s ease-out forwards !important; }
+          .icon-menu.nav-close rect:nth-child(even) {
+            animation: cross-r 0.666s ease-out forwards !important; } }
   .icon-menu.nav-close:hover rect {
     fill: #f03246;
     width: 32px; }
