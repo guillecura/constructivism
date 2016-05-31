@@ -181,7 +181,8 @@ body {
   padding: 0 20px;
   transition: color 150ms ease-out, border-color 150ms ease-out; }
   .button:hover {
-    border: 3px solid #f03246; }
+    border: 3px solid #f03246;
+    color: #f03246; }
 
 .site-footer {
   height: 40px;
@@ -445,7 +446,7 @@ body > .nav {
     margin-top: 20px; }
   .post-content p a {
     color: #f03246; }
-    .post-content p a:hover {
+    .post-content p a:not(.button):hover {
       border: 0;
       color: #f36271; }
 
@@ -974,9 +975,13 @@ h6 {
     line-height: 1.11em;
     margin-left: 0;
     width: calc(66.66% - 30px); }
+    @media (max-width: 1280px) {
+      .post-template.tag-portfolio:not(.page-template) .main-info-p .post-title {
+        padding-left: 15px; } }
     @media (max-width: 640px) {
       .post-template.tag-portfolio:not(.page-template) .main-info-p .post-title {
         font-size: 3rem;
+        padding-left: 0;
         position: relative;
         width: 100%; } }
   .post-template.tag-portfolio:not(.page-template) .main-info-p .post-excerpt {
@@ -987,8 +992,12 @@ h6 {
     top: 30px;
     width: 33.33%;
     z-index: 1; }
+    @media (max-width: 1280px) {
+      .post-template.tag-portfolio:not(.page-template) .main-info-p .post-excerpt {
+        font-size: 0.85rem; } }
     @media (max-width: 640px) {
       .post-template.tag-portfolio:not(.page-template) .main-info-p .post-excerpt {
+        font-size: 1rem;
         margin-top: 10px;
         position: relative;
         right: auto;
@@ -1044,7 +1053,7 @@ h6 {
       .contact-content > article {
         padding: 10px 15px; } }
     .contact-content > article .button {
-      color: #223347;
+      color: inherit;
       margin: 20px auto; }
     .contact-content > article span {
       font-size: 0.85rem; }
@@ -1172,9 +1181,13 @@ h6 {
     font-weight: 500;
     line-height: 1.11em;
     margin-top: 20px; }
+    @media (max-width: 1280px) {
+      .post-template:not(.page-template) .main-info .post-title {
+        padding-left: 15px; } }
     @media (max-width: 640px) {
       .post-template:not(.page-template) .main-info .post-title {
         font-size: 3rem;
+        padding-left: 0;
         position: relative;
         z-index: 1; } }
   .post-template:not(.page-template) .main-info .post-excerpt {
@@ -1245,6 +1258,12 @@ h6 {
   padding-bottom: 50px;
   padding-top: 30px;
   position: relative; }
+  @media (max-width: 1280px) {
+    .post-template:not(.page-template) .content {
+      padding: 30px 15px 50px; } }
+  @media (max-width: 640px) {
+    .post-template:not(.page-template) .content {
+      padding: 30px 0 50px; } }
   .post-template:not(.page-template) .content > aside {
     position: absolute;
     right: 0;
@@ -1286,7 +1305,7 @@ h6 {
       font-size: 4rem;
       font-weight: 500; }
 
-@media (max-width: 640px) {
+@media (max-width: 1280px) {
   .post-template:not(.page-template) .post-footer {
     padding: 0 15px; } }
 

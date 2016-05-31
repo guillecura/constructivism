@@ -61,8 +61,13 @@
       margin-left: 0;
       width: calc(66.66% - #{$distance * 3});
 
+      @include mq(desktop) {
+        padding-left: $distance * 1.5;
+      }
+
       @include mq(mobile) {
         font-size: $fh1;
+        padding-left: 0;
         position: relative;
         width: 100%;
       }
@@ -77,7 +82,12 @@
       width: 33.33%;
       z-index: 1;
 
+      @include mq(desktop) {
+        font-size: $fsmall;
+      }
+
       @include mq(mobile) {
+        font-size: $fdef;
         margin-top: $distance;
         position: relative;
         right: auto;

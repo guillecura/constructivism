@@ -66,8 +66,13 @@
       line-height: $line-height;
       margin-top: $distance * 2;
 
+      @include mq(desktop) {
+        padding-left: $distance * 1.5;
+      }
+
       @include mq(mobile) {
         font-size: $fh1;
+        padding-left: 0;
         position: relative;
         z-index: 1;
       }
@@ -165,6 +170,14 @@
     padding-top: $distance * 3;
     position: relative;
 
+    @include mq(desktop) {
+      padding: $distance * 3 $distance * 1.5 $distance * 5;
+    }
+
+    @include mq(mobile) {
+      padding: $distance * 3 0 $distance * 5;
+    }
+
     > aside {
       position: absolute;
       right: 0;
@@ -233,7 +246,7 @@
 // Post Footer
 // -----------------------------------------------------------------------------
   .post-footer {
-    @include mq(mobile) {
+    @include mq(desktop) {
       padding: 0 $distance * 1.5;
     }
   }

@@ -19,7 +19,7 @@
       color: $primary;
 
       // scss-lint:disable NestingDepth
-      &:hover {
+      &:not(.button):hover {
         border: 0;
         color: $primary-light;
       }
