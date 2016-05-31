@@ -8,7 +8,7 @@
 // Nav block
 // -----------------------------------------------------------------------------
 body > .nav {
-  // background-color: $white;
+  background-color: $white;
   bottom: 0;
   color: $black;
   height: $menu-height;
@@ -20,6 +20,23 @@ body > .nav {
   top: 0;
   width: $menu-width;
   z-index: $z-top + 1;
+
+  @include mq(hybrid) {
+    background-color: transparent;
+
+    &::after {
+      background-color: $white;
+      bottom: 0;
+      content: '';
+      height: 100%;
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+  }
 
 
 // If nav is closed
