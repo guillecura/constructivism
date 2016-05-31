@@ -73,8 +73,20 @@ body {
   body.nav-opened {
     height: 100vh;
     max-height: 100vh;
-    overflow: hidden;
-    overflow-scrolling: touch; }
+    overflow: hidden; }
+    @media (max-width: 854px) {
+      body.nav-opened {
+        overflow-scrolling: touch; }
+        body.nav-opened::after {
+          background-color: white;
+          bottom: 0;
+          content: '';
+          height: 100%;
+          left: 0;
+          position: fixed;
+          right: 0;
+          top: 0;
+          width: 100%; } }
 
 .site-wrapper {
   max-width: 1280px;
@@ -366,7 +378,6 @@ body {
         fill: #223347 !important; } }
 
 body > .nav {
-  background-color: white;
   bottom: 0;
   color: #223347;
   height: 100vh;

@@ -44,7 +44,22 @@ body {
     height: 100vh;
     max-height: 100vh;
     overflow: hidden;
-    overflow-scrolling:touch;
+
+    @include mq(hybrid) {
+      overflow-scrolling:touch;
+
+      &::after {
+        background-color: $white;
+        bottom: 0;
+        content: '';
+        height: 100%;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+      }
+    }
   }
 }
 // -----------------------------------------------------------------------------
