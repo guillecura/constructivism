@@ -79,40 +79,44 @@
 
 // Set the on-click state (replace the &:focus selector with the active class)
 // -----------------------------------------------------------------------------
-  &.nav-close rect {
+  &.nav-close {
+    @include mq(mobile) {
+      position: fixed;
+    }
+
+    rect {
 // Animation -------------------------------------------------------------------
 // scss-lint:disable NestingDepth
-    @keyframes cross-l {
-      0% {transform: translateY(#{($icon - $line) / 2});}
-      33% {transform: translateY(#{($icon - $line) / 2}) rotate(-45deg);}
-      100% {transform: translateY(#{($icon - $line) / 2}) rotate(-45deg);}
-    }
+      @keyframes cross-l {
+        0% {transform: translateY(#{($icon - $line) / 2});}
+        33% {transform: translateY(#{($icon - $line) / 2}) rotate(-45deg);}
+        100% {transform: translateY(#{($icon - $line) / 2}) rotate(-45deg);}
+      }
 
-    @keyframes cross-r {
-      0% {transform: translateY(#{($icon - $line) / 2});}
-      33% {transform: translateY(#{($icon - $line) / 2}) rotate(45deg);}
-      100% {transform: translateY(#{($icon - $line) / 2}) rotate(45deg);}
-    }
+      @keyframes cross-r {
+        0% {transform: translateY(#{($icon - $line) / 2});}
+        33% {transform: translateY(#{($icon - $line) / 2}) rotate(45deg);}
+        100% {transform: translateY(#{($icon - $line) / 2}) rotate(45deg);}
+      }
 
-    &:nth-child(odd) {
-      animation: cross-l .666s ease-out forwards;
-    }
+      &:nth-child(odd) {
+        animation: cross-l .666s ease-out forwards;
+      }
 
-    &:nth-child(even) {
-      animation: cross-r .666s ease-out forwards;
-    }
+      &:nth-child(even) {
+        animation: cross-r .666s ease-out forwards;
+      }
 
 // Prevent hover on mobile -----------------------------------------------------
-    @include mq(mobile) {
-      fill: $black!important;
-      position: relative;
-      z-index: 1;
+      @include mq(mobile) {
+        fill: $black!important;
 
-      &:nth-child(odd) {animation: cross-l .666s ease-out forwards!important;}
+        &:nth-child(odd) {animation: cross-l .666s ease-out forwards!important;}
 
-      &:nth-child(even) {animation: cross-r .666s ease-out forwards!important;}
-    }
+        &:nth-child(even) {animation: cross-r .666s ease-out forwards!important;}
+      }
 // -----------------------------------------------------------------------------
+    }
   }
 
   &.nav-close:hover rect {

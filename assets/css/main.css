@@ -72,7 +72,9 @@ body {
   text-rendering: optimizeLegibility; }
   body.nav-opened {
     height: 100vh;
-    overflow: hidden; }
+    max-height: 100vh;
+    overflow: hidden;
+    overflow-scrolling: touch; }
 
 .site-wrapper {
   max-width: 1280px;
@@ -325,6 +327,9 @@ body {
       @media (max-width: 640px) {
         .icon-menu:hover rect {
           fill: #223347 !important; } }
+  @media (max-width: 640px) {
+    .icon-menu.nav-close {
+      position: fixed; } }
 
 @keyframes cross-l {
   0% {
@@ -347,9 +352,7 @@ body {
     animation: cross-r .666s ease-out forwards; }
   @media (max-width: 640px) {
     .icon-menu.nav-close rect {
-      fill: #223347 !important;
-      position: relative;
-      z-index: 1; }
+      fill: #223347 !important; }
       .icon-menu.nav-close rect:nth-child(odd) {
         animation: cross-l 0.666s ease-out forwards !important; }
       .icon-menu.nav-close rect:nth-child(even) {
