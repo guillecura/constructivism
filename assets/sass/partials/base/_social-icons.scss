@@ -15,8 +15,8 @@
     width: $icon * 2;
 
     @include mq(mobile) {
-      height: $icon * 1.5;
-      width: $icon * 1.5;
+      height: $icon * 1.25;
+      width: $icon * 1.25;
     }
 
     + li {

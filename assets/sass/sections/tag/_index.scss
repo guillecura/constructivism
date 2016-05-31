@@ -10,6 +10,10 @@
   max-width: $site-box / 4;
   width: 25%;
 
+  @include mq(mobile) {
+    display: none;
+  }
+
   &.fixed {
     position: fixed;
     top: $distance * 3;
@@ -28,8 +32,18 @@
   min-height: 0;
   width: 75%;
 
+  @include mq(mobile) {
+    padding: $distance * 1.5;
+    padding-top: 0;
+    width: 100%;
+  }
+
   &.fixed {
     margin-left: 25%;
+
+    @include mq(mobile) {
+      margin-left: 0;
+    }
   }
 }
 // -----------------------------------------------------------------------------
