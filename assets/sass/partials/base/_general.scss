@@ -52,8 +52,6 @@ body {
 .site-wrapper {
   max-width: $site-box;
   min-height: $site-height;
-  overflow-x: hidden;
-  overflow-y: auto;
   padding-top: $distance * 3;
   position: relative;
   width: 100%;

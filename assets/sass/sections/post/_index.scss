@@ -166,6 +166,7 @@
   .content {
     animation: op-in .999s ease-out forwards; // Opacity In animation
     max-width: $site-box;
+    min-height: $post-box;
     padding-bottom: $distance * 5;
     padding-top: $distance * 3;
     position: relative;
