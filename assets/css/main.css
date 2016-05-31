@@ -396,6 +396,10 @@ body > .nav {
     font-size: 4rem;
     font-weight: 700;
     line-height: 5rem; }
+    @media (max-width: 640px) {
+      body > .nav li {
+        font-size: 20vw;
+        line-height: 25vw; } }
   body > .nav a {
     transition: text-shadow 50ms; }
     body > .nav a:hover {

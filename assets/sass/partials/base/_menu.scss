@@ -62,8 +62,13 @@ body > .nav {
     font-size: $fh0;
     font-weight: $bold;
     line-height: $fh0 * 1.25;
+
+    @include mq(mobile) {
+      font-size: 20vw;
+      line-height: 20vw * 1.25;
+    }
   }
-  
+
   a {
     transition: text-shadow 50ms;
 
