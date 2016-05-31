@@ -30,10 +30,6 @@
     right: 0;
     top: $distance * 5;
 
-    @include mq(mobile) {
-      display: none;
-    }
-
     &.fixed {
       position: fixed;
       right: calc(50% - #{$site-box / 2});

@@ -20,6 +20,10 @@
 
   &:last-of-type {
     margin-bottom: $distance * 10;
+
+    @include mq(mobile) {
+      margin-bottom: $distance * 5;
+    }
   }
 
   .post-header {

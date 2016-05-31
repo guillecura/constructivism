@@ -9,6 +9,11 @@
   text-align: right;
   width: 100%;
 
+  @include mq(mobile) {
+    margin-top: $distance;
+    text-align: left;
+  }
+
   > span {
     display: block;
     font-size: $ftiny;

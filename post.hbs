@@ -7,6 +7,10 @@
 {{#post}}
   {{#if image}}
     <section class="post-heading">
+      <header class="main-header post-head">
+        <figure class="post-cover" style="background-image: url({{image}})"></figure>
+      </header>
+      
       {{#has tag="thoughts"}}
         <section class="main-info">
           <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
@@ -14,15 +18,7 @@
           <p class="post-excerpt">{{excerpt characters="200"}}</p>
           <p class="post-cap">{{title}}</p>
         </section>
-
-        <header class="main-header post-head">
-          <figure class="post-cover" style="background-image: url({{image}})"></figure>
-        </header>
       {{else}}
-        <header class="main-header post-head">
-          <figure class="post-cover" style="background-image: url({{image}})"></figure>
-        </header>
-
         <section class="main-info-p">
           <h1 class="post-title">{{title}}</h1>
           <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
@@ -33,6 +29,22 @@
   {{/if}}
 
   <main class="content" role="main">
+    <article class="{{post_class}}">
+      {{#if image}}
+      {{else}}
+        <header class="post-header no-cover">
+          <h1 class="post-title">{{title}}</h1>
+          <section class="post-meta">
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+          </section>
+        </header>
+      {{/if}}
+
+      <section class="post-content">
+        {{content}}
+      </section>
+    </article>
+
     <aside>
       {{#if @blog.navigation}}
         <menu class="menu-box right">
@@ -76,21 +88,5 @@
         </section>
       </footer>
     </aside>
-
-    <article class="{{post_class}}">
-      {{#if image}}
-      {{else}}
-        <header class="post-header no-cover">
-          <h1 class="post-title">{{title}}</h1>
-          <section class="post-meta">
-            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-          </section>
-        </header>
-      {{/if}}
-
-      <section class="post-content">
-        {{content}}
-      </section>
-    </article>
   </main>
 {{/post}}

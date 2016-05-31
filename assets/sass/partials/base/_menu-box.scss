@@ -12,6 +12,10 @@
   padding: $distance * 1.5;
   width: 300px;
 
+  @include mq(mobile) {
+    display: none;
+  }
+
   &.left {
     margin-left: 0;
     text-align: left;

@@ -256,6 +256,9 @@ body {
   border: 6px solid #f03246;
   padding: 15px;
   width: 300px; }
+  @media (max-width: 640px) {
+    .menu-box {
+      display: none; } }
   .menu-box.left {
     margin-left: 0;
     text-align: left; }
@@ -587,6 +590,10 @@ pre[class*='language-'] {
   margin-top: 30px;
   text-align: right;
   width: 100%; }
+  @media (max-width: 640px) {
+    .related-posts {
+      margin-top: 10px;
+      text-align: left; } }
   .related-posts > span {
     display: block;
     font-size: 0.7rem;
@@ -686,6 +693,9 @@ a[class='dribbble'] {
     width: 10%; }
   .about-content > .post:last-of-type, .post-template:not(.page-template) article:last-of-type, article.thought:last-of-type {
     margin-bottom: 100px; }
+    @media (max-width: 640px) {
+      .about-content > .post:last-of-type, .post-template:not(.page-template) article:last-of-type, article.thought:last-of-type {
+        margin-bottom: 50px; } }
   .about-content > .post .post-header, .post-template:not(.page-template) article .post-header, article.thought .post-header {
     margin-bottom: 20px; }
   .about-content > .post .post-title, .post-template:not(.page-template) article .post-title, article.thought .post-title {
@@ -811,9 +821,6 @@ h6 {
     position: absolute;
     right: 0;
     top: 50px; }
-    @media (max-width: 640px) {
-      .about-content .menu-box {
-        display: none; } }
     .about-content .menu-box.fixed {
       position: fixed;
       right: calc(50% - 640px);
@@ -1068,6 +1075,9 @@ h6 {
   margin-top: 30px;
   min-height: auto;
   position: relative; }
+  @media (max-width: 640px) {
+    .post-template:not(.page-template) .post-heading {
+      margin-top: 15px; } }
 
 .post-template:not(.page-template) .main-info {
   height: calc(100vh - 80px);
@@ -1076,6 +1086,14 @@ h6 {
   min-height: 500px;
   position: relative;
   width: 66.66%; }
+  @media (max-width: 640px) {
+    .post-template:not(.page-template) .main-info {
+      height: auto;
+      max-height: none;
+      min-height: 0;
+      padding: 15px;
+      padding-bottom: 30px;
+      width: 100%; } }
   .post-template:not(.page-template) .main-info::before {
     background-image: url("../img/dots-texture.png");
     bottom: 0;
@@ -1095,7 +1113,14 @@ h6 {
       margin-left: 5px; }
   .post-template:not(.page-template) .main-info .post-title {
     font-size: 4rem;
-    font-weight: 500; }
+    font-weight: 500;
+    line-height: 1.11em;
+    margin-top: 20px; }
+    @media (max-width: 640px) {
+      .post-template:not(.page-template) .main-info .post-title {
+        font-size: 3rem;
+        position: relative;
+        z-index: 1; } }
   .post-template:not(.page-template) .main-info .post-excerpt {
     background-color: white;
     bottom: 60px;
@@ -1104,6 +1129,12 @@ h6 {
     position: absolute;
     width: 50%;
     z-index: 1; }
+    @media (max-width: 640px) {
+      .post-template:not(.page-template) .main-info .post-excerpt {
+        bottom: auto;
+        left: auto;
+        position: relative;
+        width: 100%; } }
     .post-template:not(.page-template) .main-info .post-excerpt::after {
       content: '...';
       margin-left: 5px; }
@@ -1126,6 +1157,13 @@ h6 {
   top: 0;
   width: 50%;
   z-index: -1; }
+  @media (max-width: 640px) {
+    .post-template:not(.page-template) .main-header {
+      height: 50vh;
+      max-height: 50vh;
+      min-height: 0;
+      position: static;
+      width: calc(100% - 30px); } }
   .post-template:not(.page-template) .main-header .post-cover {
     animation: blured-out .999s ease-out forwards;
     background-position: center;
@@ -1135,6 +1173,11 @@ h6 {
     max-height: 824px;
     min-height: 500px;
     width: 100%; }
+    @media (max-width: 640px) {
+      .post-template:not(.page-template) .main-header .post-cover {
+        height: 100%;
+        max-height: 100%;
+        min-height: 0; } }
 
 .post-template:not(.page-template) .site-wrapper {
   min-height: calc(100vh - 40px);
@@ -1150,6 +1193,9 @@ h6 {
     position: absolute;
     right: 0;
     top: 80px; }
+    @media (max-width: 640px) {
+      .post-template:not(.page-template) .content > aside {
+        position: static; } }
     .post-template:not(.page-template) .content > aside.fixed {
       position: fixed;
       right: calc(50% - 640px);
@@ -1157,11 +1203,18 @@ h6 {
       @media (max-width: 1280px) {
         .post-template:not(.page-template) .content > aside.fixed {
           right: 0; } }
+      @media (max-width: 640px) {
+        .post-template:not(.page-template) .content > aside.fixed {
+          position: static; } }
 
 .post-template:not(.page-template) article {
   margin-left: 0;
   text-align: left;
   width: 66.66%; }
+  @media (max-width: 640px) {
+    .post-template:not(.page-template) article {
+      padding: 0 15px;
+      width: 100%; } }
   .post-template:not(.page-template) article .post-header {
     text-align: left; }
     .post-template:not(.page-template) article .post-header .post-date {
@@ -1177,16 +1230,28 @@ h6 {
       font-size: 4rem;
       font-weight: 500; }
 
-.post-template:not(.page-template) .post-content + .post-footer {
-  margin-top: 30px; }
+@media (max-width: 640px) {
+  .post-template:not(.page-template) .post-footer {
+    padding: 0 15px; } }
 
 .post-template:not(.page-template) .author,
 .post-template:not(.page-template) .share {
   margin-top: 30px;
   width: 100%; }
+  @media (max-width: 640px) {
+    .post-template:not(.page-template) .author,
+    .post-template:not(.page-template) .share {
+      display: inline-block;
+      margin-right: -5px;
+      vertical-align: top;
+      margin-top: 0;
+      width: 50%; } }
 
 .post-template:not(.page-template) .author {
   text-align: right; }
+  @media (max-width: 640px) {
+    .post-template:not(.page-template) .author {
+      text-align: left; } }
   .post-template:not(.page-template) .author .author-image {
     display: inline-block;
     margin-right: -5px;
