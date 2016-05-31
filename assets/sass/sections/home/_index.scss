@@ -42,12 +42,7 @@
 }
 
 .home-posts > .thought {
-  margin-right: 0;
   width: 66.66%;
-
-  @include mq(desktop) {
-    margin-right: $distance * 1.5;
-  }
 
   @include mq(mobile) {
     padding: $distance * 1.5;

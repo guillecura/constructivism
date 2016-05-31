@@ -1070,11 +1070,7 @@ h6 {
   min-height: 50vh; }
 
 .home-posts > .thought {
-  margin-right: 0;
   width: 66.66%; }
-  @media (max-width: 1280px) {
-    .home-posts > .thought {
-      margin-right: 15px; } }
   @media (max-width: 640px) {
     .home-posts > .thought {
       padding: 15px;
