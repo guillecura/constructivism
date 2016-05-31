@@ -14,20 +14,20 @@
           <p class="post-excerpt">{{excerpt characters="200"}}</p>
           <p class="post-cap">{{title}}</p>
         </section>
-      {{else}}
-        <time class="main-date" datetime="{{date format='YYYY-MM-DD'}}">
-          <span class="mm">{{date format="MM"}}</span>
-          <span class="yy">{{date format="YY"}}</span>
-        </time>
-      {{/has}}
 
-      <header class="main-header post-head">
-        <figure class="post-cover" style="background-image: url({{image}})"></figure>
-      </header>
-
-      {{#has tag="thoughts"}}
+        <header class="main-header post-head">
+          <figure class="post-cover" style="background-image: url({{image}})"></figure>
+        </header>
       {{else}}
-        <h1 class="post-title">{{title}}</h1>
+        <header class="main-header post-head">
+          <figure class="post-cover" style="background-image: url({{image}})"></figure>
+        </header>
+
+        <section class="main-info-p">
+          <h1 class="post-title">{{title}}</h1>
+          <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+          <p class="post-excerpt">{{excerpt characters="200"}}</p>
+        </section>
       {{/has}}
     </section>
   {{/if}}

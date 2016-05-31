@@ -5,16 +5,21 @@
 
 // General
 // -----------------------------------------------------------------------------
-.post-template.tag-thoughts:not(.page-template) {
+.post-template:not(.page-template) {
 // Post Heading
 // -----------------------------------------------------------------------------
   .post-heading {
+    max-width: $site-box;
+    overflow: hidden;
+    margin-top: $distance * 3;
     min-height: auto;
+    position: relative;
   }
 
   .main-info {
     height: calc(100vh - #{$header-height});
     margin-left: 0;
+    max-height: 854px;
     min-height: 500px;
     position: relative;
     width: 66.66%;
@@ -28,51 +33,51 @@
       position: absolute;
       width: 100%;
     }
-  }
+    
+    .post-date {
+      background-color: $black;
+      color: $white;
+      font-size: $fsmall;
+      line-height: $line-height;
+      padding: 0 $distance;
 
-  .post-date {
-    background-color: $black;
-    color: $white;
-    font-size: $fsmall;
-    line-height: $line-height;
-    padding: 0 $distance;
-
-    &::after {
-      content: '»';
-      margin-left: $distance / 2;
+      &::after {
+        content: '»';
+        margin-left: $distance / 2;
+      }
     }
-  }
 
-  .post-title {
-    font-size: $fh0;
-    font-weight: $medium;
-  }
-
-  .post-excerpt {
-    background-color: $white;
-    bottom: $distance * 7;
-    left: $distance * 3;
-    padding: $distance * 2;
-    position: absolute;
-    width: 50%;
-    z-index: 1;
-
-    &::after {
-      content: '...';
-      margin-left: $distance / 2;
+    .post-title {
+      font-size: $fh0;
+      font-weight: $medium;
     }
-  }
 
-  .post-cap {
-    bottom: -8rem;
-    color: $primary;
-    font-size: 0;
-    font-weight: $light;
-    line-height: 1em;
-    position: absolute;
+    .post-excerpt {
+      background-color: $white;
+      bottom: $distance * 6;
+      left: $distance * 3;
+      padding: $distance * 2;
+      position: absolute;
+      width: 50%;
+      z-index: 1;
 
-    &::first-letter {
-      font-size: 41rem;
+      &::after {
+        content: '...';
+        margin-left: $distance / 2;
+      }
+    }
+
+    .post-cap {
+      bottom: -8rem;
+      color: $primary;
+      font-size: 0;
+      font-weight: $light;
+      line-height: 1em;
+      position: absolute;
+
+      &::first-letter {
+        font-size: 41rem;
+      }
     }
   }
 // -----------------------------------------------------------------------------
@@ -82,26 +87,21 @@
 // -----------------------------------------------------------------------------
   .main-header {
     height: calc(100vh - #{$header-height + $distance * 6});
+    max-height: 854px;
     min-height: 500px;
-    padding: 0;
     position: absolute;
     right: 0;
     top: 0;
     width: 50%;
     z-index: -1;
 
-    // Stripes background ------------------------------------------------------
-    &::before,
-    &::after {
-      display: none;
-    }
-
     .post-cover {
       animation: blured-out .999s ease-out forwards; // Blur out animation
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      height: calc(100vh - #{$header-height + $distance * 6});
+      height: calc(100vh - #{$header-height + $distance * 9});
+      max-height: 824px;
       min-height: 500px;
       width: 100%;
     }
@@ -111,11 +111,114 @@
 
 // Page styles
 // -----------------------------------------------------------------------------
+  .site-wrapper {
+    min-height: $post-height;
+    padding: 0;
+  }
+
   .content {
-    // padding-top: $distance * 3;
+    animation: op-in .999s ease-out forwards; // Opacity In animation
+    max-width: $site-box;
+    padding-bottom: $distance * 5;
+    padding-top: $distance * 3;
+    position: relative;
 
     > aside {
+      position: absolute;
+      right: 0;
       top: $distance * 8;
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Thought Post style
+// -----------------------------------------------------------------------------
+  article {
+    @extend %thought;
+    margin-left: 0;
+    text-align: left;
+    width: 66.66%;
+
+    .post-header {
+      text-align: left;
+
+      .post-date {
+        background-color: $black;
+        color: $white;
+        font-size: $fsmall;
+        line-height: $line-height;
+        padding: 0 $distance;
+
+        &::after {
+          content: '»';
+          margin-left: $distance / 2;
+        }
+      }
+
+      .post-title {
+        font-size: $fh0;
+        font-weight: $medium;
+      }
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Post Footer
+// -----------------------------------------------------------------------------
+  .post-content + .post-footer {
+    margin-top: $distance * 3;
+  }
+
+  .author,
+  .share {
+    margin-top: $distance * 3;
+    width: 100%;
+  }
+
+// Author ----------------------------------------------------------------------
+  .author {
+    text-align: right;
+
+    .author-image {
+      @extend %auth-image;
+      @include inline-block;
+    }
+
+    .author-name {
+      @extend %auth-name;
+      @include inline-block;
+      text-align: left;
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Share -----------------------------------------------------------------------
+  .share {
+    text-align: right;
+
+    > span {
+      display: block;
+      font-size: $ftiny;
+      font-weight: $light;
+      line-height: $auth-image;
+      margin-right: $distance;
+
+      @include mq(mobile) {
+        display: block;
+        line-height: $auth-image / 2;
+      }
+    }
+
+    > a[class*='icon-'] { // scss-lint:disable QualifyingElement
+      @extend %social-icon;
+      margin-top: #{($auth-image - $icon) / 2};
+
+      @include mq(mobile) {
+        margin-top: 0;
+      }
     }
   }
 // -----------------------------------------------------------------------------
