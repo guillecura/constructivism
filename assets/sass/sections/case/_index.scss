@@ -13,6 +13,15 @@
     position: relative;
     width: 100%;
 
+    @include mq(mobile) {
+      height: auto;
+      max-height: none;
+      min-height: 0;
+      padding: $distance * 1.5;
+      padding-bottom: $distance * 3;
+      width: 100%;
+    }
+
     &::before {
       background-image: url('../img/dots-texture.png');
       content: '';
@@ -21,6 +30,15 @@
       right: 0;
       top: 0;
       width: 50%;
+
+      @include mq(mobile) {
+        bottom: 0;
+        height: 33.33%;
+        left: 0;
+        right: auto;
+        top: auto;
+        width: 100%;
+      }
     }
 
     .post-date {
@@ -42,6 +60,12 @@
       line-height: $line-height;
       margin-left: 0;
       width: calc(66.66% - #{$distance * 3});
+
+      @include mq(mobile) {
+        font-size: $fh1;
+        position: relative;
+        width: 100%;
+      }
     }
 
     .post-excerpt {
@@ -52,6 +76,14 @@
       top: $distance * 3;
       width: 33.33%;
       z-index: 1;
+
+      @include mq(mobile) {
+        margin-top: $distance;
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+      }
 
       &::after {
         content: '...';
@@ -71,6 +103,21 @@
     position: static;
     width: 100%;
     z-index: -1;
+
+    @include mq(mobile) {
+      min-height: 66.66vh;
+      width: calc(100% - #{$distance * 3});
+    }
+  }
+// -----------------------------------------------------------------------------
+
+
+// Share & footer
+// -----------------------------------------------------------------------------
+  .share {
+    @include mq(mobile) {
+      text-align: left;
+    }
   }
 // -----------------------------------------------------------------------------
 }

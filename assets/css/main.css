@@ -604,6 +604,13 @@ pre[class*='language-'] {
     display: block;
     font-size: 0.85rem;
     line-height: 23px; }
+    @media (max-width: 640px) {
+      .related-posts > a {
+        display: inline-block; }
+        .related-posts > a::after {
+          content: ', '; }
+        .related-posts > a:last-child::after {
+          content: ''; } }
     .related-posts > a:hover {
       border: 0;
       color: #334c69; }
@@ -914,6 +921,14 @@ h6 {
   padding: 20px 0;
   position: relative;
   width: 100%; }
+  @media (max-width: 640px) {
+    .post-template.tag-portfolio:not(.page-template) .main-info-p {
+      height: auto;
+      max-height: none;
+      min-height: 0;
+      padding: 15px;
+      padding-bottom: 30px;
+      width: 100%; } }
   .post-template.tag-portfolio:not(.page-template) .main-info-p::before {
     background-image: url("../img/dots-texture.png");
     content: '';
@@ -922,6 +937,14 @@ h6 {
     right: 0;
     top: 0;
     width: 50%; }
+    @media (max-width: 640px) {
+      .post-template.tag-portfolio:not(.page-template) .main-info-p::before {
+        bottom: 0;
+        height: 33.33%;
+        left: 0;
+        right: auto;
+        top: auto;
+        width: 100%; } }
   .post-template.tag-portfolio:not(.page-template) .main-info-p .post-date {
     background-color: #223347;
     color: white;
@@ -937,6 +960,11 @@ h6 {
     line-height: 1.11em;
     margin-left: 0;
     width: calc(66.66% - 30px); }
+    @media (max-width: 640px) {
+      .post-template.tag-portfolio:not(.page-template) .main-info-p .post-title {
+        font-size: 3rem;
+        position: relative;
+        width: 100%; } }
   .post-template.tag-portfolio:not(.page-template) .main-info-p .post-excerpt {
     background-color: white;
     right: 0;
@@ -945,6 +973,13 @@ h6 {
     top: 30px;
     width: 33.33%;
     z-index: 1; }
+    @media (max-width: 640px) {
+      .post-template.tag-portfolio:not(.page-template) .main-info-p .post-excerpt {
+        margin-top: 10px;
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%; } }
     .post-template.tag-portfolio:not(.page-template) .main-info-p .post-excerpt::after {
       content: '...';
       margin-left: 5px; }
@@ -956,6 +991,14 @@ h6 {
   position: static;
   width: 100%;
   z-index: -1; }
+  @media (max-width: 640px) {
+    .post-template.tag-portfolio:not(.page-template) .main-header {
+      min-height: 66.66vh;
+      width: calc(100% - 30px); } }
+
+@media (max-width: 640px) {
+  .post-template.tag-portfolio:not(.page-template) .share {
+    text-align: left; } }
 
 .contact-head {
   height: 20vh;

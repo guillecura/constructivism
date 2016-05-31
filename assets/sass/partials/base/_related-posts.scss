@@ -27,6 +27,18 @@
     font-size: $fsmall;
     line-height: $auth-image / 2;
 
+    @include mq(mobile) {
+      display: inline-block;
+
+      &::after {
+        content: ', ';
+      }
+
+      &:last-child::after {
+        content: '';
+      }
+    }
+
     &:hover{
       border: 0;
       color: $black-light;
