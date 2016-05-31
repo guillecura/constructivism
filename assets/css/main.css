@@ -254,6 +254,7 @@ body {
 .menu-box {
   animation: none !important;
   border: 6px solid #f03246;
+  max-width: calc(33.33vw - 20px);
   padding: 15px;
   width: 300px; }
   @media (max-width: 640px) {
@@ -814,6 +815,9 @@ h6 {
   padding-top: 30px;
   position: relative;
   text-align: center; }
+  @media (max-width: 1280px) {
+    .about-content {
+      padding: 30px 15px 0; } }
   @media (max-width: 640px) {
     .about-content {
       padding: 0 15px; } }
@@ -849,7 +853,7 @@ h6 {
     overflow: hidden;
     width: 66.66vw;
     z-index: -1; }
-    @media (max-width: 640px) {
+    @media (max-width: 854px) {
       .author-profile .author-image {
         margin-bottom: -15px;
         margin-left: 15px;
@@ -874,7 +878,7 @@ h6 {
     right: 0;
     width: 50vw;
     z-index: 1; }
-    @media (max-width: 640px) {
+    @media (max-width: 854px) {
       .author-profile .author-block {
         height: auto;
         max-height: none;
@@ -890,7 +894,7 @@ h6 {
       position: absolute;
       right: 0;
       width: calc(66.66% - 30px); }
-      @media (max-width: 640px) {
+      @media (max-width: 854px) {
         .author-profile .author-block > section {
           position: static;
           width: 100%; } }

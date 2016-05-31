@@ -39,6 +39,8 @@
     @media (min-width: 1660px) { @content; }
   } @else if $point == desktop {
     @media (max-width: 1280px) { @content; }
+  } @else if $point == hybrid {
+    @media (max-width: 854px)  { @content; }
   } @else if $point == mobile {
     @media (max-width: 640px)  { @content; }
   }

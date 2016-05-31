@@ -9,6 +9,7 @@
 .menu-box {
   animation: none!important;
   border: $line * 2 solid $primary;
+  max-width: calc(33.33vw - #{$distance * 2});
   padding: $distance * 1.5;
   width: 300px;
 
