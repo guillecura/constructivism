@@ -19,7 +19,7 @@
   outline: 0;
   padding: 0 $distance / 4;
   position: absolute;
-  right: calc(50% - #{($site-box / 2) - ($distance * 3)});
+  right: calc(50% - #{$site-box / 2});
   top: ($header-height - $icon) / 2;
   transform: translateZ(1px);
   width: #{$icon + $distance / 2};
