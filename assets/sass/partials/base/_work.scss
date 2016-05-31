@@ -18,9 +18,21 @@
   position: relative;
   width: $case-size;
 
+  @include mq(desktop) {
+    max-height: calc(((100vw - #{$distance * 4 + 300}) / 2) - #{$distance});
+    max-width: calc(((100vw - #{$distance * 4 + 300}) / 2) - #{$distance});
+  }
+
+  @include mq(hybrid) {
+    max-height: calc((100vw - #{$distance * 4 + 300}) - #{$distance});
+    max-width: calc((100vw - #{$distance * 4 + 300}) - #{$distance});
+  }
+
   @include mq(mobile) {
     height: $case-size-small;
     margin-left: auto;
+    max-height: none;
+    max-width: none;
     width: $case-size-small;
   }
 

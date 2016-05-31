@@ -59,6 +59,10 @@
   &.fixed {
     margin-left: 25%;
 
+    @include mq(desktop) {
+      margin-left: $distance * 3 + 300;
+    }
+
     @include mq(mobile) {
       margin-left: 0;
     }

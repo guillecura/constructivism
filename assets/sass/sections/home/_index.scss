@@ -79,6 +79,10 @@
       text-align: left;
       width: 66.66%;
 
+      @include mq(hybrid) {
+        font-size: $fh1;
+      }
+
       @include mq(mobile) {
         font-size: $fh2;
         width: 100%;
