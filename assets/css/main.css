@@ -284,6 +284,7 @@ body {
 .icon-menu {
   animation: menu-h-in .333s ease-out forwards;
   appearance: none;
+  background-color: white;
   border: 0;
   box-shadow: none;
   cursor: pointer;
@@ -292,8 +293,8 @@ body {
   outline: 0;
   padding: 0 2.5px;
   position: absolute;
-  right: calc(50% - 640px);
-  top: 34px;
+  right: calc(50% - 610px);
+  top: 24px;
   transform: translateZ(1px);
   width: 37px;
   z-index: 10002; }
