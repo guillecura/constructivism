@@ -6,7 +6,7 @@ Developed to create a portfolio website. This theme for Ghost blogging platform 
 
 This theme is currently working used on my personal [blog](http://guillecura.co/) and you get the tarball file [here!](https://github.com/guillecura/constructivism/archive/master.zip)
 
-![Hi Contrast theme preview]()
+![Constructivism theme preview](http://guillecura.co/content/images/2016/05/screencapture-guillecura-co.png)
 
 ---
 
@@ -59,4 +59,4 @@ Other thing is to create a nice navigation menu. By default you'll only have the
 ![Add Navigation example](http://guillecura.co/content/images/2016/03/Captura-de-pantalla-2016-03-01-a-las-6-46-47-p-m-.jpg)
 <br><br>
 ######You'll get this navigation menu
-![Navigation menu example](http://guillecura.co/content/images/2016/03/Captura-de-pantalla-2016-03-01-a-las-6-46-24-p-m--1.jpg)
+![Navigation menu example](http://guillecura.co/content/images/2016/05/Screen-Shot-2016-05-31-at-1-56-15-AM.png)
