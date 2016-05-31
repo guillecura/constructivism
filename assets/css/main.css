@@ -142,6 +142,9 @@ body {
     display: block;
     margin-right: auto;
     margin-left: 0; }
+    @media (max-width: 640px) {
+      .case-study:first-child {
+        margin-left: auto; } }
   .case-study:nth-child(2) {
     margin-left: 0; }
     @media (max-width: 640px) {
@@ -353,7 +356,7 @@ body {
     width: 32px; }
     @media (max-width: 640px) {
       .icon-menu.nav-close:hover rect {
-        fill: white !important; } }
+        fill: #223347 !important; } }
 
 body > .nav {
   background-color: white;
@@ -414,6 +417,10 @@ body > .nav {
   @media (max-width: 1280px) {
     .main-nav {
       padding: 0 15px; } }
+  @media (max-width: 640px) {
+    .main-nav {
+      padding: 0;
+      width: calc(100% - 30px); } }
   .main-nav .page-title {
     display: inline-block;
     font-size: 1rem;
@@ -957,6 +964,9 @@ h6 {
   min-height: calc(100vh - 95px);
   position: relative;
   margin-top: calc(9rem + 30px); }
+  @media (max-width: 640px) {
+    .home-content {
+      margin-top: calc(12rem + 30px); } }
   .home-content::before {
     background-image: url("../img/dots-texture.png");
     content: '';
@@ -966,6 +976,9 @@ h6 {
     top: calc((9rem + 30px) * -1);
     width: 66.66%;
     z-index: -1; }
+    @media (max-width: 640px) {
+      .home-content::before {
+        top: calc((12rem + 30px) * -1); } }
 
 .home-cases + .home-posts {
   margin-top: 50px; }
@@ -980,6 +993,10 @@ h6 {
   @media (max-width: 1280px) {
     .home-posts > .thought {
       margin-right: 15px; } }
+  @media (max-width: 640px) {
+    .home-posts > .thought {
+      padding: 15px;
+      width: 100%; } }
 
 .menu-widget {
   padding: 20px 0;
@@ -987,6 +1004,10 @@ h6 {
   right: 0;
   width: 50%;
   z-index: 10000; }
+  @media (max-width: 640px) {
+    .menu-widget {
+      padding: 0 15px;
+      width: 66.66%; } }
   .menu-widget > .nav > ul {
     list-style: none;
     margin-right: 0;
@@ -999,6 +1020,10 @@ h6 {
       line-height: 1.11em;
       text-align: left;
       width: 66.66%; }
+      @media (max-width: 640px) {
+        .menu-widget > .nav > ul li {
+          font-size: 2rem;
+          width: 100%; } }
     .menu-widget > .nav > ul a {
       transition: text-shadow 50ms; }
       .menu-widget > .nav > ul a:hover {

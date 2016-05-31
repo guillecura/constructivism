@@ -41,6 +41,10 @@
   &:first-child {
     @include block;
     margin-left: 0;
+
+    @include mq(mobile) {
+      margin-left: auto;
+    }
   }
 
   &:nth-child(2) {

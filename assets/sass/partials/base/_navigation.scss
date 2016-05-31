@@ -18,6 +18,11 @@
     padding: 0 $distance * 1.5;
   }
 
+  @include mq(mobile) {
+    padding: 0;
+    width: calc(100% - #{$distance * 3});
+  }
+
 
 // Blog name and page title ----------------------------------------------------
   .page-title {
