@@ -59,6 +59,7 @@
       font-weight: $medium;
       line-height: $line-height;
       margin-left: 0;
+      margin-top: $distance * 3;
       width: calc(66.66% - #{$distance * 3});
 
       @include mq(desktop) {
@@ -67,6 +68,7 @@
 
       @include mq(mobile) {
         font-size: $fh1;
+        margin-top: 0;
         padding-left: 0;
         position: relative;
         width: 100%;
@@ -108,7 +110,7 @@
 // -----------------------------------------------------------------------------
   .main-header {
     height: calc(100vh - #{$header-height + $distance * 6});
-    max-height: 760px;
+    max-height: $post-heading-height - $distance * 8;
     min-height: 500px;
     position: static;
     width: 100%;

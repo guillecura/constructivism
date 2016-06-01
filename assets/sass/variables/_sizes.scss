@@ -26,6 +26,7 @@ $section-height:             calc(100vh - #{$header-height + $distance * 1.5});
 $contact-height:             calc(100vh - #{$tag-head} - #{$header-height + $footer-height + $distance * 6});
 $site-height:                calc(100vh - #{$header-height + $footer-height});
 $post-height:                calc(100vh - #{$footer-height});
+$post-heading-height:        720px;
 // -----------------------------------------------------------------------------
 
 

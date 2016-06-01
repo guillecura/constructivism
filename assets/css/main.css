@@ -988,6 +988,7 @@ h6 {
     font-weight: 500;
     line-height: 1.11em;
     margin-left: 0;
+    margin-top: 30px;
     width: calc(66.66% - 30px); }
     @media (max-width: 1280px) {
       .post-template.tag-portfolio:not(.page-template) .main-info-p .post-title {
@@ -995,6 +996,7 @@ h6 {
     @media (max-width: 640px) {
       .post-template.tag-portfolio:not(.page-template) .main-info-p .post-title {
         font-size: 3rem;
+        margin-top: 0;
         padding-left: 0;
         position: relative;
         width: 100%; } }
@@ -1023,7 +1025,7 @@ h6 {
 
 .post-template.tag-portfolio:not(.page-template) .main-header {
   height: calc(100vh - 140px);
-  max-height: 760px;
+  max-height: 640px;
   min-height: 500px;
   position: static;
   width: 100%;
@@ -1161,7 +1163,7 @@ h6 {
 .post-template:not(.page-template) .main-info {
   height: calc(100vh - 80px);
   margin-left: 0;
-  max-height: 854px;
+  max-height: 750px;
   min-height: 500px;
   position: relative;
   width: 66.66%; }
@@ -1233,7 +1235,7 @@ h6 {
 
 .post-template:not(.page-template) .main-header {
   height: calc(100vh - 140px);
-  max-height: 854px;
+  max-height: 720px;
   min-height: 500px;
   position: absolute;
   right: 0;
@@ -1253,7 +1255,7 @@ h6 {
     background-repeat: no-repeat;
     background-size: cover;
     height: calc(100vh - 170px);
-    max-height: 824px;
+    max-height: 720px;
     min-height: 500px;
     width: 100%; }
     @media (max-width: 640px) {

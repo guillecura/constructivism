@@ -23,7 +23,7 @@
   .main-info {
     height: calc(100vh - #{$header-height});
     margin-left: 0;
-    max-height: 854px;
+    max-height: $post-heading-height + $distance * 3;
     min-height: 500px;
     position: relative;
     width: 66.66%;
@@ -120,7 +120,7 @@
 // -----------------------------------------------------------------------------
   .main-header {
     height: calc(100vh - #{$header-height + $distance * 6});
-    max-height: 854px;
+    max-height: $post-heading-height;
     min-height: 500px;
     position: absolute;
     right: 0;
@@ -142,7 +142,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       height: calc(100vh - #{$header-height + $distance * 9});
-      max-height: 824px;
+      max-height: $post-heading-height;
       min-height: 500px;
       width: 100%;
 
