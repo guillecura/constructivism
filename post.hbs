@@ -11,14 +11,20 @@
         <figure class="post-cover" style="background-image: url({{image}})" data-adaptive-background data-ab-css-background></figure>
       </header>
 
-        <section class="main-info">
-          <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-          <h1 class="post-title">{{title}}</h1>
-          <p class="post-excerpt">{{excerpt characters="200"}}</p>
-          {{#has tag="thoughts"}}
+        {{#has tag="thoughts"}}
+          <section class="main-info">
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+            <h1 class="post-title">{{title}}</h1>
+            <p class="post-excerpt">{{excerpt characters="200"}}</p>
             <p class="post-cap">{{title}}</p>
-          {{/has}}
-        </section>
+          </section>
+        {{else}}
+          <section class="main-info-p">
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+            <h1 class="post-title">{{title}}</h1>
+            <p class="post-excerpt">{{excerpt characters="200"}}</p>
+          </section>
+        {{/has}}
     </section>
   {{/if}}
 
