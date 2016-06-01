@@ -71,7 +71,7 @@
       }
 
       @include mq(mobile) {
-        font-size: $fh1;
+        font-size: 13vw;
         padding-left: 0;
         position: relative;
         z-index: 1;

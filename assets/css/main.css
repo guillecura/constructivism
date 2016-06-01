@@ -969,7 +969,7 @@ h6 {
     @media (max-width: 640px) {
       .post-template.tag-portfolio:not(.page-template) .main-info-p::before {
         bottom: 0;
-        height: 33.33%;
+        height: 66.66%;
         left: 0;
         right: auto;
         top: auto;
@@ -1200,7 +1200,7 @@ h6 {
         padding-left: 15px; } }
     @media (max-width: 640px) {
       .post-template:not(.page-template) .main-info .post-title {
-        font-size: 3rem;
+        font-size: 13vw;
         padding-left: 0;
         position: relative;
         z-index: 1; } }
