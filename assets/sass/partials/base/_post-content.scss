@@ -16,12 +16,12 @@
     }
 
     a {
-      color: $primary;
+      color: lighten($black, 33.33%);
 
       // scss-lint:disable NestingDepth
       &:not(.button):hover {
         border: 0;
-        color: $primary-light;
+        color: lighten($black, 50%);
       }
     }
   }
