@@ -76,7 +76,11 @@
 
 
     // Adaptative Backgrounds
-    $.adaptiveBackground.run();
+    $.adaptiveBackground.run({
+      success: function($img, data) {
+        console.log($img, data);
+      }
+    });
   });
 
 })(jQuery);
