@@ -76,11 +76,19 @@
 
 
     // Adaptative Backgrounds
-    $.adaptiveBackground.run({
-      success: function($img, data) {
-        console.log($img, data);
-      }
+    $.adaptiveBackground.run();
+
+    var $postCover = $(".post-template .main-header > .post-cover");
+    var $postCap = $(".post-template .main-info > .post-cap");
+    var $menuBox = $(".post-template menu.menu-box");
+    var $menuBoxLI = $(".post-template menu.menu-box li");
+
+    $postCover.on('ab-color-found', function(ev,payload){
+      $menuBox.css("border-color", payload.color);
+      $menuBoxLI.css("color", payload.color);
+      $postCap.css("color", payload.color);
     });
+
   });
 
 })(jQuery);

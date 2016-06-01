@@ -107,6 +107,7 @@
       font-weight: $light;
       line-height: 1em;
       position: absolute;
+      transition: color 250ms ease-out;
 
       &::first-letter {
         font-size: 41rem;

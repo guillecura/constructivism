@@ -12,19 +12,28 @@
   max-width: calc(33.33vw - #{$distance * 2});
   padding: $distance * 1.5;
   width: 300px;
+  transition: border-color 250ms ease-out;
 
   @include mq(mobile) {
     display: none;
   }
 
+  @mixin alignment($pos) {
+    margin-#{$pos}: 0;
+    text-align: #{$pos};
+
+    li:hover {
+      color: $primary-dark;
+      padding-#{$pos}: $distance;
+    }
+  }
+
   &.left {
-    margin-left: 0;
-    text-align: left;
+    @include alignment(left);
   }
 
   &.right {
-    margin-right: 0;
-    text-align: right;
+    @include alignment(right);
   }
 
   li {
@@ -33,11 +42,7 @@
     font-weight: $light;
     line-height: $line-height;
     list-style: none;
-    transition: color 150ms;
-
-    &:hover {
-      color: $primary-dark;
-    }
+    transition: color 250ms ease-out, padding 150ms;
 
     &.nav-current {
       font-weight: $bold;
