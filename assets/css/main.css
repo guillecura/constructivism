@@ -323,10 +323,6 @@ body {
       transition-delay: 100ms; }
   .icon-menu:hover {
     border: 0 !important; }
-    .icon-menu:hover rect {
-      fill: #f03246; }
-  .icon-menu.nav-close {
-    position: fixed; }
 
 @keyframes cross-l {
   0% {
@@ -343,26 +339,17 @@ body {
     transform: translateY(14.5px) rotate(45deg); }
   100% {
     transform: translateY(14.5px) rotate(45deg); } }
-    .icon-menu.nav-close rect:nth-child(odd) {
-      animation: cross-l .666s ease-out forwards; }
-    .icon-menu.nav-close rect:nth-child(even) {
-      animation: cross-r .666s ease-out forwards; }
-  .icon-menu.nav-close:hover rect {
-    fill: #f03246;
-    width: 32px; }
+  .icon-menu.nav-close rect:nth-child(odd) {
+    animation: cross-l .666s ease-out forwards; }
+  .icon-menu.nav-close rect:nth-child(even) {
+    animation: cross-r .666s ease-out forwards; }
   @media (max-width: 854px) {
     .icon-menu {
       animation: menu-h-in .333s ease-out forwards !important; }
-      .icon-menu:hover rect {
-        fill: #223347 !important; }
-      .icon-menu.nav-close:hover rect {
-        fill: #223347 !important; }
-      .icon-menu.nav-close rect {
-        fill: #223347 !important; }
-        .icon-menu.nav-close rect:nth-child(odd) {
-          animation: cross-l .666s ease-out forwards !important; }
-        .icon-menu.nav-close rect:nth-child(even) {
-          animation: cross-r .666s ease-out forwards !important; } }
+      .icon-menu.nav-close rect:nth-child(odd) {
+        animation: cross-l .666s ease-out forwards !important; }
+      .icon-menu.nav-close rect:nth-child(even) {
+        animation: cross-r .666s ease-out forwards !important; } }
 
 body > .nav {
   background-color: white;
