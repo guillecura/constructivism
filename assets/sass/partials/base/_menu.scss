@@ -32,9 +32,10 @@ body > .nav {
       left: 0;
       position: fixed;
       right: 0;
+      transform: translateZ(-100px);
       top: 0;
       width: 100%;
-      z-index: -1;
+      z-index: -1000;
     }
   }
 
@@ -89,8 +90,8 @@ body > .nav {
   a {
     transition: text-shadow 50ms;
 
-    &:hover,
-    &:focus {
+    &:focus,
+    &:hover {
       border: 0;
       text-shadow: $border * 1.5 $border * 1.5 $primary;
     }
