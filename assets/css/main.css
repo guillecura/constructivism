@@ -370,15 +370,11 @@ body > .nav {
     animation: menu-out .333s ease-in forwards; }
   body > .nav > ul {
     display: block;
-    left: 50%;
     list-style: none;
     max-width: 1280px;
     padding: 0 15px;
-    position: absolute;
-    text-align: right;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%; }
+    position: relative;
+    text-align: right; }
     @media (max-width: 1280px) {
       body > .nav > ul {
         padding: 0 30px; } }
