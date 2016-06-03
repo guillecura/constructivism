@@ -39,6 +39,7 @@ body > .nav {
     padding: 0 $distance * 1.5;
     position: relative;
     text-align: right;
+    top: $header-height + $distance * 3;
 
     @include mq(desktop) {
       padding: 0 $distance * 3;
