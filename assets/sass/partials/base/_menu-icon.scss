@@ -21,9 +21,13 @@
   position: absolute;
   right: calc(50% - #{$site-box / 2});
   top: ($header-height - $icon) / 2;
-  transform: translateZ(1px); // iOS z-index hack
   width: #{$icon + $distance / 2};
   z-index: $z-top + 2; // over the nav menu
+
+  -webkit-transform:translateZ(1px);
+     -moz-transform:translateZ(1px);
+       -o-transform:translateZ(1px);
+          transform:translateZ(1px);
 
   @include mq(desktop) {
     right: $distance * 1.5;

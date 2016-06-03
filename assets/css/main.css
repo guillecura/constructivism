@@ -298,9 +298,12 @@ body {
   position: absolute;
   right: calc(50% - 640px);
   top: 24px;
-  transform: translateZ(1px);
   width: 37px;
-  z-index: 10002; }
+  z-index: 10002;
+  -webkit-transform: translateZ(1px);
+  -moz-transform: translateZ(1px);
+  -o-transform: translateZ(1px);
+  transform: translateZ(1px); }
   @media (max-width: 1280px) {
     .icon-menu {
       right: 15px; } }
@@ -431,10 +434,6 @@ body > .nav {
     width: auto; }
     .main-nav .page-title > a:hover {
       border: 0; }
-
-.nav-opened .main-nav {
-  position: fixed;
-  top: 0; }
 
 .post-content p {
   font-size: 0.85rem; }
