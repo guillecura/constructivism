@@ -398,8 +398,7 @@ body > .nav {
   body > .nav a {
     transition: text-shadow 50ms; }
     body > .nav a:focus, body > .nav a:hover {
-      border: 0;
-      text-shadow: 4.5px 4.5px #f03246; }
+      border: 0; }
 
 .nav-opened > .nav {
   animation: menu-in .333s ease-out forwards;

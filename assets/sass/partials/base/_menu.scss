@@ -75,7 +75,7 @@ body > .nav {
     &:focus,
     &:hover {
       border: 0;
-      text-shadow: $border * 1.5 $border * 1.5 $primary;
+      // text-shadow: $border * 1.5 $border * 1.5 $primary;
     }
   }
 // -----------------------------------------------------------------------------
