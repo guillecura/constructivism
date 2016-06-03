@@ -377,21 +377,6 @@ body > .nav {
   top: 0;
   width: 100%;
   z-index: 10001; }
-  @media (max-width: 854px) {
-    body > .nav {
-      background-color: transparent; }
-      body > .nav::after {
-        background-color: white;
-        bottom: 0;
-        content: '';
-        height: 100%;
-        left: 0;
-        position: fixed;
-        right: 0;
-        transform: translateZ(-100px);
-        top: 0;
-        width: 100%;
-        z-index: -1000; } }
   body > .nav.closed {
     animation: menu-out .333s ease-in forwards; }
   body > .nav > ul {
