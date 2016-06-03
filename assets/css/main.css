@@ -352,6 +352,7 @@ body {
           animation: cross-r .666s ease-out forwards !important; } }
 
 .main-menu .nav {
+  background-color: white;
   bottom: 0;
   color: #223347;
   height: 100vh;
