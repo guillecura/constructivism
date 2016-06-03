@@ -19,18 +19,17 @@
     $(".menu-button").on("click tap", function(e){
       e.preventDefault();
 
-      if ($("body").hasClass("nav-closed")) {
+      var $body = $("body");
+      var $nav = $(".main-menu .nav");
 
+      if ($body.hasClass("nav-closed")) {
         $(this).addClass("nav-close");
-        $("body").toggleClass("nav-opened nav-closed");
-        $("body > .nav").removeClass("closed");
-
+        $body.toggleClass("nav-opened nav-closed");
+        $nav.removeClass("closed");
       } else {
-
         $(this).removeClass("nav-close");
-        $("body").toggleClass("nav-opened nav-closed");
-        $("body > .nav").addClass("closed");
-
+        $body.toggleClass("nav-opened nav-closed");
+        $nav.addClass("closed");
       }
     });
 
