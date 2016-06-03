@@ -9,7 +9,6 @@
 // -----------------------------------------------------------------------------
 body > .nav {
   background-color: $white;
-  border: $distance solid $white;
   bottom: 0;
   color: $black;
   height: $menu-height;
@@ -34,10 +33,20 @@ body > .nav {
 // Main content
 // -----------------------------------------------------------------------------
   > ul {
-    @include vertical-center;
     display: block;
-    text-align: center;
+    left: 50%;
+    list-style: none;
+    max-width: $site-box;
+    padding: 0 $distance * 1.5;
+    position: absolute;
+    text-align: right;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
+
+    @include mq(desktop) {
+      padding: 0 $distance * 3;
+    }
   }
 
 
@@ -50,8 +59,24 @@ body > .nav {
   }
 
   li {
-    font-size: $fh1;
-    line-height: $line-height-big;
+    font-size: $fh0;
+    font-weight: $bold;
+    line-height: $fh0 * 1.25;
+
+    @include mq(mobile) {
+      font-size: 20vw;
+      line-height: 20vw * 1.25;
+    }
+  }
+
+  a {
+    transition: text-shadow 50ms;
+
+    &:focus,
+    &:hover {
+      border: 0;
+      text-shadow: $border * 1.5 $border * 1.5 $primary;
+    }
   }
 // -----------------------------------------------------------------------------
 }
@@ -60,7 +85,7 @@ body > .nav {
 
 // If nav is opened
 // -----------------------------------------------------------------------------
-.nav-opened .nav {
+.nav-opened > .nav {
   animation: menu-in .333s ease-out forwards;
   pointer-events: all;
 }

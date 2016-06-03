@@ -4,17 +4,9 @@
 // =============================================================================
 
 
-// Double Meat Hamburger Icon SVG
+// No Meat Hamburger Icon SVG
 // -----------------------------------------------------------------------------
 .icon-menu {
-// Variables -------------------------------------------------------------------
-  $color-1:        darken($primary, 10%);
-  $color-2:        $primary;
-  $color-3:        lighten($primary, 10%);
-
-  $list:           $color-1 $color-2 $color-3; // one for each line
-// -----------------------------------------------------------------------------
-
 // General Styles --------------------------------------------------------------
   animation: menu-h-in .333s ease-out forwards; // Slide In animation
   appearance: none;
@@ -26,19 +18,14 @@
   height: $icon;
   outline: 0;
   padding: 0 $distance / 4;
-  position: fixed;
-  right: calc(50% - #{($site-box / 2) - ($distance * 3)});
+  position: absolute;
+  right: calc(50% - #{$site-box / 2});
   top: ($header-height - $icon) / 2;
-  transform: translateZ(1px);
+  transform: translateZ(1px); // iOS z-index hack
   width: #{$icon + $distance / 2};
   z-index: $z-top + 2; // over the nav menu
 
   @include mq(desktop) {
-    right: $distance * 3;
-  }
-
-  @include mq(mobile) {
-    animation: menu-h-in .333s ease-out forwards!important; // Slide In animation
     right: $distance * 1.5;
   }
 
@@ -57,59 +44,36 @@
     transition: fill 50ms ease-out, width 150ms ease-out, transform 150ms ease-out;
     width: $icon;
 
-    @each $pos-y in $list {
-      $i: index($list, $pos-y);
+    // Top line
+    &:nth-child(odd) {
+      transform: translateY(#{$line * 3.5});
+      transition-delay: unquote('#{50}ms');
+    }
 
-      &:nth-child(#{$i}) {
-        transform: translateY(#{$line * $i * 2.5});
-        transition-delay: unquote('#{$i * 50}ms');
-      }
+    // Bottom line
+    &:nth-child(even) {
+      transform: translateY(#{$line * 7});
+      transition-delay: unquote('#{100}ms');
     }
   }
 // -----------------------------------------------------------------------------
 
 // Set the hover
 // -----------------------------------------------------------------------------
-  &:hover rect {
-    @each $color in $list {
-      $i: index($list, $color);
+  &:hover {
+    border: 0 !important;
 
-// Animation -------------------------------------------------------------------
-      @keyframes bounce-#{$i} {
-        0% {width: #{$icon};}
-
-        33% {width: #{$icon / $i};}
-
-        66% {width: #{$icon / ($i * .333)};}
-
-        100% {width: #{$icon / ($i * .666)};}
-      }
-
-// Hover state -----------------------------------------------------------------
-      &:nth-child(#{$i}) {
-        animation: bounce-#{$i} unquote('#{$i * 150}ms') ease-out forwards;
-        fill: #{$color};
-        width: #{$icon / ($i * .666)};
-      }
-    }
-
-// Prevent hover on mobile -----------------------------------------------------
-    @include mq(mobile) {
-      animation: none!important;
-      fill: $black!important;
-      width: $icon!important;
+    rect {
+      fill: $primary;
     }
   }
-// -----------------------------------------------------------------------------
 
 // Set the on-click state (replace the &:focus selector with the active class)
 // -----------------------------------------------------------------------------
   &.nav-close {
-    background-color: transparent;
+    position: fixed;
 
     rect {
-      fill: $black;
-
 // Animation -------------------------------------------------------------------
 // scss-lint:disable NestingDepth
       @keyframes cross-l {
@@ -131,15 +95,6 @@
       &:nth-child(even) {
         animation: cross-r .666s ease-out forwards;
       }
-
-// Prevent hover on mobile -----------------------------------------------------
-      @include mq(mobile) {
-        fill: $white!important;
-
-        &:nth-child(odd) {animation: cross-l .666s ease-out forwards!important;}
-
-        &:nth-child(even) {animation: cross-r .666s ease-out forwards!important;}
-      }
 // -----------------------------------------------------------------------------
     }
   }
@@ -147,11 +102,28 @@
   &.nav-close:hover rect {
     fill: $primary;
     width: #{$icon};
+  }
+// -----------------------------------------------------------------------------
+
 
 // Prevent hover on mobile -----------------------------------------------------
-    @include mq(mobile) {
-      fill: $white!important;
-// -----------------------------------------------------------------------------
+  @include mq(hybrid) {
+    animation: menu-h-in .333s ease-out forwards !important; // Slide In animation
+
+    &:hover rect {
+      fill: $black !important;
+    }
+
+    &.nav-close:hover rect {
+      fill: $black !important;
+    }
+
+    &.nav-close rect {
+      fill: $black !important;
+
+      &:nth-child(odd) {animation: cross-l .666s ease-out forwards !important;}
+
+      &:nth-child(even) {animation: cross-r .666s ease-out forwards !important;}
     }
   }
 // -----------------------------------------------------------------------------

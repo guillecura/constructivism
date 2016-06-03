@@ -79,7 +79,6 @@ body {
   max-width: 1280px;
   min-height: calc(100vh - 120px);
   padding-top: 30px;
-  position: relative;
   width: 100%; }
 
 .post-template:not(.page-template) .author .author-image {
@@ -296,18 +295,14 @@ body {
   height: 32px;
   outline: 0;
   padding: 0 2.5px;
-  position: fixed;
-  right: calc(50% - 610px);
+  position: absolute;
+  right: calc(50% - 640px);
   top: 24px;
   transform: translateZ(1px);
   width: 37px;
   z-index: 10002; }
   @media (max-width: 1280px) {
     .icon-menu {
-      right: 30px; } }
-  @media (max-width: 640px) {
-    .icon-menu {
-      animation: menu-h-in 0.333s ease-out forwards !important;
       right: 15px; } }
   .icon-menu > svg {
     display: block;
@@ -320,66 +315,18 @@ body {
     transform-origin: center;
     transition: fill 50ms ease-out, width 150ms ease-out, transform 150ms ease-out;
     width: 32px; }
-    .icon-menu rect:nth-child(1) {
-      transform: translateY(7.5px);
+    .icon-menu rect:nth-child(odd) {
+      transform: translateY(10.5px);
       transition-delay: 50ms; }
-    .icon-menu rect:nth-child(2) {
-      transform: translateY(15px);
+    .icon-menu rect:nth-child(even) {
+      transform: translateY(21px);
       transition-delay: 100ms; }
-    .icon-menu rect:nth-child(3) {
-      transform: translateY(22.5px);
-      transition-delay: 150ms; }
-
-@keyframes bounce-1 {
-  0% {
-    width: 32px; }
-  33% {
-    width: 32px; }
-  66% {
-    width: 96.0961px; }
-  100% {
-    width: 48.04805px; } }
-  .icon-menu:hover rect:nth-child(1) {
-    animation: bounce-1 150ms ease-out forwards;
-    fill: #df1026;
-    width: 48.04805px; }
-
-@keyframes bounce-2 {
-  0% {
-    width: 32px; }
-  33% {
-    width: 16px; }
-  66% {
-    width: 48.04805px; }
-  100% {
-    width: 24.02402px; } }
-  .icon-menu:hover rect:nth-child(2) {
-    animation: bounce-2 300ms ease-out forwards;
-    fill: #f03246;
-    width: 24.02402px; }
-
-@keyframes bounce-3 {
-  0% {
-    width: 32px; }
-  33% {
-    width: 10.66667px; }
-  66% {
-    width: 32.03203px; }
-  100% {
-    width: 16.01602px; } }
-  .icon-menu:hover rect:nth-child(3) {
-    animation: bounce-3 450ms ease-out forwards;
-    fill: #f36271;
-    width: 16.01602px; }
-  @media (max-width: 640px) {
+  .icon-menu:hover {
+    border: 0 !important; }
     .icon-menu:hover rect {
-      animation: none !important;
-      fill: #223347 !important;
-      width: 32px !important; } }
+      fill: #f03246; }
   .icon-menu.nav-close {
-    background-color: transparent; }
-    .icon-menu.nav-close rect {
-      fill: #223347; }
+    position: fixed; }
 
 @keyframes cross-l {
   0% {
@@ -396,27 +343,29 @@ body {
     transform: translateY(14.5px) rotate(45deg); }
   100% {
     transform: translateY(14.5px) rotate(45deg); } }
-      .icon-menu.nav-close rect:nth-child(odd) {
-        animation: cross-l .666s ease-out forwards; }
-      .icon-menu.nav-close rect:nth-child(even) {
-        animation: cross-r .666s ease-out forwards; }
-      @media (max-width: 640px) {
-        .icon-menu.nav-close rect {
-          fill: white !important; }
-          .icon-menu.nav-close rect:nth-child(odd) {
-            animation: cross-l 0.666s ease-out forwards !important; }
-          .icon-menu.nav-close rect:nth-child(even) {
-            animation: cross-r 0.666s ease-out forwards !important; } }
+    .icon-menu.nav-close rect:nth-child(odd) {
+      animation: cross-l .666s ease-out forwards; }
+    .icon-menu.nav-close rect:nth-child(even) {
+      animation: cross-r .666s ease-out forwards; }
   .icon-menu.nav-close:hover rect {
     fill: #f03246;
     width: 32px; }
-    @media (max-width: 640px) {
+  @media (max-width: 854px) {
+    .icon-menu {
+      animation: menu-h-in .333s ease-out forwards !important; }
+      .icon-menu:hover rect {
+        fill: #223347 !important; }
       .icon-menu.nav-close:hover rect {
-        fill: white !important; } }
+        fill: #223347 !important; }
+      .icon-menu.nav-close rect {
+        fill: #223347 !important; }
+        .icon-menu.nav-close rect:nth-child(odd) {
+          animation: cross-l .666s ease-out forwards !important; }
+        .icon-menu.nav-close rect:nth-child(even) {
+          animation: cross-r .666s ease-out forwards !important; } }
 
 body > .nav {
   background-color: white;
-  border: 10px solid white;
   bottom: 0;
   color: #223347;
   height: 100vh;
@@ -431,46 +380,66 @@ body > .nav {
   body > .nav.closed {
     animation: menu-out .333s ease-in forwards; }
   body > .nav > ul {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     display: block;
-    text-align: center;
+    left: 50%;
+    list-style: none;
+    max-width: 1280px;
+    padding: 0 15px;
+    position: absolute;
+    text-align: right;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 100%; }
+    @media (max-width: 1280px) {
+      body > .nav > ul {
+        padding: 0 30px; } }
   body > .nav .nav-title {
     color: #4b719d;
     font-size: 1.5rem;
     line-height: 1.48em;
     margin-bottom: 30px; }
   body > .nav li {
-    font-size: 3rem;
-    line-height: 1.48em; }
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 5rem; }
+    @media (max-width: 640px) {
+      body > .nav li {
+        font-size: 20vw;
+        line-height: 25vw; } }
+  body > .nav a {
+    transition: text-shadow 50ms; }
+    body > .nav a:focus, body > .nav a:hover {
+      border: 0;
+      text-shadow: 4.5px 4.5px #f03246; }
 
-.nav-opened .nav {
+.nav-opened > .nav {
   animation: menu-in .333s ease-out forwards;
   pointer-events: all; }
 
 .main-nav {
   animation: header-in .333s ease-out forwards;
-  background-color: white;
+  border-bottom: 6px solid #223347;
   height: 80px;
-  left: 50%;
   max-width: 1280px;
-  padding: 0 30px;
-  position: fixed;
-  top: 0;
-  transform: translateX(-50%);
+  padding: 0;
   width: 100%;
   z-index: 10000; }
-  @media (max-width: 640px) {
+  @media (max-width: 1280px) {
     .main-nav {
       padding: 0 15px; } }
+  @media (max-width: 640px) {
+    .main-nav {
+      padding: 0;
+      width: calc(100% - 30px); } }
   .main-nav .page-title {
     display: inline-block;
     font-size: 1rem;
     font-weight: 500;
-    line-height: 80px;
+    line-height: 60px;
+    margin-top: 20px;
     width: auto; }
+    .main-nav .page-title > a:hover {
+      border: 0; }
 
 .post-content p {
   font-size: 0.85rem; }
