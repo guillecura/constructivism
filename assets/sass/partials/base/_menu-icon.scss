@@ -90,7 +90,6 @@
     }
 // -----------------------------------------------------------------------------
   }
-// -----------------------------------------------------------------------------
 
 
 // Prevent hover on mobile -----------------------------------------------------
@@ -98,8 +97,6 @@
     animation: menu-h-in .333s ease-out forwards !important; // Slide In animation
 
     &.nav-close rect {
-      fill: $black !important;
-
       &:nth-child(odd) {animation: cross-l .666s ease-out forwards !important;}
 
       &:nth-child(even) {animation: cross-r .666s ease-out forwards !important;}

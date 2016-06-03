@@ -344,12 +344,10 @@ body {
   @media (max-width: 854px) {
     .icon-menu {
       animation: menu-h-in .333s ease-out forwards !important; }
-      .icon-menu.nav-close rect {
-        fill: #223347 !important; }
-        .icon-menu.nav-close rect:nth-child(odd) {
-          animation: cross-l .666s ease-out forwards !important; }
-        .icon-menu.nav-close rect:nth-child(even) {
-          animation: cross-r .666s ease-out forwards !important; } }
+      .icon-menu.nav-close rect:nth-child(odd) {
+        animation: cross-l .666s ease-out forwards !important; }
+      .icon-menu.nav-close rect:nth-child(even) {
+        animation: cross-r .666s ease-out forwards !important; } }
 
 body > .nav {
   background-color: white;
