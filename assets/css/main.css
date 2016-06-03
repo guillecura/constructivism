@@ -394,7 +394,7 @@ body {
     .main-menu .nav a:focus, .main-menu .nav a:hover {
       border: 0; }
 
-.nav-opened > .nav {
+.nav-opened .main-menu .nav {
   animation: menu-in .333s ease-out forwards;
   pointer-events: all; }
 

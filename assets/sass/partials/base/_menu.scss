@@ -82,7 +82,7 @@
 
 // If nav is opened
 // -----------------------------------------------------------------------------
-.nav-opened > .nav {
+.nav-opened .main-menu .nav {
   animation: menu-in .333s ease-out forwards;
   pointer-events: all;
 }
