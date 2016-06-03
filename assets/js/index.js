@@ -16,12 +16,12 @@
 
 
     // Menu & menu button animation
-    $(".menu-button").on("click tap", function(e){
+    var $btn = $(".menu-button");
+    var $body = $("body");
+    var $nav = $("body > .nav");
+
+    $btn.on("click tap", function(e){
       e.preventDefault();
-
-      var $body = $("body");
-      var $nav = $(".main-menu .nav");
-
       if ($body.hasClass("nav-closed")) {
         $(this).addClass("nav-close");
         $body.toggleClass("nav-opened nav-closed");
@@ -32,6 +32,16 @@
         $nav.addClass("closed");
       }
     });
+
+    if ($body.hasClass("nav-opened")) {
+      $nav.on("click tap", function(e){
+        if( e.target === this ) {
+          $(this).removeClass("closed");
+          $body.toggleClass("nav-opened nav-closed");
+          $btn.addClass("nav-close");
+        }
+      });
+    }
 
 
     // Sticky navs

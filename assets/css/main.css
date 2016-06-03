@@ -351,10 +351,7 @@ body {
         .icon-menu.nav-close rect:nth-child(even) {
           animation: cross-r .666s ease-out forwards !important; } }
 
-.main-menu {
-  z-index: 10001; }
-
-.main-menu .nav {
+body > .nav {
   background-color: white;
   bottom: 0;
   color: #223347;
@@ -366,39 +363,43 @@ body {
   right: 0;
   top: 0;
   width: 100%;
-  z-index: -1; }
-  .main-menu .nav.closed {
+  z-index: 10001; }
+  body > .nav.closed {
     animation: menu-out .333s ease-in forwards; }
-  .main-menu .nav > ul {
+  body > .nav > ul {
     display: block;
+    left: 50%;
     list-style: none;
     max-width: 1280px;
     padding: 0 15px;
-    position: relative;
+    position: absolute;
     text-align: right;
-    top: 110px; }
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; }
     @media (max-width: 1280px) {
-      .main-menu .nav > ul {
+      body > .nav > ul {
         padding: 0 30px; } }
-  .main-menu .nav .nav-title {
+  body > .nav .nav-title {
     color: #4b719d;
     font-size: 1.5rem;
     line-height: 1.48em;
     margin-bottom: 30px; }
-  .main-menu .nav li {
+  body > .nav li {
     font-size: 4rem;
     font-weight: 700;
     line-height: 5rem; }
     @media (max-width: 640px) {
-      .main-menu .nav li {
+      body > .nav li {
         font-size: 20vw;
         line-height: 25vw; } }
-  .main-menu .nav a {
+  body > .nav a {
     transition: text-shadow 50ms; }
-    .main-menu .nav a:focus, .main-menu .nav a:hover {
-      border: 0; }
+    body > .nav a:focus, body > .nav a:hover {
+      border: 0;
+      text-shadow: 4.5px 4.5px #f03246; }
 
-.nav-opened .main-menu .nav {
+.nav-opened > .nav {
   animation: menu-in .333s ease-out forwards;
   pointer-events: all; }
 
