@@ -35,6 +35,7 @@ body {
   font-variant-ligatures: common-ligatures;
   font-weight: $regular;
   text-rendering: optimizeLegibility;
+  transform: translate3d(0, 0, 0);
 
   &.nav-opened {
     height: 100vh;

@@ -20,7 +20,7 @@
   padding: 0 $distance / 4;
   position: absolute;
   right: calc(50% - #{$site-box / 2});
-  transform: translateZ(#{$distance + 1});
+  transform: translateZ(#{$distance});
   top: ($header-height - $icon) / 2;
   width: #{$icon + $distance / 2};
   z-index: $z-top + 2; // over the nav menu

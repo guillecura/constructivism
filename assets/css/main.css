@@ -66,7 +66,8 @@ body {
   font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
   font-weight: 400;
-  text-rendering: optimizeLegibility; }
+  text-rendering: optimizeLegibility;
+  transform: translate3d(0, 0, 0); }
   body.nav-opened {
     height: 100vh;
     overflow: hidden; }
@@ -294,7 +295,7 @@ body {
   padding: 0 2.5px;
   position: absolute;
   right: calc(50% - 640px);
-  transform: translateZ(11px);
+  transform: translateZ(10px);
   top: 24px;
   width: 37px;
   z-index: 10002; }
