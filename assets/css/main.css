@@ -297,13 +297,10 @@ body {
   padding: 0 2.5px;
   position: absolute;
   right: calc(50% - 640px);
+  transform: translateZ(1px);
   top: 24px;
   width: 37px;
-  z-index: 10002;
-  -webkit-transform: translateZ(1px);
-  -moz-transform: translateZ(1px);
-  -o-transform: translateZ(1px);
-  transform: translateZ(1px); }
+  z-index: 10002; }
   @media (max-width: 1280px) {
     .icon-menu {
       right: 15px; } }

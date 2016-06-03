@@ -20,14 +20,10 @@
   padding: 0 $distance / 4;
   position: absolute;
   right: calc(50% - #{$site-box / 2});
+  transform:translateZ(1px);
   top: ($header-height - $icon) / 2;
   width: #{$icon + $distance / 2};
   z-index: $z-top + 2; // over the nav menu
-
-  -webkit-transform:translateZ(1px);
-     -moz-transform:translateZ(1px);
-       -o-transform:translateZ(1px);
-          transform:translateZ(1px);
 
   @include mq(desktop) {
     right: $distance * 1.5;
@@ -66,10 +62,6 @@
 // -----------------------------------------------------------------------------
   &:hover {
     border: 0 !important;
-
-    // rect {
-    //   fill: $primary;
-    // }
   }
 
 // Set the on-click state (replace the &:focus selector with the active class)
@@ -102,25 +94,12 @@
 // -----------------------------------------------------------------------------
     }
   }
-
-  // &.nav-close:hover rect {
-  //   fill: $primary;
-  //   width: #{$icon};
-  // }
 // -----------------------------------------------------------------------------
 
 
 // Prevent hover on mobile -----------------------------------------------------
   @include mq(hybrid) {
     animation: menu-h-in .333s ease-out forwards !important; // Slide In animation
-
-    // &:hover rect {
-    //   fill: $black !important;
-    // }
-
-    // &.nav-close:hover rect {
-    //   fill: $black !important;
-    // }
 
     &.nav-close rect {
       fill: $black !important;

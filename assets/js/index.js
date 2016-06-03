@@ -16,7 +16,7 @@
 
 
     // Menu & menu button animation
-    $(".menu-button").on("click", function(e){
+    $(".menu-button").on("click tap", function(e){
       e.preventDefault();
 
       if ($("body").hasClass("nav-closed")) {
