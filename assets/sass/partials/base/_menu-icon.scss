@@ -29,10 +29,6 @@
     right: $distance * 1.5;
   }
 
-  @include mq(hybrid) {
-    animation: menu-h-in .333s ease-out forwards !important; // Slide In animation
-  }
-
   > svg {
     display: block;
     height: 100%;
@@ -69,23 +65,13 @@
 
     rect {
       fill: $primary;
-
-// Prevent hover on mobile -----------------------------------------------------
-      @include mq(hybrid) {
-        fill: $black !important;
-      }
     }
   }
-// -----------------------------------------------------------------------------
 
 // Set the on-click state (replace the &:focus selector with the active class)
 // -----------------------------------------------------------------------------
   &.nav-close {
-    @include mq(hybrid) {
-      position: fixed;
-      transform: translateZ(1px); // iOS z-index hack
-      z-index: $z-top + 2; // over the nav menu
-    }
+    position: fixed;
 
     rect {
 // Animation -------------------------------------------------------------------
@@ -109,15 +95,6 @@
       &:nth-child(even) {
         animation: cross-r .666s ease-out forwards;
       }
-
-// Prevent hover on hybrid -----------------------------------------------------
-      @include mq(hybrid) {
-        fill: $black !important;
-
-        &:nth-child(odd) {animation: cross-l .666s ease-out forwards !important;}
-
-        &:nth-child(even) {animation: cross-r .666s ease-out forwards !important;}
-      }
 // -----------------------------------------------------------------------------
     }
   }
@@ -125,11 +102,28 @@
   &.nav-close:hover rect {
     fill: $primary;
     width: #{$icon};
-
-// Prevent hover on hybrid -----------------------------------------------------
-    @include mq(hybrid) {
-      fill: $black !important;
+  }
 // -----------------------------------------------------------------------------
+
+
+// Prevent hover on mobile -----------------------------------------------------
+  @include mq(hybrid) {
+    animation: menu-h-in .333s ease-out forwards !important; // Slide In animation
+
+    &:hover rect {
+      fill: $black !important;
+    }
+
+    &.nav-close:hover rect {
+      fill: $black !important;
+    }
+
+    &.nav-close rect {
+      fill: $black !important;
+
+      &:nth-child(odd) {animation: cross-l .666s ease-out forwards !important;}
+
+      &:nth-child(even) {animation: cross-r .666s ease-out forwards !important;}
     }
   }
 // -----------------------------------------------------------------------------
