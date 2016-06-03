@@ -295,14 +295,18 @@ body {
   height: 32px;
   outline: 0;
   padding: 0 2.5px;
-  position: absolute;
-  right: calc(50% - 640px);
+  position: fixed;
+  right: calc(50% - 610px);
   top: 24px;
   transform: translateZ(1px);
   width: 37px;
   z-index: 10002; }
   @media (max-width: 1280px) {
     .icon-menu {
+      right: 30px; } }
+  @media (max-width: 640px) {
+    .icon-menu {
+      animation: menu-h-in 0.333s ease-out forwards !important;
       right: 15px; } }
   .icon-menu > svg {
     display: block;
@@ -315,18 +319,66 @@ body {
     transform-origin: center;
     transition: fill 50ms ease-out, width 150ms ease-out, transform 150ms ease-out;
     width: 32px; }
-    .icon-menu rect:nth-child(odd) {
-      transform: translateY(10.5px);
+    .icon-menu rect:nth-child(1) {
+      transform: translateY(7.5px);
       transition-delay: 50ms; }
-    .icon-menu rect:nth-child(even) {
-      transform: translateY(21px);
+    .icon-menu rect:nth-child(2) {
+      transform: translateY(15px);
       transition-delay: 100ms; }
-  .icon-menu:hover {
-    border: 0 !important; }
+    .icon-menu rect:nth-child(3) {
+      transform: translateY(22.5px);
+      transition-delay: 150ms; }
+
+@keyframes bounce-1 {
+  0% {
+    width: 32px; }
+  33% {
+    width: 32px; }
+  66% {
+    width: 96.0961px; }
+  100% {
+    width: 48.04805px; } }
+  .icon-menu:hover rect:nth-child(1) {
+    animation: bounce-1 150ms ease-out forwards;
+    fill: #df1026;
+    width: 48.04805px; }
+
+@keyframes bounce-2 {
+  0% {
+    width: 32px; }
+  33% {
+    width: 16px; }
+  66% {
+    width: 48.04805px; }
+  100% {
+    width: 24.02402px; } }
+  .icon-menu:hover rect:nth-child(2) {
+    animation: bounce-2 300ms ease-out forwards;
+    fill: #f03246;
+    width: 24.02402px; }
+
+@keyframes bounce-3 {
+  0% {
+    width: 32px; }
+  33% {
+    width: 10.66667px; }
+  66% {
+    width: 32.03203px; }
+  100% {
+    width: 16.01602px; } }
+  .icon-menu:hover rect:nth-child(3) {
+    animation: bounce-3 450ms ease-out forwards;
+    fill: #f36271;
+    width: 16.01602px; }
+  @media (max-width: 640px) {
     .icon-menu:hover rect {
-      fill: #f03246; }
+      animation: none !important;
+      fill: #223347 !important;
+      width: 32px !important; } }
   .icon-menu.nav-close {
-    position: fixed; }
+    background-color: transparent; }
+    .icon-menu.nav-close rect {
+      fill: white; }
 
 @keyframes cross-l {
   0% {
@@ -343,26 +395,23 @@ body {
     transform: translateY(14.5px) rotate(45deg); }
   100% {
     transform: translateY(14.5px) rotate(45deg); } }
-    .icon-menu.nav-close rect:nth-child(odd) {
-      animation: cross-l .666s ease-out forwards; }
-    .icon-menu.nav-close rect:nth-child(even) {
-      animation: cross-r .666s ease-out forwards; }
+      .icon-menu.nav-close rect:nth-child(odd) {
+        animation: cross-l .666s ease-out forwards; }
+      .icon-menu.nav-close rect:nth-child(even) {
+        animation: cross-r .666s ease-out forwards; }
+      @media (max-width: 640px) {
+        .icon-menu.nav-close rect {
+          fill: white !important; }
+          .icon-menu.nav-close rect:nth-child(odd) {
+            animation: cross-l 0.666s ease-out forwards !important; }
+          .icon-menu.nav-close rect:nth-child(even) {
+            animation: cross-r 0.666s ease-out forwards !important; } }
   .icon-menu.nav-close:hover rect {
     fill: #f03246;
     width: 32px; }
-  @media (max-width: 854px) {
-    .icon-menu {
-      animation: menu-h-in .333s ease-out forwards !important; }
-      .icon-menu:hover rect {
-        fill: #223347 !important; }
+    @media (max-width: 640px) {
       .icon-menu.nav-close:hover rect {
-        fill: #223347 !important; }
-      .icon-menu.nav-close rect {
-        fill: #223347 !important; }
-        .icon-menu.nav-close rect:nth-child(odd) {
-          animation: cross-l .666s ease-out forwards !important; }
-        .icon-menu.nav-close rect:nth-child(even) {
-          animation: cross-r .666s ease-out forwards !important; } }
+        fill: white !important; } }
 
 body > .nav {
   background-color: white;
