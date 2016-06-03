@@ -365,10 +365,10 @@ body {
           animation: cross-r .666s ease-out forwards !important; } }
 
 body > .nav {
-  background-color: #223347;
+  background-color: white;
   border: 10px solid white;
   bottom: 0;
-  color: white;
+  color: #223347;
   height: 100vh;
   left: 0;
   opacity: 0;
