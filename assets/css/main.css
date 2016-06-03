@@ -72,13 +72,13 @@ body {
   text-rendering: optimizeLegibility; }
   body.nav-opened {
     height: 100vh;
-    overflow: hidden;
-    position: relative; }
+    overflow: hidden; }
 
 .site-wrapper {
   max-width: 1280px;
   min-height: calc(100vh - 120px);
   padding-top: 30px;
+  position: relative;
   width: 100%; }
 
 .post-template:not(.page-template) .author .author-image {
@@ -321,10 +321,6 @@ body {
     .icon-menu rect:nth-child(even) {
       transform: translateY(21px);
       transition-delay: 100ms; }
-  .icon-menu:hover {
-    border: 0 !important; }
-    .icon-menu:hover rect {
-      fill: #f03246; }
   .icon-menu.nav-close {
     position: fixed; }
 
@@ -353,10 +349,6 @@ body {
   @media (max-width: 854px) {
     .icon-menu {
       animation: menu-h-in .333s ease-out forwards !important; }
-      .icon-menu:hover rect {
-        fill: #223347 !important; }
-      .icon-menu.nav-close:hover rect {
-        fill: #223347 !important; }
       .icon-menu.nav-close rect {
         fill: #223347 !important; }
         .icon-menu.nav-close rect:nth-child(odd) {
