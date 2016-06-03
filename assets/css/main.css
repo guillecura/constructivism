@@ -365,9 +365,10 @@ body {
           animation: cross-r .666s ease-out forwards !important; } }
 
 body > .nav {
-  background-color: white;
+  background-color: #223347;
+  border: 10px solid white;
   bottom: 0;
-  color: #223347;
+  color: white;
   height: 100vh;
   left: 0;
   opacity: 0;
@@ -380,39 +381,22 @@ body > .nav {
   body > .nav.closed {
     animation: menu-out .333s ease-in forwards; }
   body > .nav > ul {
-    display: block;
-    left: 50%;
-    list-style: none;
-    max-width: 1280px;
-    padding: 0 15px;
     position: absolute;
-    text-align: right;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
+    display: block;
+    text-align: center;
     width: 100%; }
-    @media (max-width: 1280px) {
-      body > .nav > ul {
-        padding: 0 30px; } }
   body > .nav .nav-title {
     color: #4b719d;
     font-size: 1.5rem;
     line-height: 1.48em;
     margin-bottom: 30px; }
   body > .nav li {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 5rem; }
-    @media (max-width: 640px) {
-      body > .nav li {
-        font-size: 20vw;
-        line-height: 25vw; } }
-  body > .nav a {
-    transition: text-shadow 50ms; }
-    body > .nav a:focus, body > .nav a:hover {
-      border: 0;
-      text-shadow: 4.5px 4.5px #f03246; }
+    font-size: 3rem;
+    line-height: 1.48em; }
 
-.nav-opened > .nav {
+.nav-opened .nav {
   animation: menu-in .333s ease-out forwards;
   pointer-events: all; }
 
