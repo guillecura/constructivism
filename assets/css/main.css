@@ -378,7 +378,7 @@ body {
   .icon-menu.nav-close {
     background-color: transparent; }
     .icon-menu.nav-close rect {
-      fill: white; }
+      fill: #223347; }
 
 @keyframes cross-l {
   0% {
