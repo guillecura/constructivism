@@ -33,16 +33,6 @@
       }
     });
 
-    if ($body.hasClass("nav-opened")) {
-      $nav.on("click tap", function(e){
-        if( e.target === this ) {
-          $(this).removeClass("closed");
-          $body.toggleClass("nav-opened nav-closed");
-          $btn.addClass("nav-close");
-        }
-      });
-    }
-
 
     // Sticky navs
     var $tagAside = $(".tag-aside");
