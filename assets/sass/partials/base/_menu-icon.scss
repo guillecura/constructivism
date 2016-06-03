@@ -10,7 +10,7 @@
 // General Styles --------------------------------------------------------------
   animation: menu-h-in .333s ease-out forwards; // Slide In animation
   appearance: none;
-  background-color: $white;
+  background-color: transparent;
   border: 0;
   box-shadow: none;
   cursor: pointer;
@@ -21,7 +21,7 @@
   position: absolute;
   right: calc(50% - #{$site-box / 2});
   top: ($header-height - $icon) / 2;
-  transform: translateZ(1px);
+  transform: translateZ(1px); // iOS z-index hack
   width: #{$icon + $distance / 2};
   z-index: $z-top + 2; // over the nav menu
 
@@ -29,8 +29,8 @@
     right: $distance * 1.5;
   }
 
-  @include mq(mobile) {
-    animation: menu-h-in .333s ease-out forwards!important; // Slide In animation
+  @include mq(hybrid) {
+    animation: menu-h-in .333s ease-out forwards !important; // Slide In animation
   }
 
   > svg {
@@ -65,14 +65,14 @@
 // Set the hover
 // -----------------------------------------------------------------------------
   &:hover {
-    border: 0!important;
+    border: 0 !important;
 
     rect {
       fill: $primary;
 
 // Prevent hover on mobile -----------------------------------------------------
-      @include mq(mobile) {
-        fill: $black!important;
+      @include mq(hybrid) {
+        fill: $black !important;
       }
     }
   }
@@ -81,8 +81,10 @@
 // Set the on-click state (replace the &:focus selector with the active class)
 // -----------------------------------------------------------------------------
   &.nav-close {
-    @include mq(mobile) {
+    @include mq(hybrid) {
       position: fixed;
+      transform: translateZ(1px); // iOS z-index hack
+      z-index: $z-top + 2; // over the nav menu
     }
 
     rect {
@@ -108,13 +110,13 @@
         animation: cross-r .666s ease-out forwards;
       }
 
-// Prevent hover on mobile -----------------------------------------------------
-      @include mq(mobile) {
-        fill: $black!important;
+// Prevent hover on hybrid -----------------------------------------------------
+      @include mq(hybrid) {
+        fill: $black !important;
 
-        &:nth-child(odd) {animation: cross-l .666s ease-out forwards!important;}
+        &:nth-child(odd) {animation: cross-l .666s ease-out forwards !important;}
 
-        &:nth-child(even) {animation: cross-r .666s ease-out forwards!important;}
+        &:nth-child(even) {animation: cross-r .666s ease-out forwards !important;}
       }
 // -----------------------------------------------------------------------------
     }
@@ -124,9 +126,9 @@
     fill: $primary;
     width: #{$icon};
 
-// Prevent hover on mobile -----------------------------------------------------
-    @include mq(mobile) {
-      fill: $black!important;
+// Prevent hover on hybrid -----------------------------------------------------
+    @include mq(hybrid) {
+      fill: $black !important;
 // -----------------------------------------------------------------------------
     }
   }

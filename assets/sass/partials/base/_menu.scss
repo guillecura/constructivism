@@ -89,7 +89,8 @@ body > .nav {
   a {
     transition: text-shadow 50ms;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border: 0;
       text-shadow: $border * 1.5 $border * 1.5 $primary;
     }

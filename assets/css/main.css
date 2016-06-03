@@ -287,7 +287,7 @@ body {
 .icon-menu {
   animation: menu-h-in .333s ease-out forwards;
   appearance: none;
-  background-color: white;
+  background-color: transparent;
   border: 0;
   box-shadow: none;
   cursor: pointer;
@@ -304,9 +304,9 @@ body {
   @media (max-width: 1280px) {
     .icon-menu {
       right: 15px; } }
-  @media (max-width: 640px) {
+  @media (max-width: 854px) {
     .icon-menu {
-      animation: menu-h-in 0.333s ease-out forwards !important; } }
+      animation: menu-h-in .333s ease-out forwards !important; } }
   .icon-menu > svg {
     display: block;
     height: 100%;
@@ -328,12 +328,14 @@ body {
     border: 0 !important; }
     .icon-menu:hover rect {
       fill: #f03246; }
-      @media (max-width: 640px) {
+      @media (max-width: 854px) {
         .icon-menu:hover rect {
           fill: #223347 !important; } }
-  @media (max-width: 640px) {
+  @media (max-width: 854px) {
     .icon-menu.nav-close {
-      position: fixed; } }
+      position: fixed;
+      transform: translateZ(1px);
+      z-index: 10002; } }
 
 @keyframes cross-l {
   0% {
@@ -354,17 +356,17 @@ body {
     animation: cross-l .666s ease-out forwards; }
   .icon-menu.nav-close rect:nth-child(even) {
     animation: cross-r .666s ease-out forwards; }
-  @media (max-width: 640px) {
+  @media (max-width: 854px) {
     .icon-menu.nav-close rect {
       fill: #223347 !important; }
       .icon-menu.nav-close rect:nth-child(odd) {
-        animation: cross-l 0.666s ease-out forwards !important; }
+        animation: cross-l .666s ease-out forwards !important; }
       .icon-menu.nav-close rect:nth-child(even) {
-        animation: cross-r 0.666s ease-out forwards !important; } }
+        animation: cross-r .666s ease-out forwards !important; } }
   .icon-menu.nav-close:hover rect {
     fill: #f03246;
     width: 32px; }
-    @media (max-width: 640px) {
+    @media (max-width: 854px) {
       .icon-menu.nav-close:hover rect {
         fill: #223347 !important; } }
 
@@ -426,7 +428,7 @@ body > .nav {
         line-height: 25vw; } }
   body > .nav a {
     transition: text-shadow 50ms; }
-    body > .nav a:hover {
+    body > .nav a:hover, body > .nav a:focus {
       border: 0;
       text-shadow: 4.5px 4.5px #f03246; }
 
@@ -784,53 +786,54 @@ h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: calc(50vw - 10px);
   margin-left: 15px;
-  max-height: 300px;
-  max-width: 300px;
-  padding: 20px;
-  position: relative;
-  width: calc(50vw - 10px); }
-  @media (max-width: 1280px) {
-    .work-sample {
-      max-height: calc(((100vw - 340px) / 2) - 10px);
-      max-width: calc(((100vw - 340px) / 2) - 10px); } }
+  position: relative; }
   @media (max-width: 854px) {
     .work-sample {
-      max-height: calc((100vw - 340px) - 10px);
-      max-width: calc((100vw - 340px) - 10px); } }
-  @media (max-width: 640px) {
-    .work-sample {
-      height: calc((100vw - 30px) / 2 - 10px);
-      margin-left: auto;
-      max-height: none;
-      max-width: none;
-      width: calc((100vw - 30px) / 2 - 10px); } }
+      margin-left: auto; } }
   .work-sample:nth-child(3n-2) {
     margin-left: 0; }
-    @media (max-width: 640px) {
+    @media (max-width: 854px) {
       .work-sample:nth-child(3n-2) {
         margin-left: auto; } }
+  @media (max-width: 1280px) {
+    .work-sample:nth-child(2n) {
+      margin-left: 15px; } }
+  @media (max-width: 854px) {
+    .work-sample:nth-child(2n) {
+      margin-left: auto; } }
   @media (max-width: 640px) {
     .work-sample:nth-child(2n) {
       margin-left: 15px; } }
+  @media (max-width: 1280px) {
+    .work-sample:nth-child(2n-1) {
+      margin-left: 0; } }
   .work-sample > a > figure {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%; }
+    height: calc(50vw - 10px);
+    max-height: 310px;
+    max-width: 310px;
+    width: calc(50vw - 10px); }
+    @media (max-width: 1280px) {
+      .work-sample > a > figure {
+        max-height: calc(((100vw - 340px) / 2) - 10px);
+        max-width: calc(((100vw - 340px) / 2) - 10px); } }
+    @media (max-width: 854px) {
+      .work-sample > a > figure {
+        max-height: calc((100vw - 340px) - 10px);
+        max-width: calc((100vw - 340px) - 10px); } }
+    @media (max-width: 640px) {
+      .work-sample > a > figure {
+        height: calc((100vw - 30px) / 2 - 10px);
+        max-height: none;
+        max-width: none;
+        width: calc((100vw - 30px) / 2 - 10px); } }
   .work-sample > a > section {
     background-color: white;
-    bottom: 0;
     display: block;
-    left: 0;
-    position: absolute;
+    margin-bottom: 10px;
     width: 100%; }
   .work-sample .post-title {
     font-weight: 400;

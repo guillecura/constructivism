@@ -10,43 +10,38 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: $case-size;
   margin-left: $distance * 1.5;
-  max-height: #{(($site-box - ($distance * 4)) / 4) - $distance};
-  max-width: #{(($site-box - ($distance * 4)) / 4) - $distance};
-  padding: $distance * 2;
   position: relative;
-  width: $case-size;
-
-  @include mq(desktop) {
-    max-height: calc(((100vw - #{$distance * 4 + 300}) / 2) - #{$distance});
-    max-width: calc(((100vw - #{$distance * 4 + 300}) / 2) - #{$distance});
-  }
 
   @include mq(hybrid) {
-    max-height: calc((100vw - #{$distance * 4 + 300}) - #{$distance});
-    max-width: calc((100vw - #{$distance * 4 + 300}) - #{$distance});
-  }
-
-  @include mq(mobile) {
-    height: $case-size-small;
     margin-left: auto;
-    max-height: none;
-    max-width: none;
-    width: $case-size-small;
   }
 
   &:nth-child(3n-2) {
     margin-left: 0;
 
-    @include mq(mobile) {
+    @include mq(hybrid) {
       margin-left: auto;
     }
   }
 
   &:nth-child(2n) {
+    @include mq(desktop) {
+      margin-left: $distance * 1.5;
+    }
+
+    @include mq(hybrid) {
+      margin-left: auto;
+    }
+
     @include mq(mobile) {
       margin-left: $distance * 1.5;
+    }
+  }
+
+  &:nth-child(2n-1) {
+    @include mq(desktop) {
+      margin-left: 0;
     }
   }
 
@@ -54,21 +49,33 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
+    height: $case-size;
+    max-height: #{($site-box - ($distance * 4)) / 4};
+    max-width: #{($site-box - ($distance * 4)) / 4};
+    width: $case-size;
+
+    @include mq(desktop) {
+      max-height: calc(((100vw - #{$distance * 4 + 300}) / 2) - #{$distance});
+      max-width: calc(((100vw - #{$distance * 4 + 300}) / 2) - #{$distance});
+    }
+
+    @include mq(hybrid) {
+      max-height: calc((100vw - #{$distance * 4 + 300}) - #{$distance});
+      max-width: calc((100vw - #{$distance * 4 + 300}) - #{$distance});
+    }
+
+    @include mq(mobile) {
+      height: $case-size-small;
+      max-height: none;
+      max-width: none;
+      width: $case-size-small;
+    }
   }
 
   > a > section {
     background-color: $white;
-    bottom: 0;
     display: block;
-    left: 0;
-    position: absolute;
+    margin-bottom: $distance;
     width: 100%;
   }
 
