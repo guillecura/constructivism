@@ -72,7 +72,8 @@ body {
   text-rendering: optimizeLegibility; }
   body.nav-opened {
     height: 100vh;
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative; }
 
 .site-wrapper {
   max-width: 1280px;
