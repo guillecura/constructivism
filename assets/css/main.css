@@ -66,8 +66,7 @@ body {
   font-smoothing: antialiased;
   font-variant-ligatures: common-ligatures;
   font-weight: 400;
-  text-rendering: optimizeLegibility;
-  transform: translate3d(0, 0, 0); }
+  text-rendering: optimizeLegibility; }
   body.nav-opened {
     height: 100vh;
     overflow: hidden; }
