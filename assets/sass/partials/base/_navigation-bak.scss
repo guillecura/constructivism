@@ -7,19 +7,20 @@
 // -----------------------------------------------------------------------------
 .main-nav {
   animation: header-in .333s ease-out forwards; // Slide In animation
-  background-color: $white;
+  border-bottom: $line * 2 solid $black;
   height: $header-height;
-  left: 50%;
   max-width: $site-box;
-  padding: 0 $distance * 3;
-  position: fixed;
-  top: 0;
-  transform: translateX(-50%);
+  padding: 0;
   width: 100%;
   z-index: $z-top;
 
-  @include mq(mobile) {
+  @include mq(desktop) {
     padding: 0 $distance * 1.5;
+  }
+
+  @include mq(mobile) {
+    padding: 0;
+    width: calc(100% - #{$distance * 3});
   }
 
 
@@ -28,8 +29,13 @@
     display: inline-block;
     font-size: $fh5;
     font-weight: $medium;
-    line-height: $header-height;
+    line-height: $header-height - $distance * 2;
+    margin-top: $distance * 2;
     width: auto;
+
+    > a:hover {
+      border: 0;
+    }
   }
 // -----------------------------------------------------------------------------
 }

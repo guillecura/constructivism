@@ -451,28 +451,25 @@ body > .nav {
 
 .main-nav {
   animation: header-in .333s ease-out forwards;
-  border-bottom: 6px solid #223347;
+  background-color: white;
   height: 80px;
+  left: 50%;
   max-width: 1280px;
-  padding: 0;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  transform: translateX(-50%);
   width: 100%;
   z-index: 10000; }
-  @media (max-width: 1280px) {
-    .main-nav {
-      padding: 0 15px; } }
   @media (max-width: 640px) {
     .main-nav {
-      padding: 0;
-      width: calc(100% - 30px); } }
+      padding: 0 15px; } }
   .main-nav .page-title {
     display: inline-block;
     font-size: 1rem;
     font-weight: 500;
-    line-height: 60px;
-    margin-top: 20px;
+    line-height: 80px;
     width: auto; }
-    .main-nav .page-title > a:hover {
-      border: 0; }
 
 .post-content p {
   font-size: 0.85rem; }
