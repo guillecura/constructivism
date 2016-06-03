@@ -432,6 +432,10 @@ body > .nav {
     .main-nav .page-title > a:hover {
       border: 0; }
 
+.nav-opened .main-nav {
+  position: fixed;
+  top: 0; }
+
 .post-content p {
   font-size: 0.85rem; }
   .post-content p + p {
