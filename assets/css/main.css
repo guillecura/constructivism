@@ -321,6 +321,8 @@ body {
     .icon-menu rect:nth-child(even) {
       transform: translateY(21px);
       transition-delay: 100ms; }
+  .icon-menu:hover {
+    border: 0 !important; }
   .icon-menu.nav-close {
     position: fixed; }
 
@@ -343,9 +345,6 @@ body {
       animation: cross-l .666s ease-out forwards; }
     .icon-menu.nav-close rect:nth-child(even) {
       animation: cross-r .666s ease-out forwards; }
-  .icon-menu.nav-close:hover rect {
-    fill: #f03246;
-    width: 32px; }
   @media (max-width: 854px) {
     .icon-menu {
       animation: menu-h-in .333s ease-out forwards !important; }

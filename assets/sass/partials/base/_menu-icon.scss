@@ -60,13 +60,13 @@
 
 // Set the hover
 // -----------------------------------------------------------------------------
-  // &:hover {
-  //   border: 0 !important;
-  //
-  //   rect {
-  //     fill: $primary;
-  //   }
-  // }
+  &:hover {
+    border: 0 !important;
+
+    // rect {
+    //   fill: $primary;
+    // }
+  }
 
 // Set the on-click state (replace the &:focus selector with the active class)
 // -----------------------------------------------------------------------------
@@ -99,10 +99,10 @@
     }
   }
 
-  &.nav-close:hover rect {
-    fill: $primary;
-    width: #{$icon};
-  }
+  // &.nav-close:hover rect {
+  //   fill: $primary;
+  //   width: #{$icon};
+  // }
 // -----------------------------------------------------------------------------
 
 
