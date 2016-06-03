@@ -67,24 +67,9 @@ body {
   font-variant-ligatures: common-ligatures;
   font-weight: 400;
   text-rendering: optimizeLegibility; }
-  body::after {
-    content: '';
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    position: fixed;
-    right: 0;
-    top: 0; }
   body.nav-opened {
     height: 100vh;
     overflow: hidden; }
-    body.nav-opened::after {
-      animation: menu-in .333s ease-out forwards;
-      background-color: white;
-      content: '';
-      height: 100vh;
-      width: 100%;
-      z-index: 10000; }
 
 .site-wrapper {
   max-width: 1280px;
@@ -309,7 +294,7 @@ body {
   padding: 0 2.5px;
   position: absolute;
   right: calc(50% - 640px);
-  transform: translateZ(1px);
+  transform: translateZ(11px);
   top: 24px;
   width: 37px;
   z-index: 10002; }
