@@ -176,8 +176,8 @@ body {
   padding: 0 20px;
   transition: color 150ms ease-out, border-color 150ms ease-out; }
   .button:hover {
-    border: 3px solid #f03246;
-    color: #f03246; }
+    border: 3px solid #dc006e;
+    color: #dc006e; }
 
 .site-footer {
   height: 40px;
@@ -198,7 +198,7 @@ body {
 .hero-section {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: calc(100vh - 120px);
   max-height: 1066.66667px;
   min-height: 450px;
@@ -249,7 +249,7 @@ body {
 
 .menu-box {
   animation: none !important;
-  border: 6px solid #f03246;
+  border: 6px solid #dc006e;
   max-width: calc(33.33vw - 20px);
   padding: 15px;
   width: 300px;
@@ -261,16 +261,16 @@ body {
     margin-left: 0;
     text-align: left; }
     .menu-box.left li:hover {
-      color: #df1026;
+      color: #a90055;
       padding-left: 10px; }
   .menu-box.right {
     margin-right: 0;
     text-align: right; }
     .menu-box.right li:hover {
-      color: #df1026;
+      color: #a90055;
       padding-right: 10px; }
   .menu-box li {
-    color: #f03246;
+    color: #dc006e;
     font-size: 2rem;
     font-weight: 300;
     line-height: 1.11em;
@@ -394,7 +394,7 @@ body > .nav {
     transition: text-shadow 50ms; }
     body > .nav a:focus, body > .nav a:hover {
       border: 0;
-      text-shadow: 4.5px 4.5px #f03246; }
+      text-shadow: 4.5px 4.5px #dc006e; }
 
 .nav-opened > .nav {
   animation: menu-in .333s ease-out forwards;
@@ -528,10 +528,10 @@ pre[class*='language-'] {
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #df1026; }
+  color: #a90055; }
 
 .token.boolean {
-  color: #df1026; }
+  color: #a90055; }
 
 .token.number,
 .token.selector,
@@ -907,7 +907,7 @@ h6 {
         line-height: 1.48em;
         margin: 10px auto; }
       .author-profile .author-block > section a {
-        color: #f03246;
+        color: #dc006e;
         font-size: 0.85rem;
         line-height: 2.96em; }
         .author-profile .author-block > section a:hover {
@@ -1120,7 +1120,7 @@ h6 {
       transition: text-shadow 50ms; }
       .menu-widget > .nav > ul a:hover {
         border: 0;
-        text-shadow: 4.5px 4.5px #f03246; }
+        text-shadow: 4.5px 4.5px #dc006e; }
 
 .post-template:not(.page-template) .post-heading {
   max-width: 1280px;
@@ -1197,7 +1197,7 @@ h6 {
       margin-left: 5px; }
   .post-template:not(.page-template) .main-info .post-cap {
     bottom: -8rem;
-    color: #f03246;
+    color: #dc006e;
     font-size: 0;
     font-weight: 300;
     line-height: 1em;
