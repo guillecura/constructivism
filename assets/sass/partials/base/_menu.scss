@@ -25,6 +25,10 @@ body > .nav {
 // If nav is closed
 // -----------------------------------------------------------------------------
   &.closed ul {
+    animation: menu-li-out .333s ease-in forwards;
+  }
+
+  &.closed {
     animation: menu-out .333s ease-in forwards;
   }
 // -----------------------------------------------------------------------------
@@ -86,6 +90,11 @@ body > .nav {
 // If nav is opened
 // -----------------------------------------------------------------------------
 .nav-opened > .nav ul {
+  animation: menu-li-in .333s ease-out forwards;
+  pointer-events: all;
+}
+
+.nav-opened > .nav {
   animation: menu-in .333s ease-out forwards;
   pointer-events: all;
 }
