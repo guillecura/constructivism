@@ -45,7 +45,6 @@ body > .nav {
     position: absolute;
     text-align: right;
     top: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
 
     @include mq(desktop) {
@@ -96,6 +95,5 @@ body > .nav {
 
 .nav-opened > .nav {
   animation: menu-in .333s ease-out forwards;
-  pointer-events: all;
 }
 // -----------------------------------------------------------------------------

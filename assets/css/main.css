@@ -11,10 +11,10 @@
 @keyframes menu-li-in {
   from {
     opacity: 0;
-    transform: scale(1.1) translateZ(10px); }
+    transform: scale(1.1) translate3d(-50%, -50%, 10px); }
   to {
     opacity: 1;
-    transform: scale(1) translateZ(0); } }
+    transform: scale(1) translate3d(-50%, -50%, 0); } }
 
 @keyframes menu-in {
   from {
@@ -25,10 +25,10 @@
 @keyframes menu-li-out {
   from {
     opacity: 1;
-    transform: scale(1) translateZ(0); }
+    transform: scale(1) translate3d(-50%, -50%, 0); }
   to {
     opacity: 0;
-    transform: scale(1.1) translateZ(10px); } }
+    transform: scale(1.1) translate3d(-50%, -50%, 10px); } }
 
 @keyframes menu-out {
   from {
@@ -332,6 +332,8 @@ body {
       transition-delay: 100ms; }
   .icon-menu:hover {
     border: 0 !important; }
+  .icon-menu.nav-close {
+    position: fixed; }
 
 @keyframes cross-l {
   0% {
@@ -348,10 +350,10 @@ body {
     transform: translateY(14.5px) rotate(45deg); }
   100% {
     transform: translateY(14.5px) rotate(45deg); } }
-  .icon-menu.nav-close rect:nth-child(odd) {
-    animation: cross-l .666s ease-out forwards; }
-  .icon-menu.nav-close rect:nth-child(even) {
-    animation: cross-r .666s ease-out forwards; }
+    .icon-menu.nav-close rect:nth-child(odd) {
+      animation: cross-l .666s ease-out forwards; }
+    .icon-menu.nav-close rect:nth-child(even) {
+      animation: cross-r .666s ease-out forwards; }
   @media (max-width: 854px) {
     .icon-menu {
       animation: menu-h-in .333s ease-out forwards !important; }
@@ -386,7 +388,6 @@ body > .nav {
     position: absolute;
     text-align: right;
     top: 50%;
-    transform: translate(-50%, -50%);
     width: 100%; }
     @media (max-width: 1280px) {
       body > .nav > ul {
@@ -415,8 +416,7 @@ body > .nav {
   pointer-events: all; }
 
 .nav-opened > .nav {
-  animation: menu-in .333s ease-out forwards;
-  pointer-events: all; }
+  animation: menu-in .333s ease-out forwards; }
 
 .main-nav {
   animation: header-in .333s ease-out forwards;
