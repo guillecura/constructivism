@@ -361,7 +361,7 @@ body > .nav {
   top: 0;
   width: 100%;
   z-index: 10001; }
-  body > .nav.closed {
+  body > .nav.closed ul {
     animation: menu-out .333s ease-in forwards; }
   body > .nav > ul {
     display: block;
@@ -396,7 +396,7 @@ body > .nav {
       border: 0;
       text-shadow: 4.5px 4.5px #ff0064; }
 
-.nav-opened > .nav {
+.nav-opened > .nav ul {
   animation: menu-in .333s ease-out forwards;
   pointer-events: all; }
 
