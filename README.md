@@ -4,7 +4,7 @@ Developed to create a portfolio website. This theme for Ghost blogging platform 
 
 ###Demo & Download
 
-This theme is currently working used on my personal [blog](http://guillecura.co/) and you get the tarball file [here!](https://github.com/guillecura/constructivism/archive/master.zip)
+This theme is currently working used on my personal [blog](http://guillecura.co/) and you get the tarball file [here!](https://github.com/guillecura/constructivism/releases/tag/1.0)
 
 ![Constructivism theme preview](http://guillecura.co/content/images/2016/06/constructivism-sample-2.jpg)
 
