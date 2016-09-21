@@ -14,5 +14,21 @@
         </a>
       </article>
     {{/has}}
+
+    {{#has tag="thoughts"}}
+      <article class="{{post_class}} thought">
+          <header class="post-header">
+            <h3 class="post-title"><a href="{{url}}">{{{title}}}</a></h3>
+            <section class="post-meta">
+              <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+            </section>
+          </header>
+
+          <section class="post-excerpt">
+              <p>{{excerpt words="44"}}</p>
+              <a class="read-more" href="{{url}}">Read more &raquo;</a>
+          </section>
+      </article>
+    {{/has}}
   {{/foreach}}
 </section>
